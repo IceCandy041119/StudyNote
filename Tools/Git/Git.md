@@ -33,10 +33,10 @@
 - `git mergetool` 使用工具来处理冲突  
 - `git rebase` 将一系列补丁变基为新的基线  
 - `git checkout <revision>` 更新HEAD和目前的分支  
-  -`git checkout -b <name>` 创建并切换分支
+  - `git checkout -b <name>` 创建并切换分支
 - `git reset --hard <revision>` 重置HEAD指针到指定的提交
 
->**`checkout` 与 `reset --hard` 的区别**
+>**`checkout` 与 `reset --hard` 的区别**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**前者只去更新HEAD指针，列如，在使用时，从主线切换到其他地方，只有HEAD指针去移动，而后者，则将主线指针也一并带了过来，为此可能会出现丢失数据的情况，就要用到 `reflog` 了**  
 
 
