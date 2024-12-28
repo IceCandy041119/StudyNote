@@ -65,7 +65,7 @@
 - `git checkout -- <filename>` 丢弃修改  
 - `git restore` git2.32 版本后取代 git reset 进行许多撤销操作
 
->**`checkout -- <filename>` 与 `reset HEAD <filename>` 区别**  
+>**`checkout -- <filename>` 与 `reset HEAD <filename>` 的区别**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前者如果文件没有添加到缓存区，那么将最近一次提交的版本替换工作目录中的文件，丢弃本地的修改，后者仅将文件从暂存区中移除
 
 ## 高级操作  
