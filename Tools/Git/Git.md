@@ -7,6 +7,7 @@
 - [分支和合并](#分支和合并)
 - [远端操作](#远端操作)
 - [撤销](#撤销)
+- [高级操作](#高级操作)
 
 ## 基础命令  
 
@@ -61,5 +62,17 @@
 - `git checkout -- <filename>` 丢弃修改  
 - `git restore` git2.32 版本后取代 git reset 进行许多撤销操作
 
->**`checkout -- <filename>` 与 `reset HEAD <filename>` 区别**
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前者将最近一次提交的版本替换工作目录中的文件，丢弃本地的修改，后者不仅将文件从暂存区中移除，还会用最近一次提交的版本代替工作目录下的文件，丢弃本地修改  
+>**`checkout -- <filename>` 与 `reset HEAD <filename>` 区别**  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前者如果文件没有添加到缓存区，那么将最近一次提交的版本替换工作目录中的文件，丢弃本地的修改，后者仅将文件从暂存区中移除
+
+## 高级操作  
+
+- `git config` Git 是一个高度可定制的工具  
+- `git clone --depth=1` 浅克隆(shallow clone)，不包括完整的版本历史信息  
+- `git add -p` 交互式暂存  
+- `git rebase -i` 交互式变基  
+- `git blame` 查看最后修改某行的人  
+- `git stash` 暂时移除工作目录下的修改内容  
+- `git bisect` 通过二分查找搜索历史记录  
+- `.gitignore` 指定故意不追踪的文件(不是命令，是dot file)  
+
