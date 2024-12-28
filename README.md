@@ -7,7 +7,7 @@
 ## 学习资料  
 
 - [CS自学指南](https://csdiy.wiki/)
-- [一生一芯](https://ysys.org)
+- [一生一芯](https://ysyx.org)
 
 
 
