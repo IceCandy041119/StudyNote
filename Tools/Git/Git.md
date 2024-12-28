@@ -45,7 +45,7 @@
 >**`checkout` 与 `reset --hard` 的区别**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前者只去更新HEAD指针，列如，在使用时，从主线切换到其他地方，只有HEAD指针去移动，而后者，则将主线指针也一并带了过来，为此可能会出现丢失数据的情况，就要用到 `reflog` 了
 
->**关于合并冲突**
+>**关于合并冲突**  
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在两个分支中对同一个文件的修改可能会产生冲突，因此需要开发人员手动的修改，冲突文件会在冲突位置做好标记，改完后记得删除标记  
 
 ## 远端操作  
@@ -75,7 +75,8 @@
 - `git add -p` 交互式暂存  
 - `git rebase -i` 交互式变基  
 - `git blame <filename>` 查看最后修改某行的人
-- `git show <hashkey>` 根据hashkey查看提交记录  
+- `git show <hashkey>` 根据hashkey查看提交记录
+- `git cat-file -p <hashkey>` 查看这个提交的内容  
 - `git stash` 暂时移除工作目录下的修改内容  
 - `git bisect` 通过二分查找搜索历史记录  
 - `.gitignore` 指定故意不追踪的文件(不是命令，是dot file)  
