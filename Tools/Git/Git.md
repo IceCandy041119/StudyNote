@@ -124,8 +124,6 @@ Git能够识别的配置项分为两大类：
 
 可以使用 `man git-config` 查阅支持的配置.      
 
-
-
 ### 初次运行Git 
 
 安装完Git之后,要做的第一件事就是设置你的用户名和邮件地址.它们会写入到你的每一次提交中,不可更改：
@@ -689,30 +687,6 @@ Git可以使用四种不同的协议来传输资料：
 - 缺乏授权机制
 -  Git 协议也许也是最难架设的,它要求有自己的守护进程,这就要配置 `xinetd`、`systemd` 或者其他的程序,这些工作并不简单. 它还要求防火墙开放 9418 端口,但是企业防火墙一般不会开放这个非标准端口. 而大型的企业防火墙通常会封锁这个端口.
 
-### 在服务器上搭建Git   
-
-在开始架设Git服务器前,需要把现有仓库导出为裸仓库——即一个不包含当前工作目录的仓库. 这通常是很简单的. 为了通过克隆你的仓库来创建一个新的裸仓库,你需要在克隆命令后加上 `--bare` 选项.按照惯例,裸仓库的目录名以 .git 结尾   
-
-整体上效果大致相当于 `$ cp -Rf my_project/.git my_project.git`   
-
-虽然在配置文件中有若干不同,但是对于你的目的来说,这两种方式都是一样的. 它只取出 Git 仓库自身,不要工作目录,然后特别为它单独创建一个目录. 
-
-既然你有了裸仓库的副本,剩下要做的就是把裸仓库放到服务器上并设置你的协议.    
-
->如果一个用户,通过使用 SSH 连接到一个服务器,并且其对 `/srv/git/my_project.git` 目录拥有可写权限,那么他将自动拥有推送权限. 
-
-如果只是和几个人在一个私有项目上合作的话,仅仅是一个SSH服务器和裸仓库就足够了.   
-
-**小型安装**    
-如果设备较少或者你只想在小型开发团队里尝试 Git ,那么一切都很简单. 架设 Git 服务最复杂的地方在于用户管理. 如果需要仓库对特定的用户可读,而给另一部分用户读写权限,那么访问和许可安排就会比较困难.   
-
-**SSH连接**    
-如果需要团队里的每个人都对仓库有写权限,又不能给每个人在服务器上建立账户,那么提供 SSH 连接就是唯一的选择了. 我们假设用来共享仓库的服务器已经安装了 SSH 服务,而且你通过它访问服务器.   
-有几个方法可以使你给团队每个成员提供访问权：
-1. 就是给团队里的每个人创建账号,这种方法很直接但也很麻烦. 或许你不会想要为每个人运行一次 `adduser`(或者 `useradd` )并且设置临时密码.
-2. 是在主机上建立一个 'git' 账户,让每个需要写权限的人发送一个SSH公钥, 然后将其加入git账户的 `~/.ssh/authorized_keys` 文件. 这样一来,所有人都将通过 'git' 账户访问主机. 这一点也不会影响提交的数据——访问主机用的身份不会影响提交对象的提交者信息.
-3. 让SSH服务器通过某个LDAP服务,或者其他已经设定好的集中授权机制,来进行授权. 只要每个用户可以获得主机的shell访问权限,任何SSH授权机制你都可视为是有效的.   
-
 ### 生成SSH公钥   
 
 如前所述,许多Git服务器都使用SSH公钥进行认证. 为了向Git服务器提供SSH公钥,如果某系统用户尚未拥有密钥,必须事先为其生成一份. 这个过程在所有操作系统上都是相似的. 首先,你需要确认自己是否已经拥有密钥. 默认情况下,用户的 SSH 密钥存储在其 `~/.ssh` 目录下.   
@@ -722,190 +696,7 @@ Git可以使用四种不同的协议来传输资料：
 首先 `ssh-keygen` 会确认密钥的存储位置（默认是 `.ssh/id_rsa`）,然后它会要求你输入两次密钥口令. 如果你不想在使用密钥时输入口令,将其留空即可. 然而,如果你使用了密码,那么请确保添加了 `-o` 选项,它会以比默认格式更能抗暴力破解的格式保存私钥. 你也可以用 `ssh-agent` 工具来避免每次都要输入密码.      
 
 现在,进行了上述操作的用户需要将各自的公钥发送给任意一个Git服务器管理员 （假设服务器正在使用基于公钥的SSH验证设置）. 他们所要做的就是复制各自的 `.pub` 文件内容,并将其通过邮件发送.
-
-### 配置服务器    
-
-> [!note]
-> 以下操作可通过 `ssh-copy-id` 命令自动完成,这样就不必手动复制并安装公钥了.  
-
-首先,创建一个操作系统用户 `git`,并为其建立一个 `.ssh` 目录.    
-
-接着,我们需要为系统用户 `git` 的 `authorized_keys` 文件添加一些开发者 SSH 公钥. 假设我们已经获得了若干受信任的公钥,并将它们保存在临时文件中.   
-
-将这些公钥加入系统用户 `git` 的 `.ssh` 目录下 `authorized_keys` 文件的末尾.
-
-现在我们来为开发者新建一个空仓库.可以借助带 `--bare` 选项的 `git init` 命令来做到这一点,该命令在初始化仓库时不会创建工作目录.
-
-请注意,每添加一个新项目,都需要有人登录服务器取得shell,并创建一个裸仓库.    
-
-需要注意的是,目前所有（获得授权的）开发者用户都能以系统用户 `git` 的身份登录服务器从而获得一个普通shell. 如果你想对此加以限制,则需要修改 `/etc/passwd` 文件中(`git` 用户所对应)的shell值.
-
-借助一个名为 `git-shell` 的受限shell工具,你可以方便地将用户 `git` 的活动限制在与 Git 相关的范围内. 该工具随Git软件包一同提供.如果将 `git-shell` 设置为用户 `git` 的登录shell(login shell), 那么该用户便不能获得此服务器的普通 shell 访问权限. 若要使用 `git-shell`,需要用它替换掉bash或csh,使其成为该用户的登录 shell. 为进行上述操作,首先你必须确保 `git-shell` 的完整路径名已存在于 `/etc/shells` 文件中.    
-现在你可以使用 `chsh <username> -s <shell>` 命令修改任一系统用户的shell.这样,用户 `git` 就只能利用SSH连接对Git仓库进行推送和拉取操作,而不能登录机器并取得普通shell. 如果试图登录,你会发现尝试被拒绝.   
-
-此时,用户仍可通过 SSH 端口转发来访问任何可达的 git 服务器. 如果你想要避免它,可编辑 `authorized_keys` 文件并在所有想要限制的公钥之前添加以下选项：     
-```console
-no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty
-```
-
-现在,网络相关的 Git 命令依然能够正常工作,但是开发者用户已经无法得到一个普通 shell 了. 正如输出信息所提示的,你也可以在 `git` 用户的主目录下建立一个目录,来对 `git-shell` 命令进行一定程度的自定义. 比如,你可以限制掉某些本应被服务器接受的 Git 命令,或者对刚才的 SSH 拒绝登录信息进行自定义,这样,当有开发者用户以类似方式尝试登录时,便会看到你的信息. 要了解更多有关自定义 shell 的信息,请运行 `git help shell`.     
-
-### Git守护进程   
-
->请注意,因为其不包含授权服务,任何通过该协议管理的内容将在其网络上公开.     
-
-如果运行在防火墙之外的服务器上,它应该只对那些公开的只读项目服务. 如果运行在防火墙之内的服务器上,它可用于支撑大量参与人员或自动系统 （用于持续集成或编译的主机）只读访问的项目,这样可以省去逐一配置 SSH 公钥的麻烦.   
-
-无论何时,该 Git 协议都是相对容易设定的. 通常,你只需要以守护进程的形式运行该命令：
-
-```console
-$ git daemon --reuseaddr --base-path=/srv/git/ /srv/git/
-```
-
-`--reuseaddr` 选项允许服务器在无需等待旧连接超时的情况下重启,而 `--base-path` 选项允许用户在未完全指定路径的条件下克隆项目, 结尾的路径将告诉Git守护进程从何处寻找仓库来导出. 如果有防火墙正在运行,你需要开放端口9418的通信权限.    
-
-由于在现代的Linux发行版中,`systemd` 是最常见的初始化系统,因此你可以用它来达到此目的. 只要在 `/etc/systemd/system/git-daemon.service` 中放一个文件即可,其内容如下：
-
-```console
-[Unit]
-Description=Start Git Daemon
-
-[Service]
-ExecStart=/usr/bin/git daemon --reuseaddr --base-path=/srv/git/ /srv/git/
-
-Restart=always
-RestartSec=500ms
-
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=git-daemon
-
-User=git
-Group=git
-
-[Install]
-WantedBy=multi-user.target
-```
-
-你可能会注意这里以 `git` 启动的Git驻留程序同时使用了Group和User权限.按需修改它并确保提供的用户在此系统上.此外,请确保Git二进制文件位于 `/usr/bin/git`,必要时可修改此路径.最后,你需要运行 `systemctl enable git-daemon` 以让它在系统启动时自动运行, 这样也能让它通过 `systemctl start git-daemon` 启动,通过 `systemctl stop git-daemon` 停止.     
-
-在其他系统中,你可以使用 `sysvinit` 系统中的 `xinetd` 脚本,或者另外的方式来实现——只要你能够将其命令守护进程化并实现监控.    
-
-接下来,你需要告诉 Git 哪些仓库允许基于服务器的无授权访问. 你可以在每个仓库下创建一个名为 `git-daemon-export-ok` 的文件来实现.    
-
-```console
-$ cd /path/to/project.git
-$ touch git-daemon-export-ok
-```
-
-该文件将允许Git提供无需授权的项目访问服务.     
-
-### Smart HTTP 
-
-我们一般通过SSH进行授权访问,通过git:// 进行无授权访问,但是还有一种协议可以同时实现以上两种方式的访问. 设置Smart HTTP一般只需要在服务器上启用一个Git自带的名为 `git-http-backend` 的CGI脚本. 该CGI脚本将会读取由 `git fetch` 或 `git push` 命令向 HTTP URL发送的请求路径和头部信息, 来判断该客户端是否支持HTTP通信（不低于 1.6.6 版本的客户端支持此特性）. 如果CGI发现该客户端支持智能(Smart)模式,它将会以智能模式与它进行通信, 否则它将会回落到哑(Dumb)模式下(因此它可以对某些老的客户端实现向下兼容）.      
-
-在完成以上简单的安装步骤后, 我们将用Apache来作为CGI服务器. 如果你没有安装 Apache,你可以在Linux环境下执行如下或类似的命令来安装：   
-
-```console
-$ sudo apt-get install apache2 apache2-utils
-$ a2enmod cgi alias env
-```
-
-该操作将会启用 `mod_cgi`, `mod_alias` 和 `mod_env` 等Apache模块, 这些模块都是使该功能正常工作所必须的.    
-
-你还需要将 `/srv/git` 的Unix用户组设置为 `www-data`,这样 Web 服务器才能读写该仓库, 因为运行CGI脚本的Apache实例默认会以该用户的权限运行：     
-
-```console
-$ chgrp -R www-data /srv/git
-```
-
-接下来我们要向Apache配置文件添加一些内容,来让 `git-http-backend` 作为Web服务器对 `/git` 路径请求的处理器.     
-
-```console
-SetEnv GIT_PROJECT_ROOT /srv/git
-SetEnv GIT_HTTP_EXPORT_ALL
-ScriptAlias /git/ /usr/lib/git-core/git-http-backend/
-```
-
-如果留空 `GIT_HTTP_EXPORT_ALL` 这个环境变量,Git将只对无授权客户端提供带 `git-daemon-export-ok` 文件的版本库,就像Git守护进程一样.     
-
-最后,如果想让 Apache 允许 `git-http-backend` 请求并实现写入操作的授权验证,使用如下授权屏蔽配置即可：    
-
-```console
-<Files "git-http-backend">
-    AuthType Basic
-    AuthName "Git Access"
-    AuthUserFile /srv/git/.htpasswd
-    Require expr !(%{QUERY_STRING} -strmatch '*service=git-receive-pack*' || %{REQUEST_URI} =~ m#/git-receive-pack$#)
-    Require valid-user
-</Files>
-```
-
-这需要你创建一个包含所有合法用户密码的 `.htpasswd` 文件. 以下是一个添加 “schacon” 用户到此文件的例子：   
-
-```console
-$ htpasswd -c /srv/git/.htpasswd schacon
-```
-
-你可以通过许多方式添加Apache授权用户,选择使用其中一种方式即可. 以上仅仅只是我们可以找到的最简单的一个例子. 如果愿意的话,你也可以通过SSL运行它,以保证所有数据是在加密状态下进行传输的.   
-
->Apache的主要原理是使用一个Git附带的,名为 `git-http-backend` 的CGI.它被引用来处理协商通过HTTP发送和接收的数据. 它本身并不包含任何授权功能,但是授权功能可以在Web服务器层引用它时被轻松实现. 你可以在任何所有可以处理CGI的Web服务器上办到这点,所以随便挑一个你最熟悉的 Web 服务器试手吧.    
-
-### GitWeb
-
-如果你对项目有读写权限或只读权限,你可能需要建立起一个基于网页的简易查看器. Git提供了一个叫做GitWeb的CGI脚本来做这项工作.     
-
-如果你想要查看GitWeb如何展示你的项目,并且在服务器上安装了轻量级Web服务器比如 `lighttpd` 或 `webrick` ,Git提供了一个命令来让你启动一个临时的服务器. 在Linux系统的电脑上,`lighttpd` 通常已经安装了,所以你只需要在项目目录里执行 `git instaweb` 命令即可. 如果你使用Mac系统,Mac OS X Leopard系统已经预安装了Ruby,所以 `webrick` 或许是你最好的选择. 如果不想使用lighttpd启动 `instaweb` 命令,你需要在执行时加入 `--httpd` 参数.    
-
-这个命令启动了一个监听1234端口的HTTP服务器,并且自动打开了浏览器. 这对你来说十分方便. 当你已经完成了工作并想关闭这个服务器,你可以执行同一个命令,并加上 `--stop` 选项.     
-
-如果你现在想为你的团队或你托管的开源项目持续的运行这个页面,你需要通过普通的Web服务器来设置CGI脚本. 一些Linux发行版的软件库有 `gitweb` 包,可以通过 `apt` 或 `dnf` 来安装,你可以先试试. 接下来我们来快速的了解一下如何手动安装GitWeb.      
-
-首先,你需要获得Git的源代码,它包含了GitWeb,并可以生成自定义的CGI脚本   
-```console
-$ git clone git://git.kernel.org/pub/scm/git/git.git
-$ cd git/
-$ make GITWEB_PROJECTROOT="/srv/git" prefix=/usr gitweb
-    SUBDIR gitweb
-    SUBDIR ../
-make[2]: `GIT-VERSION-FILE' is up to date.
-    GEN gitweb.cgi
-    GEN static/gitweb.js
-$ sudo cp -Rf gitweb /var/www/
-```
-
->需要注意的是,你需要在命令中指定 `GITWEB_PROJECTROOT` 变量来让程序知道你的 Git 版本库的位置.   
-
-现在,你需要在 Apache 中使用这个CGI脚本,你需要为此添加一个虚拟主机：
-
-```console
-<VirtualHost *:80>
-    ServerName gitserver
-    DocumentRoot /var/www/gitweb
-    <Directory /var/www/gitweb>
-        Options +ExecCGI +FollowSymLinks +SymLinksIfOwnerMatch
-        AllowOverride All
-        order allow,deny
-        Allow from all
-        AddHandler cgi-script cgi
-        DirectoryIndex gitweb.cgi
-    </Directory>
-</VirtualHost>
-```
-
-### GitLab
-
-GitLab是一个数据库支持的 web 应用,所以相比于其他 git 服务器,它的安装过程涉及到更多的东西. 幸运的是,这个过程有非常详细的文档说明和支持.   
-
-**下载**：    
-- 下载虚拟机镜像
-- [bitnami获取一键安装包](https://bitnami.com/stack/gitlab) 同时调整配置使之符合你特定的环境.Bitnami的一个优点在于它的登录界面(通过alt+->键),会告诉你安装好的GitLab的IP地址以及默认的用户名和密码
-
-无论如何,跟着[GitLab社区版的readme](https://gitlab.com/gitlab-org/gitlab-ce/tree/master)文件一步步来,在这里你将会在主菜单中找到安装GitLab的帮助,一个可以在Digital Ocean上运行的虚拟机,以及RPM和DEB包（都是测试版）. 这里还有 “非官方” 的引导让GitLab运行在非标准的操作系统和数据库上,一个全手动的安装脚本,以及许多其他的话题.     
-
-**管理**：    
-GitLab 的管理界面是通过网络进入的. 将你的浏览器转到已经安装 GitLab 的 主机名或 IP 地址,然后以管理员身份登录即可. 默认的用户名是 `admin@local.host`,默认的密码是 `5iveL!fe`（你会得到类似 请登录后尽快更换密码 的提示）. 登录后,点击主栏上方靠右位置的 “Admin area” 图标进行管理.     
-
+ 
 ## 分布式Git 
 
 ### 工作流程    
@@ -942,29 +733,17 @@ Git 允许多个远程仓库存在,使得这样一种工作流成为可能：每
 
 在我们开始查看特定的用例前,这里有一个关于提交信息的快速说明. 有一个好的创建提交的准则并且坚持使用会让与 Git 工作和与其他人协作更容易. Git 项目提供了一个文档,其中列举了关于创建提交到提交补丁的若干好的提示——可以在 Git 源代码中的`Documentation/SubmittingPatches` 文件中阅读它.     
 
-首先,你的提交不应该包含任何空白错误. Git 提供了一个简单的方式来检查这点——在提交前,运行 `git diff --check`,它将会找到可能的空白错误并将它们为你列出来.     
+**首先,你的提交不应该包含任何空白错误**. Git 提供了一个简单的方式来检查这点——在提交前,运行 `git diff --check`,它将会找到可能的空白错误并将它们为你列出来.     
 
-接下来,尝试让每一个提交成为一个逻辑上的独立变更集.如果可以,尝试让改动可以理解——不要在整个周末编码解决五个问题,然后在周一时将它们提交为一个巨大的提交.   
+**接下来,尝试让每一个提交成为一个逻辑上的独立变更集**.如果可以,尝试让改动可以理解——不要在整个周末编码解决五个问题,然后在周一时将它们提交为一个巨大的提交.   
 
-最后一件要牢记的事是提交信息. 有一个创建优质提交信息的习惯会使 Git 的使用与协作容易的多. 一般情况下,信息应当以少于 50 个字符（25个汉字）的单行开始且简要地描述变更,接着是一个空白行,再接着是一个更详细的解释.Git 项目要求一个更详细的解释,包括做改动的动机和它的实现与之前行为的对比——这是一个值得遵循的好规则. 使用指令式的语气来编写提交信息,比如使用“Fix bug”而非“Fixed bug”或“Fixes bug”.  这里是一份[最初由 Tim Pope 写的模板](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)：   
+**最后一件要牢记的事是提交信息**. 有一个创建优质提交信息的习惯会使 Git 的使用与协作容易的多. 一般情况下,**信息应当以少于 50 个字符（25个汉字）的单行开始且简要地描述变更,接着是一个空白行,再接着是一个更详细的解释**.Git 项目要求一个更详细的解释,包括做改动的动机和它的实现与之前行为的对比——这是一个值得遵循的好规则. 使用指令式的语气来编写提交信息,比如使用“Fix bug”而非“Fixed bug”或“Fixes bug”.  这里是一份[最初由 Tim Pope 写的模板](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)：   
 
 >Git 项目有一个良好格式化的提交信息——尝试在那儿运行 `git log --no-merges` 来看看漂亮的格式化的项目提交历史像什么样.  
 
-#### 私有小型团队   
-
-[集中式工作流](#集中式工作流)   
-
-#### 私有管理团队    
-
-[主管与副主管工作流](#主管与副主管工作流)  
-
-#### 派生的公开项目    
-
-[集成管理者工作流](#集成管理者工作流)    
-
 #### 通过邮件的公开项目  
 
-与上者相似,区别为生成每一个提交序列的电子邮件版本然后邮寄它们到开发者邮件列表,而不是派生项目然后推送到你自己的可写版本.  
+生成每一个提交序列的电子邮件版本然后邮寄它们到开发者邮件列表,而不是派生项目然后推送到你自己的可写版本.  
 可以用 `git format-patch` 命令来生成可以邮寄到列表的mbox格式文件——它将每一个提交转换为一封电子邮件,提交信息的第一行作为主题,剩余信息与提交引入的补丁作为正文.它有一个好处是使用 `format-patch` 生成的一封电子邮件应用的提交正确地保留了所有的提交信息.       
 
 ### 维护项目   
@@ -1182,6 +961,7 @@ Git 也可以暂存文件的特定部分.在和上一节一样的交互式提示
 可以通过原来 stash 命令的帮助提示中的命令将你刚刚贮藏的工作重新应用：`git stash apply`.如果想要应用其中一个更旧的贮藏,可以通过名字指定它,像这样：`git stash apply stash@{2}` .       
 
 并不是必须要有一个干净的工作目录,或者要应用到同一分支才能成功应用贮藏. 可以在一个分支上保存一个贮藏,切换到另一个分支,然后尝试重新应用这些修改. 当应用贮藏时工作目录中也可以有修改与未提交的文件——如果有任何东西不能干净地应用,Git 会产生合并冲突.    
+
 **清理**    
 
 对于工作目录中一些工作或文件,你想做的也许不是贮藏而是移除. `git clean` 命令就是用来干这个的.     
