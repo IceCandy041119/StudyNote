@@ -53,30 +53,18 @@
             "id": "5c16f6dad5dc98c0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
-                "page": 1,
-                "zoom": 1
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Digital-Design-and-Computer-Architecture-RISC-V-Edition"
-            }
-          },
-          {
-            "id": "8d4ed89a7db5a73e",
-            "type": "leaf",
-            "state": {
-              "type": "epub",
-              "state": {
-                "file": "Language/ComposingPrograms-JohnDeNero.epub"
-              },
-              "icon": "doc-epub",
-              "title": "ComposingPrograms-JohnDeNero"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -237,13 +225,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa78a1f9a5f4015b",
+  "active": "5c16f6dad5dc98c0",
   "lastOpenFiles": [
+    "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
+    "README.md",
+    "Language/ComposingPrograms-JohnDeNero.epub",
     "ComputerArchitecture/riscv-spec-20191213.pdf",
     "ComputerArchitecture/riscv-privileged-20211203.pdf",
-    "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
     "ComputerArchitecture/ComputerArchitecture'Notes.md",
-    "Language/ComposingPrograms-JohnDeNero.epub",
     "ComposingPrograms-JohnDeNero.epub",
     "Composing Programs - John DeNero.epub",
     "Language/C/C'Note.md",
@@ -252,7 +241,6 @@
     "ComputerNetworking/ComputerNetworking'Note.md",
     "English/README.md",
     "Language/PYTHON",
-    "README.md",
     "Language/C",
     "Language",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/第六章+数理统计的基本概念.pdf",
