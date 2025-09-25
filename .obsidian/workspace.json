@@ -8,63 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f84d6c5f47ed75dd",
+            "id": "8475b45977e08429",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "epub",
               "state": {
-                "file": "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
-                "page": 1,
-                "zoom": 1
+                "file": "Language/ComposingPrograms-JohnDeNero.epub"
               },
-              "icon": "lucide-file-text",
-              "title": "Digital-Design-and-Computer-Architecture-RISC-V-Edition"
+              "icon": "doc-epub",
+              "title": "ComposingPrograms-JohnDeNero"
             }
           },
           {
-            "id": "8bfec96e04fdfdc7",
+            "id": "5bbbe7b2ac4ff9ac",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "00f44ffa387a43f7",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "ComputerArchitecture/riscv-privileged-20211203.pdf",
-                "page": 1,
-                "zoom": 1
-              },
-              "icon": "lucide-file-text",
-              "title": "riscv-privileged-20211203"
-            }
-          },
-          {
-            "id": "5c16f6dad5dc98c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,6 +183,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -225,25 +196,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c16f6dad5dc98c0",
+  "active": "5bbbe7b2ac4ff9ac",
   "lastOpenFiles": [
-    "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
-    "README.md",
-    "Language/ComposingPrograms-JohnDeNero.epub",
     "ComputerArchitecture/riscv-spec-20191213.pdf",
     "ComputerArchitecture/riscv-privileged-20211203.pdf",
-    "ComputerArchitecture/ComputerArchitecture'Notes.md",
-    "ComposingPrograms-JohnDeNero.epub",
-    "Composing Programs - John DeNero.epub",
-    "Language/C/C'Note.md",
+    "Language/VERILOG/SystemVerilogStandarg1800-2017.pdf",
+    "Language/VERILOG/verilogStandarg1364-2005.pdf",
     "Language/PYTHON/PYTHON'NOTE.md",
+    "Language/ComposingPrograms-JohnDeNero.epub",
+    "Language/general.md",
+    "Language/VERILOG/1800-2017.pdf",
+    "ysyx/ysyx.md",
+    "ysyx",
+    "BNF.md",
+    "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
+    "README.md",
+    "Language/C/C'Note.md",
+    "Language/VERILOG",
+    "Language/verilogManual.pdf",
+    "ComputerArchitecture/ComputerArchitecture'Notes.md",
     "ComputerNetworking/README.md",
     "ComputerNetworking/ComputerNetworking'Note.md",
     "English/README.md",
-    "Language/PYTHON",
-    "Language/C",
-    "Language",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/第六章+数理统计的基本概念.pdf",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
     "English/语法笔记合集/README.md",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/README.md",
