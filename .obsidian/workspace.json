@@ -198,6 +198,7 @@
   },
   "active": "5bbbe7b2ac4ff9ac",
   "lastOpenFiles": [
+    "ysyx/ysyx.md",
     "ComputerArchitecture/riscv-spec-20191213.pdf",
     "ComputerArchitecture/riscv-privileged-20211203.pdf",
     "Language/VERILOG/SystemVerilogStandarg1800-2017.pdf",
@@ -206,7 +207,6 @@
     "Language/ComposingPrograms-JohnDeNero.epub",
     "Language/general.md",
     "Language/VERILOG/1800-2017.pdf",
-    "ysyx/ysyx.md",
     "ysyx",
     "BNF.md",
     "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
