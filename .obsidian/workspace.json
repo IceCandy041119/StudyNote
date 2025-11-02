@@ -6,26 +6,47 @@
       {
         "id": "544a794467a09e13",
         "type": "tabs",
+        "dimension": 58.13464235624124,
         "children": [
           {
             "id": "10c1421e209f234f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Language/PYTHON/PYTHON'NOTE.md",
-                "mode": "source",
-                "source": false
+                "file": "ComputerArchitecture/riscv-privileged-20211203.pdf",
+                "page": 57,
+                "left": -13,
+                "top": 657,
+                "zoom": 1.224264705882353
               },
-              "icon": "lucide-file",
-              "title": "PYTHON'NOTE"
+              "icon": "lucide-file-text",
+              "title": "riscv-privileged-20211203"
+            }
+          },
+          {
+            "id": "144ddbf17d574832",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "ComputerArchitecture/riscv-spec-20191213.pdf",
+                "page": 73,
+                "left": -26,
+                "top": 122,
+                "zoom": 0.5821078431372549
+              },
+              "icon": "lucide-file-text",
+              "title": "riscv-spec-20191213"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "9ea9ef63f61ef475",
         "type": "tabs",
+        "dimension": 41.86535764375876,
         "children": [
           {
             "id": "6c1aa4bb3d19b368",
@@ -96,7 +117,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7e82b33e80e66247",
@@ -201,8 +223,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10c1421e209f234f",
+  "active": "144ddbf17d574832",
   "lastOpenFiles": [
+    "ComputerArchitecture/riscv-privileged-20211203.pdf",
+    "ComputerArchitecture/riscv-spec-20191213.pdf",
+    "Language/VERILOG/verilogStandarg1364-2005.pdf",
     "Language/ComposingPrograms-JohnDeNero.epub",
     "Language/PYTHON/PYTHON'NOTE.md",
     "Language/general.md",
@@ -226,9 +251,7 @@
     "DataBase/DataBasePicture/Pasted image 20251029111914.png",
     "DataBase/DataBaseHomeWork/Unconfirmed 63760.crdownload",
     "DataBase/DataBaseHomeWork",
-    "DataBase/DataBasePicture",
     "Language/C/C'Note.md",
-    "DataBase",
     "README.md",
     "ComputerArchitecture/ComputerArchitecture'Notes.md",
     "ComputerNetworking/README.md",
