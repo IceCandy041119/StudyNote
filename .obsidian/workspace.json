@@ -1,38 +1,24 @@
 {
   "main": {
-    "id": "f2e285580f667d06",
+    "id": "c4730e765765eb57",
     "type": "split",
     "children": [
       {
-        "id": "66ee992a8731c9ab",
+        "id": "635668c0d76457ed",
         "type": "tabs",
         "children": [
           {
-            "id": "9eb1ec9e740918c8",
+            "id": "b70702200d1692ba",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "11408/408.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "408"
-            }
-          },
-          {
-            "id": "25a3ad14241114d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11408/408.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "408"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ]
@@ -41,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b6e4d363ba21c029",
+    "id": "0f4cccea0a529875",
     "type": "split",
     "children": [
       {
-        "id": "20762be338346cce",
+        "id": "c7917f86a4f7c89e",
         "type": "tabs",
         "children": [
           {
-            "id": "20297eced408a37c",
+            "id": "76db8e3af01d0adf",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,11 +44,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
-            "id": "d3e0e592c9b38a3f",
+            "id": "1d6571dffad27ae7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -79,7 +65,7 @@
             }
           },
           {
-            "id": "9dc56b09c78d7b7a",
+            "id": "d80ea8e391531c59",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -95,21 +81,21 @@
     "width": 300
   },
   "right": {
-    "id": "7e82b33e80e66247",
+    "id": "5104e536c7562f99",
     "type": "split",
     "children": [
       {
-        "id": "0c49e19928c2ee87",
+        "id": "17ec9ff14ee909b4",
         "type": "tabs",
         "children": [
           {
-            "id": "ff66e5dc9e0d3bcf",
+            "id": "5ee7900af375057a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/ComposingPrograms-JohnDeNero.epub",
-                "collapseAll": false,
+                "file": "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -118,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ComposingPrograms-JohnDeNero"
+              "title": "Additional 的反向链接列表"
             }
           },
           {
-            "id": "2420ee0affcaadbe",
+            "id": "6dfeb6f527ed9fac",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Language/ComposingPrograms-JohnDeNero.epub",
+                "file": "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ComposingPrograms-JohnDeNero"
+              "title": "Additional 的出链列表"
             }
           },
           {
-            "id": "812ec14fcd5433e6",
+            "id": "c9e097c6ec2a9a1b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,26 +133,25 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
-            "id": "14e5c73e721a56d6",
+            "id": "cfec4adec5cd7c73",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/ComposingPrograms-JohnDeNero.epub",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ComposingPrograms-JohnDeNero"
+              "title": "大纲"
             }
           },
           {
-            "id": "fa78a1f9a5f4015b",
+            "id": "fc5bce63befcb6ca",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -184,60 +169,61 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9eb1ec9e740918c8",
+  "active": "b70702200d1692ba",
   "lastOpenFiles": [
-    "11408/数一.md",
     "11408/408.md",
-    "English/README.md",
-    "11408",
-    "Language/VERILOG/verilogStandarg1364-2005.pdf",
-    "Language/VERILOG/SystemVerilogStandarg1800-2017.pdf",
-    "ComputerNetworking/ComputerNetworking'Note.md",
-    "DataBase/DataBaseHomeWork/test1(1).png",
+    "11408/数一.md",
+    "Language/general.md",
+    "Language/ComposingPrograms-JohnDeNero.epub",
     "DataBase/Book/数据库系统概论 第5版_完整版 PDF电子书.pdf",
+    "11408",
+    "DataBase/DataBaseHomeWork/test1(1).png",
+    "ArtificalIntelligence/动手学深度学习.pdf",
+    "ArtificalIntelligence/人工智能：一种现代的方法（第3版）[中文译本].pdf",
+    "ArtificalIntelligence/Artificial Intelligence A Modern Approach Global Edition by Stuart J. Russell Peter Norvig (z-lib..pdf",
+    "ysyx/ysyx.md",
+    "ArtificalIntelligence",
+    "新建文件夹",
     "ComputerArchitecture/riscv-unprivileged.pdf",
     "ComputerArchitecture/riscv-privileged.pdf",
-    "ComputerArchitecture/Digital-Design-and-Computer-Architecture-RISC-V-Edition.pdf",
-    "ysyx/ysyx.md",
-    "DataBase/DataBase'sNote.md",
-    "Pasted image 20251103225905.png",
-    "Pasted image 20251103230124.png",
-    "Pasted image 20251103230043.png",
-    "Pasted image 20251103230029.png",
-    "Pasted image 20251103230009.png",
-    "Pasted image 20251103225942.png",
-    "ComputerArchitecture/riscv-spec-20191213.pdf",
-    "ComputerArchitecture/riscv-privileged-20211203.pdf",
-    "Language/ComposingPrograms-JohnDeNero.epub",
-    "Language/PYTHON/PYTHON'NOTE.md",
-    "Language/general.md",
+    "DataBase/DataBaseHomeWork/test1(2).png",
+    "DataBase/DataBaseHomeWork/test1(4).png",
+    "DataBase/DataBaseHomeWork/test1(3).png",
     "ysyx/SDB设计.md",
-    "DataBase/DataBasePicture/Pasted image 20251029095446.png",
     "DataBase/DataBasePicture/Screenshot 2025-10-29 at 11.27.56.png",
     "DataBase/DataBasePicture/Pasted image 20251029115205.png",
-    "Language/C/C'Note.md",
-    "README.md",
-    "ComputerArchitecture/ComputerArchitecture'Notes.md",
+    "DataBase/DataBasePicture/Pasted image 20251029113603.png",
+    "DataBase/DataBasePicture/Pasted image 20251029113505.png",
+    "DataBase/DataBasePicture/Pasted image 20251029113356.png",
+    "DataBase/DataBasePicture/Pasted image 20251029112804.png",
+    "DataBase/DataBase'sNote.md",
     "ComputerNetworking/README.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
+    "ComputerNetworking/ComputerNetworking'Note.md",
+    "Language/PYTHON/PYTHON'NOTE.md",
+    "Language/C/C'Note.md",
+    "ComputerArchitecture/ComputerArchitecture'Notes.md",
     "English/语法笔记合集/README.md",
+    "English/README.md",
+    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/README.md",
     "Math/ProbabilityTheoryAndMathematicalStatistics/README.md",
-    "Tools/English/Grammar.md",
-    "Tools/Git/Git.md",
-    "Tools/Git/README.md"
+    "README.md",
+    "ComputerNetworking/ComputerNetworking.md",
+    "Math/ProbabilityTheoryAndMathematicalStatistics.md",
+    "样本点[[样本点.md",
+    "样本点.md"
   ]
 }
