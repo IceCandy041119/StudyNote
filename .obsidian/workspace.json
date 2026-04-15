@@ -4,21 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "635668c0d76457ed",
+        "id": "465c7e673a1967e4",
         "type": "tabs",
         "children": [
           {
-            "id": "b70702200d1692ba",
+            "id": "273e09ead0a585b7",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "11408/英语/英语笔记.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "icon": "lucide-file",
+              "title": "英语笔记"
+            }
+          },
+          {
+            "id": "a62b468c1e2b6cbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11408/英语/词组.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "词组"
+            }
+          },
+          {
+            "id": "583afabb4c2a3faf",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "English/语法笔记合集/非谓语 & 虚拟语气.pdf",
+                "page": 6,
+                "left": -38,
+                "top": 1396,
+                "zoom": 0.3975000000000001
+              },
+              "icon": "lucide-file-text",
+              "title": "非谓语 & 虚拟语气"
             }
           }
         ]
@@ -78,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5104e536c7562f99",
@@ -113,12 +144,37 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
+                "file": "11408/408.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Additional 的出链列表"
+              "title": "408 的出链列表"
+            }
+          },
+          {
+            "id": "cfec4adec5cd7c73",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "11408/408.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "408 的大纲"
+            }
+          },
+          {
+            "id": "fc5bce63befcb6ca",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -135,33 +191,9 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "cfec4adec5cd7c73",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": true,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "大纲"
-            }
-          },
-          {
-            "id": "fc5bce63befcb6ca",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -182,23 +214,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b70702200d1692ba",
+  "active": "fc5bce63befcb6ca",
   "lastOpenFiles": [
+    "11408/英语/词组.md",
+    "11408/英语/英语笔记.md",
+    "English/语法笔记合集/非谓语 & 虚拟语气.pdf",
+    "English/语法笔记合集/连词.pdf",
+    "English/语法笔记合集/时态.pdf",
+    "English/语法笔记合集/语法综述.pdf",
+    "English/语法笔记合集/数词.pdf",
+    "English/语法笔记合集/动词笔记.pdf",
+    "English/语法笔记合集/代词.pdf",
+    "English/语法笔记合集/从句.pdf",
+    "English/语法笔记合集/README.md",
+    "English/语法笔记合集/主谓一致.pdf",
+    "English/语法笔记合集/形容词.pdf",
     "11408/408.md",
     "11408/数一.md",
     "Language/general.md",
-    "Language/ComposingPrograms-JohnDeNero.epub",
-    "DataBase/Book/数据库系统概论 第5版_完整版 PDF电子书.pdf",
-    "11408",
     "DataBase/DataBaseHomeWork/test1(1).png",
-    "ArtificalIntelligence/动手学深度学习.pdf",
-    "ArtificalIntelligence/人工智能：一种现代的方法（第3版）[中文译本].pdf",
-    "ArtificalIntelligence/Artificial Intelligence A Modern Approach Global Edition by Stuart J. Russell Peter Norvig (z-lib..pdf",
     "ysyx/ysyx.md",
-    "ArtificalIntelligence",
-    "新建文件夹",
-    "ComputerArchitecture/riscv-unprivileged.pdf",
-    "ComputerArchitecture/riscv-privileged.pdf",
     "DataBase/DataBaseHomeWork/test1(2).png",
     "DataBase/DataBaseHomeWork/test1(4).png",
     "DataBase/DataBaseHomeWork/test1(3).png",
@@ -215,7 +250,6 @@
     "Language/PYTHON/PYTHON'NOTE.md",
     "Language/C/C'Note.md",
     "ComputerArchitecture/ComputerArchitecture'Notes.md",
-    "English/语法笔记合集/README.md",
     "English/README.md",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
     "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/README.md",
