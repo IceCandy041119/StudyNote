@@ -1,54 +1,52 @@
 {
   "main": {
-    "id": "c4730e765765eb57",
+    "id": "f2e285580f667d06",
     "type": "split",
     "children": [
       {
-        "id": "465c7e673a1967e4",
+        "id": "09d0096ff6a3a36d",
         "type": "tabs",
         "children": [
           {
-            "id": "273e09ead0a585b7",
+            "id": "87cd3c8a39ac866c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11408/英语/英语笔记.md",
-                "mode": "source",
+                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "英语笔记"
+              "title": "2004英语一Text4精读笔记"
             }
           },
           {
-            "id": "a62b468c1e2b6cbd",
+            "id": "eab08e293171da24",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11408/英语/词组.md",
-                "mode": "source",
+                "file": "11408/english/ReadPart/2004英语一Text4原题.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "词组"
+              "title": "2004英语一Text4原题"
             }
           },
           {
-            "id": "583afabb4c2a3faf",
+            "id": "e79f909903eefcea",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "English/语法笔记合集/非谓语 & 虚拟语气.pdf",
-                "page": 6,
-                "left": -38,
-                "top": 1396,
-                "zoom": 0.3975000000000001
+                "file": "11408/english/语法知识.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "非谓语 & 虚拟语气"
+              "icon": "lucide-file",
+              "title": "语法知识"
             }
           }
         ]
@@ -57,28 +55,30 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "0f4cccea0a529875",
+    "id": "b6e4d363ba21c029",
     "type": "split",
     "children": [
       {
-        "id": "c7917f86a4f7c89e",
+        "id": "20762be338346cce",
         "type": "tabs",
         "children": [
           {
-            "id": "76db8e3af01d0adf",
+            "id": "20297eced408a37c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
-            "id": "1d6571dffad27ae7",
+            "id": "d3e0e592c9b38a3f",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -95,7 +95,7 @@
             }
           },
           {
-            "id": "d80ea8e391531c59",
+            "id": "9dc56b09c78d7b7a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -112,21 +112,21 @@
     "collapsed": true
   },
   "right": {
-    "id": "5104e536c7562f99",
+    "id": "7e82b33e80e66247",
     "type": "split",
     "children": [
       {
-        "id": "17ec9ff14ee909b4",
+        "id": "0c49e19928c2ee87",
         "type": "tabs",
         "children": [
           {
-            "id": "5ee7900af375057a",
+            "id": "ff66e5dc9e0d3bcf",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
-                "collapseAll": true,
+                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -135,50 +135,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Additional 的反向链接列表"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "6dfeb6f527ed9fac",
+            "id": "2420ee0affcaadbe",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11408/408.md",
+                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "408 的出链列表"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "cfec4adec5cd7c73",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "11408/408.md",
-                "followCursor": false,
-                "showSearch": true,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "408 的大纲"
-            }
-          },
-          {
-            "id": "fc5bce63befcb6ca",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "c9e097c6ec2a9a1b",
+            "id": "812ec14fcd5433e6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -189,11 +164,36 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "标签"
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "14e5c73e721a56d6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "11408/english/ReadPart/2004英语一Text2精读笔记.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "fa78a1f9a5f4015b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -201,63 +201,65 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:新建数据库": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc5bce63befcb6ca",
+  "active": "fa78a1f9a5f4015b",
   "lastOpenFiles": [
-    "11408/英语/词组.md",
-    "11408/英语/英语笔记.md",
-    "English/语法笔记合集/非谓语 & 虚拟语气.pdf",
-    "English/语法笔记合集/连词.pdf",
-    "English/语法笔记合集/时态.pdf",
-    "English/语法笔记合集/语法综述.pdf",
-    "English/语法笔记合集/数词.pdf",
-    "English/语法笔记合集/动词笔记.pdf",
-    "English/语法笔记合集/代词.pdf",
-    "English/语法笔记合集/从句.pdf",
-    "English/语法笔记合集/README.md",
-    "English/语法笔记合集/主谓一致.pdf",
-    "English/语法笔记合集/形容词.pdf",
+    "11408/english/语法知识.md",
+    "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+    "11408/english/ReadPart/2004英语一Text4原题.md",
+    "11408/高等数学.md",
+    "11408/pdf/2027数据结构_高清带书签版.pdf",
+    "11408/数据结构/第1章绪论原文.md",
+    "11408/数据结构/第1章绪论拓展.md",
+    "11408/english/ReadPart/2004英语一Text3精读笔记.md",
+    "11408/概率论与数理统计.md",
+    "11408/线性代数.md",
+    "11408/数据结构.md",
+    "11408/计算机网络.md",
+    "11408/操作系统.md",
+    "11408/计算机组成原理.md",
+    "11408/数据结构/第5章树与二叉树拓展.md",
+    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/第四章+数字特征.pdf",
+    "11408/pdf/第四章+数字特征.pdf",
+    "11408/pdf/第六章+数理统计的基本概念.pdf",
+    "11408/pdf/第八章+区间估计.pdf",
+    "11408/pdf/第五章+大数定律和中心极限定理.pdf",
+    "11408/pdf/第二章+随机变量及其分布.pdf",
+    "11408/pdf/第九章+假设检验.pdf",
+    "11408/pdf/第三章+多维随机变量及其分布.pdf",
+    "11408/pdf/第七章+点估计与估计量的评价.pdf",
+    "11408/题库/数学/对题/高等数学辅导讲义-P64-例3-2026-08-26.md",
     "11408/408.md",
     "11408/数一.md",
-    "Language/general.md",
-    "DataBase/DataBaseHomeWork/test1(1).png",
-    "ysyx/ysyx.md",
-    "DataBase/DataBaseHomeWork/test1(2).png",
-    "DataBase/DataBaseHomeWork/test1(4).png",
-    "DataBase/DataBaseHomeWork/test1(3).png",
-    "ysyx/SDB设计.md",
-    "DataBase/DataBasePicture/Screenshot 2025-10-29 at 11.27.56.png",
-    "DataBase/DataBasePicture/Pasted image 20251029115205.png",
-    "DataBase/DataBasePicture/Pasted image 20251029113603.png",
-    "DataBase/DataBasePicture/Pasted image 20251029113505.png",
-    "DataBase/DataBasePicture/Pasted image 20251029113356.png",
-    "DataBase/DataBasePicture/Pasted image 20251029112804.png",
-    "DataBase/DataBase'sNote.md",
-    "ComputerNetworking/README.md",
-    "ComputerNetworking/ComputerNetworking'Note.md",
-    "Language/PYTHON/PYTHON'NOTE.md",
-    "Language/C/C'Note.md",
-    "ComputerArchitecture/ComputerArchitecture'Notes.md",
-    "English/README.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/Additional.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/README.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/README.md",
-    "README.md",
-    "ComputerNetworking/ComputerNetworking.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics.md",
-    "样本点[[样本点.md",
-    "样本点.md"
+    "11408/数据结构/第1章绪论笔记.md",
+    "11408/操作系统/第1章计算机系统概述拓展.md",
+    "11408/操作系统/第1章计算机系统概述原文.md",
+    "11408/操作系统/第1章计算机系统概述笔记.md",
+    "11408/数据结构/_片段_归纳.md",
+    "11408/数据结构/_片段_1.2.md",
+    "11408/数据结构/_片段_1.1.md",
+    "11408/数据结构/_节_归纳.md",
+    "11408/os/01第一章/frames/P11/P11-011.jpg",
+    "11408/数学严选题/01第一章/frames/P48/P48-002.jpg",
+    "11408/数学严选题/01第一章/frames/P48/P48-001.jpg",
+    "11408/数学严选题/01第一章/frames/P48/P48-000.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-008.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-007.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-006.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-005.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-004.jpg",
+    "11408/数学严选题/01第一章/frames/P49/P49-003.jpg"
   ]
 }
