@@ -8,48 +8,79 @@
         "type": "tabs",
         "children": [
           {
-            "id": "87cd3c8a39ac866c",
+            "id": "fe4d11baf9db2552",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+                "file": "11408/english/ReadPart/2005英语一Text4原题.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2004英语一Text4精读笔记"
+              "title": "2005英语一Text4原题"
             }
           },
           {
-            "id": "eab08e293171da24",
+            "id": "7bfc17506af51890",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11408/english/ReadPart/2004英语一Text4原题.md",
+                "file": "11408/english/ReadPart/2005英语一Text4精读笔记.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2004英语一Text4原题"
+              "title": "2005英语一Text4精读笔记"
             }
           },
           {
-            "id": "e79f909903eefcea",
+            "id": "ea51b340e8dc5ddb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11408/english/语法知识.md",
+                "file": "11408/english/ReadPart/2006英语一Text1精读笔记.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "语法知识"
+              "title": "2006英语一Text1精读笔记"
+            }
+          },
+          {
+            "id": "8f519f30951dbacf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11408/数学/线性代数.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "线性代数"
+            }
+          },
+          {
+            "id": "a2b28b72603f1902",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "11408/pdf/强化严选.pdf",
+                "page": 64,
+                "left": -11,
+                "top": 273,
+                "zoom": 1.4166666666666667
+              },
+              "icon": "lucide-file-text",
+              "title": "强化严选"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -108,8 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7e82b33e80e66247",
@@ -125,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+                "file": "11408/english/语法知识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +174,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11408/english/ReadPart/2004英语一Text4精读笔记.md",
+                "file": "11408/english/语法知识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -214,52 +244,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fa78a1f9a5f4015b",
+  "active": "20297eced408a37c",
   "lastOpenFiles": [
-    "11408/english/语法知识.md",
-    "11408/english/ReadPart/2004英语一Text4精读笔记.md",
-    "11408/english/ReadPart/2004英语一Text4原题.md",
-    "11408/高等数学.md",
-    "11408/pdf/2027数据结构_高清带书签版.pdf",
-    "11408/数据结构/第1章绪论原文.md",
-    "11408/数据结构/第1章绪论拓展.md",
-    "11408/english/ReadPart/2004英语一Text3精读笔记.md",
-    "11408/概率论与数理统计.md",
-    "11408/线性代数.md",
-    "11408/数据结构.md",
-    "11408/计算机网络.md",
-    "11408/操作系统.md",
-    "11408/计算机组成原理.md",
-    "11408/数据结构/第5章树与二叉树拓展.md",
-    "Math/ProbabilityTheoryAndMathematicalStatistics/Basic/Kira/第四章+数字特征.pdf",
-    "11408/pdf/第四章+数字特征.pdf",
-    "11408/pdf/第六章+数理统计的基本概念.pdf",
-    "11408/pdf/第八章+区间估计.pdf",
-    "11408/pdf/第五章+大数定律和中心极限定理.pdf",
-    "11408/pdf/第二章+随机变量及其分布.pdf",
-    "11408/pdf/第九章+假设检验.pdf",
-    "11408/pdf/第三章+多维随机变量及其分布.pdf",
-    "11408/pdf/第七章+点估计与估计量的评价.pdf",
-    "11408/题库/数学/对题/高等数学辅导讲义-P64-例3-2026-08-26.md",
-    "11408/408.md",
-    "11408/数一.md",
-    "11408/数据结构/第1章绪论笔记.md",
-    "11408/操作系统/第1章计算机系统概述拓展.md",
-    "11408/操作系统/第1章计算机系统概述原文.md",
-    "11408/操作系统/第1章计算机系统概述笔记.md",
-    "11408/数据结构/_片段_归纳.md",
-    "11408/数据结构/_片段_1.2.md",
-    "11408/数据结构/_片段_1.1.md",
-    "11408/数据结构/_节_归纳.md",
-    "11408/os/01第一章/frames/P11/P11-011.jpg",
-    "11408/数学严选题/01第一章/frames/P48/P48-002.jpg",
-    "11408/数学严选题/01第一章/frames/P48/P48-001.jpg",
-    "11408/数学严选题/01第一章/frames/P48/P48-000.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-008.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-007.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-006.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-005.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-004.jpg",
-    "11408/数学严选题/01第一章/frames/P49/P49-003.jpg"
+    "11408/数学/笔记工作流.md",
+    "11408/数学/高等数学.md",
+    "11408/数学/线性代数.md",
+    "11408/数学/高数辅导讲义/第一章 函数 极限 连续.md",
+    "11408/数学/高数辅导讲义/第三章 一元函数积分学.md",
+    "11408/数学/高数辅导讲义/第二章 一元函数微分学.md",
+    "11408/数学/概率论与数理统计.md",
+    "11408/数学/方法类总结.md",
+    "11408/数学/线代辅导讲义/第二章 矩阵.md",
+    "11408/数学/线代辅导讲义/第一章 行列式.md",
+    "11408/数学/线代辅导讲义",
+    "11408/数学/高数辅导讲义",
+    "11408/pdf/27武忠祥高数辅导讲义-强化.pdf",
+    "11408/pdf/27李永乐线代辅导讲义.pdf",
+    "11408/27武忠祥高数辅导讲义-强化.pdf",
+    "11408/27李永乐线代辅导讲义.pdf",
+    "27李永乐线代辅导讲义.pdf",
+    "27武忠祥高数辅导讲义-强化.pdf",
+    "11408/pdf/强化严选.pdf",
+    "11408/pdf/第一章+随机事件和概率.pdf",
+    "11408/题库/数学/错题/高数辅导讲义注-P55-第135页下注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P55-第135页上注-2026-09-08.md",
+    "11408/计算机网络/第2章物理层笔记.md",
+    "Tools/Pi/README.md",
+    "Tools/Pi/Pi.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P53-第129页上注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P57-第138页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P49-第123页下注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P49-第124页注1-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P50-第124页注2-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P47-第120页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P60-第147页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P59-第146页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P59-第144页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P58-第143页注-2026-09-08.md",
+    "11408/题库/数学/错题/高数辅导讲义注-P57-第139页注-2026-09-08.md",
+    "11408/tmp_q2_crop2.jpg",
+    "11408/tmp_q2_crop.jpg",
+    "11408/tmp_wx_q2_0.jpg",
+    "11408/tmp_wx_img_1.jpg",
+    "11408/tmp_wx_img_0.jpg",
+    "ysyx/Screenshot 2026-02-05 at 19.56.16.png",
+    "11408/408/2026年408统考卷/图表/2026年408统考卷-第47题图.png",
+    "11408/408/2026年408统考卷/图表/2026年408统考卷-第46题图.png",
+    "11408/408/2026年408统考卷/图表/2026年408统考卷-第44题图.png",
+    "11408/408/2026年408统考卷/图表/2026年408统考卷-第43题图.png"
   ]
 }

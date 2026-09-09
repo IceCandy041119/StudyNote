@@ -1,0 +1,970 @@
+===== 文件: 27武忠祥高数辅导讲义-强化.pdf =====
+【第 104 页 / 共 315 页】
+高等数学 辅导讲义
+
+**考试大纲内容与要求数学一、二、三对比表**
+
+| 考试大纲内容 | 考试大纲要求 | | |
+| --- | --- | --- | --- |
+| | 数一 | 数二 | 数三 |
+| 原函数与不定积分的概念 积分上限的函数 | 理解 | 理解 | 理解 |
+| 牛顿—莱布尼茨公式以及定积分的换元积分法和分部积分法 | 掌握 | 掌握 | 掌握 |
+| 不定积分的基本性质和基本积分公式 不定积分的换元积分法与分部积分法 | 掌握 | 掌握 | 掌握 |
+| 利用定积分计算平面图形的面积、旋转体的体积和函数的平均值 反常积分 | 会计算 | 会计算 | 会计算 |
+| 积分上限函数的导数 | 会求 | 会求 | 会求 |
+| 反常积分的概念 | 理解 | 理解 | 理解 |
+| 定积分的概念 | 理解 | 理解 | 了解 |
+| 定积分的性质及定积分中值定理 | 掌握 | 掌握 | 了解 |
+| 用定积分表达和计算一些几何量与物理量（平面曲线的弧长、旋转体的侧面积、平行截面面积为已知的立体体积、功、引力、压力、质心、形心等） | 掌握 | 掌握 | |
+| 利用定积分求解简单的经济应用问题 | | | 会解 |
+| 有理函数、三角函数有理式和简单无理函数的积分 | 会求 | 会求 | |
+| 反常积分敛散性的比较判别法 | 了解 | 了解 | 了解 |
+
+**第一节 不定积分**
+
+**一、考试内容要点精讲**
+
+**(一) 两个基本概念**
+
+**1. 原函数**
+
+如果在区间 $I$ 上 $F'(x) = f(x)$ 或 $dF(x) = f(x)dx$ 处处成立，则称 $F(x)$ 为 $f(x)$ 在区间 $I$ 上的原函数.
+
+注 如果 $F(x)$ 为 $f(x)$ 的一个原函数，那么 $F(x) + C$ 都是 $f(x)$ 的原函数，且是 $f(x)$
+
+· 104 ·
+
+【第 105 页 / 共 315 页】
+的所有原函数。
+
+2. 不定积分
+
+在区间 $I$ 上, 函数 $f(x)$ 带有任意常数的原函数称为 $f(x)$ 在区间 $I$ 上的不定积分, 记为 $\int f(x) \mathrm{d}x$.
+
+如果 $F(x)$ 是 $f(x)$ 在区间 $I$ 上的一个原函数, 那么 $F(x)+C$ 就是 $f(x)$ 的不定积分, 即
+$$
+\int f(x) \mathrm{d}x = F(x) + C.
+$$
+
+（二）原函数的存在性
+
+(1) 若 $f(x)$ 在区间 $I$ 上连续, 则 $f(x)$ 在区间 $I$ 上必有原函数.
+(2) 若 $f(x)$ 在区间 $I$ 上有第一类间断点, 则 $f(x)$ 在区间 $I$ 上没有原函数.
+
+（三）不定积分的性质
+
+(1) $\left( \int f(x) \mathrm{d}x \right)' = f(x)$, $\quad \mathrm{d} \int f(x) \mathrm{d}x = f(x) \mathrm{d}x$;
+(2) $\int f'(x) \mathrm{d}x = f(x) + C$, $\quad \int \mathrm{d}f(x) = f(x) + C$;
+(3) $\int k f(x) \mathrm{d}x = k \int f(x) \mathrm{d}x$ ($k$ 为非零常数);
+(4) $\int [f(x) \pm g(x)] \mathrm{d}x = \int f(x) \mathrm{d}x \pm \int g(x) \mathrm{d}x$.
+
+（四）基本积分公式
+
+(1) $\int x^a \mathrm{d}x = \frac{1}{a+1}x^{a+1} + C \quad (a \neq -1)$;
+(2) $\int \frac{1}{x} \mathrm{d}x = \ln |x| + C$;
+(3) $\int a^x \mathrm{d}x = \frac{a^x}{\ln a} + C \quad (a > 0, a \neq 1)$;
+(4) $\int \mathrm{e}^x \mathrm{d}x = \mathrm{e}^x + C$;
+(5) $\int \sin x \mathrm{d}x = -\cos x + C$;
+(6) $\int \cos x \mathrm{d}x = \sin x + C$;
+(7) $\int \sec^2 x \mathrm{d}x = \tan x + C$;
+(8) $\int \csc^2 x \mathrm{d}x = -\cot x + C$;
+(9) $\int \sec x \tan x \mathrm{d}x = \sec x + C$;
+(10) $\int \csc x \cot x \mathrm{d}x = -\csc x + C$;
+(11) $\int \sec x \mathrm{d}x = \ln |\sec x + \tan x| + C$;
+(12) $\int \csc x \mathrm{d}x = -\ln |\csc x + \cot x| + C$;
+(13) $\int \frac{\mathrm{d}x}{a^2 + x^2} = \frac{1}{a} \arctan \frac{x}{a} + C$;
+(14) $\int \frac{\mathrm{d}x}{a^2 - x^2} = \frac{1}{2a} \ln \left| \frac{a+x}{a-x} \right| + C$;
+
+· 105 ·
+
+【第 106 页 / 共 315 页】
+以下是图片中文字内容的完整转录：
+
+高等数学 辅导讲义
+
+(15) $$
+ \int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C; \quad
+$$ (16) $$
+ \int \frac{dx}{\sqrt{x^2 + a^2}} = \ln (x + \sqrt{x^2 + a^2}) + C;
+$$
+
+(17) $$
+ \int \frac{dx}{\sqrt{x^2 - a^2}} = \ln | x + \sqrt{x^2 - a^2} | + C.
+$$
+
+（五）三种主要积分法
+
+1. 第一类换元法（凑微分法）
+
+若 $$
+ \int f(u) du = F(u) + C, $$ 且 $\varphi(x)$ 可导，则
+$$
+ \int f(\varphi(x)) \varphi'(x) dx = \int f(\varphi(x)) d\varphi(x) = F(\varphi(x)) + C.
+$$
+
+2. 第二类换元法
+
+设函数 $x = \varphi(t)$ 可导，且 $\varphi'(t) \neq 0$，又设 $$
+ \int f(\varphi(t)) \varphi'(t) dt = F(t) + C, $$ 则
+$$
+ \int f(x) dx = \int f(\varphi(t)) \varphi'(t) dt = F(\varphi^{-1}(x)) + C.
+$$
+
+三种常用的变量代换
+
+(1) 被积函数中含有 $\sqrt{a^2 - x^2}$ 时，令 $x = a\sin t$，或 $x = a\cos t$;
+(2) 被积函数中含有 $\sqrt{a^2 + x^2}$ 时，令 $x = a\tan t$;
+(3) 被积函数中含有 $\sqrt{x^2 - a^2}$ 时，令 $x = a\sec t$.
+
+3. 分部积分法
+
+设 $u(x), v(x)$ 有连续一阶导数，则
+$$
+ \int u dv = uv - \int v du.
+$$
+
+注 (1) 分部积分法常用于被积函数为两类不同函数相乘的不定积分；
+(2) 分部积分法选择 $u(x), v(x)$ 的原则是 $$
+ \int v du $$ 比 $$
+ \int u dv $$ 好积，设 $P_n(x)$ 是 $n$ 次多项式.
+
+形如 $\int P_n(x) e^{ax} dx, \int P_n(x) \sin ax dx, \int P_n(x) \cos ax dx$ 的积分都是先把多项式以外的函数凑进微分号，然后分部积分；
+
+形如 $\int P_n(x) \ln x dx, \int P_n(x) \arctan x dx, \int P_n(x) \arcsin x dx$ 的积分都是先把多项式函数凑进微分号，然后分部积分；
+
+形如 $\int e^{ax} \sin \beta x dx, \int e^{ax} \cos \beta x dx$ 的积分可连续两次将指数函数凑进微分号分部积分还原，求得原不定积分.
+
+（页面底部水印：一千零一夜 整理 侵删）
+
+· 106 ·
+
+【第 107 页 / 共 315 页】
+第三章 一元函数积分学
+
+（六）三类常见可积函数积分
+
+1. 有理函数积分
+
+$$
+\int R(x)dx
+$$
+
+(1) 一般方法（部分分式法）；
+(2) 特殊方法（加项减项拆项或凑微分降幂）.
+
+2. 三角有理式积分
+
+$$
+\int R(\sin x,\cos x)dx
+$$
+
+(1) 一般方法（万能代换）
+
+令 $\tan \frac{x}{2} = t$,
+
+$$
+\int R(\sin x,\cos x)dx = \int R\left(\frac{2t}{1+t^2}, \frac{1-t^2}{1+t^2}\right)\frac{2}{1+t^2}dt.
+$$
+
+(2) 特殊方法（三角变形，换元，分部）
+几种常用的换元法
+① 若 $R(-\sin x,\cos x) = -R(\sin x,\cos x)$，则令 $u = \cos x$，即凑 $d\cos x$；
+② 若 $R(\sin x,-\cos x) = -R(\sin x,\cos x)$，则令 $u = \sin x$，即凑 $d\sin x$；
+③ 若 $R(-\sin x,-\cos x) = R(\sin x,\cos x)$，则令 $u = \tan x$，即凑 $d\tan x$.
+
+3. 简单无理函数积分
+
+$$
+\int R\left(x, \sqrt[n]{\frac{ax+b}{cx+d}}\right)dx
+$$
+
+令 $\sqrt[n]{\frac{ax+b}{cx+d}} = t$，将其化为有理函数积分进行计算.
+
+二、常考题型的方法与技巧
+
+题型一 计算不定积分
+
+【例 1】 $I = \int \frac{dx}{\sqrt{x(4-x)}}.$
+
+（方法一） $I = \int \frac{dx}{\sqrt{4x-x^2}} = \int \frac{dx}{\sqrt{4-(x-2)^2}} = \arcsin\frac{x-2}{2} + C.$
+
+（方法二） $I = \int \frac{2d(\sqrt{x})}{\sqrt{4-x}} = 2\arcsin\frac{\sqrt{x}}{2} + C.$
+
+• 107 •
+
+【第 108 页 / 共 315 页】
+以下是图片中文字的完整、准确转录：
+
+【顶部左侧图标内文字】 高等数学 辅导讲义
+
+【页面左侧竖排文字】 一元函数积分学
+
+---
+
+展示新知
+
+【例 2】 $I = \int \frac{\mathrm{d}x}{\cos x \sqrt{\sin x}}$
+
+解 $I = \int \frac{\mathrm{d}x}{\cos x \sqrt{\sin x}} = \int \frac{\cos x \mathrm{d}x}{\cos^2 x \sqrt{\sin x}} = \int \frac{\mathrm{d}\sin x}{(1 - \sin^2 x) \sqrt{\sin x}}$
+$= 2 \int \frac{\mathrm{d}\sqrt{\sin x}}{1 - \sin^2 x} \xlongequal{\text{令} \sqrt{\sin x} = t} 2 \int \frac{\mathrm{d}t}{1 - t^4} = 2 \int \frac{\mathrm{d}t}{(1 - t^2)(1 + t^2)}$
+$= \int \left( \frac{1}{1 - t^2} + \frac{1}{1 + t^2} \right) \mathrm{d}t = \frac{1}{2} \ln \left| \frac{1 + t}{1 - t} \right| + \arctan t + C$
+$= \frac{1}{2} \ln \left| \frac{1 + \sqrt{\sin x}}{1 - \sqrt{\sin x}} \right| + \arctan \sqrt{\sin x} + C.$
+
+---
+
+展示新知
+
+【例 3】 $I = \int \frac{x^4}{\sqrt{1 + x^2}} \mathrm{d}x.$
+
+解 (方法一) 令 $x = \tan t$, 则 $\mathrm{d}x = \sec^2 t \mathrm{d}t.$
+$I = \int \frac{\tan^4 t \cdot \sec^2 t \mathrm{d}t}{\sec t} = \int \tan^4 t \cdot (\tan t \cdot \sec t) \mathrm{d}t = \int \tan^4 t \mathrm{d}(\sec t)$
+$= \int (\sec^2 t - 1)^2 \mathrm{d}(\sec t) = \int (u^2 - 1)^2 \mathrm{d}u \quad (u = \sec t)$
+$= \frac{1}{5} u^5 - \frac{2}{3} u^3 + u + C$
+$= \frac{1}{15} (8 - 4x^2 + 3x^4) \sqrt{1 + x^2} + C.$
+
+(方法二) $I = \frac{1}{2} \int \frac{x^4 \mathrm{d}x^2}{\sqrt{1 + x^2}} = \int x^4 \mathrm{d}(\sqrt{1 + x^2})$
+$= x^4 \sqrt{1 + x^2} - 4 \int x^3 \sqrt{1 + x^2} \mathrm{d}x$
+$= x^4 \sqrt{1 + x^2} - 2 \int [(x^2 + 1) - 1] \sqrt{1 + x^2} \mathrm{d}(1 + x^2)$
+$= x^4 \sqrt{1 + x^2} - \frac{4}{5}(1 + x^2)^{\frac{5}{2}} + \frac{4}{3}(1 + x^2)^{\frac{3}{2}} + C.$
+
+---
+
+展示新知
+
+【例 4】 $I = \int \frac{x e^x}{\sqrt{e^x - 1}} \mathrm{d}x.$
+
+解 $I = 2 \int x \mathrm{d} \sqrt{e^x - 1} = 2x \sqrt{e^x - 1} - 2 \int \sqrt{e^x - 1} \mathrm{d}x,$
+$\int \sqrt{e^x - 1} \mathrm{d}x = \int \frac{2t^2}{1 + t^2} \mathrm{d}t \quad (\text{令} \sqrt{e^x - 1} = t)$
+$= 2t - 2\arctan t + C,$
+则 $I = 2x \sqrt{e^x - 1} - 4 \sqrt{e^x - 1} + 4 \arctan \sqrt{e^x - 1} + C.$
+
+---
+
+· 108 ·
+
+【第 109 页 / 共 315 页】
+以下是图片中文字的完整转录，数学公式已按要求使用 LaTeX 格式：
+
+**第三章 一元函数积分学**
+
+**展示新知**
+**【例 5】** $\int \frac{\ln x}{\sqrt{1+x}} dx.$
+
+**评** **(方法一)** 原式 $= 2 \int \ln x \, d\sqrt{1+x} = 2 \sqrt{1+x} \ln x - 2 \int \frac{\sqrt{1+x}}{x} dx,$
+
+$$
+ \int \frac{\sqrt{1+x}}{x} dx \xlongequal{\sqrt{1+x}=t} 2 \int \frac{t^2}{t^2-1} dt = 2 \int dt + 2 \int \frac{dt}{t^2-1} = 2t + \ln \left| \frac{t-1}{t+1} \right| + C, 
+$$
+
+原式 $= 2 \sqrt{1+x} \ln x - 4 \sqrt{1+x} - 2 \ln \left| \frac{\sqrt{1+x}-1}{\sqrt{1+x}+1} \right| + C.$
+
+**(方法二)** 令 $\sqrt{1+x} = t$, 则
+
+$$
+ \text{原式} = \int \frac{\ln(t^2-1)}{t} 2t dt = 2 \int \ln(t^2-1) dt 
+$$
+
+$$
+ = 2t \ln(t^2-1) - 2 \int \frac{2t^2}{t^2-1} dt 
+$$
+
+$$
+ = 2 \sqrt{1+x} \ln x - 4 \sqrt{1+x} - 2 \ln \left| \frac{\sqrt{1+x}-1}{\sqrt{1+x}+1} \right| + C. 
+$$
+
+---
+
+**展示新知**
+**【例 6】** $\int \frac{\arctan e^x}{e^{2x}} dx.$
+
+**评** **(方法一)** 原式 $= -\frac{1}{2} \int \arctan e^x \, de^{-2x}$
+
+$$
+ = -\frac{1}{2} e^{-2x} \arctan e^x + \frac{1}{2} \int \frac{e^{-x}}{1+e^{2x}} dx 
+$$
+
+$$
+ = -\frac{1}{2} e^{-2x} \arctan e^x + \frac{1}{2} \int \frac{de^x}{e^{2x}(1+e^{2x})} 
+$$
+
+$$
+ = -\frac{1}{2} (e^{-2x} \arctan e^x + e^{-x} + \arctan e^x) + C. 
+$$
+
+**(方法二)** 令 $e^x = t$, 则
+
+$$
+ \text{原式} = \int \frac{\arctan t}{t^2} dt = -\frac{1}{2} \int \arctan t \, d\frac{1}{t^2} 
+$$
+
+$$
+ = -\frac{\arctan t}{2t^2} + \frac{1}{2} \int \frac{dt}{t^2(1+t^2)} 
+$$
+
+$$
+ = -\frac{\arctan t}{2t^2} - \frac{1}{2t} - \frac{1}{2} \arctan t + C 
+$$
+
+$$
+ = -\frac{1}{2} (e^{-2x} \arctan e^x + e^{-x} + \arctan e^x) + C. 
+$$
+
+---
+
+**展示新知**
+**【例 7】** $I = \int \frac{1}{(x+1)(x^2-2x+2)} dx.$
+
+**评** **(方法一)** 令 $\frac{1}{(x+1)(x^2-2x+2)} = \frac{A}{x+1} + \frac{Bx+C}{x^2-2x+2}$, 则
+
+$$
+ 1 = A(x^2-2x+2) + (x+1)(Bx+C). 
+$$
+
+---
+
+**· 109 ·**
+
+【第 110 页 / 共 315 页】
+**高等数学 辅导讲义**
+
+比较同次幂系数得 $A+B=0, -2A+B+C=0, 2A+C=1$, 由此解得
+
+$$
+A=\frac{1}{5}, B=-\frac{1}{5}, C=\frac{3}{5}.
+$$
+
+则
+$$
+I = \frac{1}{5} \int \frac{1}{x+1} dx - \frac{1}{5} \int \frac{(x-1)-2}{(x-1)^2+1} dx
+$$
+$$
+= \frac{1}{5} \ln|x+1| - \frac{1}{10} \ln[(x-1)^2+1] + \frac{2}{5} \arctan(x-1) + C.
+$$
+
+（方法二）
+$$
+I = \int \frac{1}{(x+1)(x^2-2x+2)} dx = \frac{1}{5} \int \frac{(x^2-2x+2)-(x+1)(x-3)}{(x+1)(x^2-2x+2)} dx
+$$
+$$
+= \frac{1}{5} \int \frac{1}{x+1} dx - \frac{1}{5} \int \frac{x-3}{x^2-2x+1} dx
+$$
+$$
+= \frac{1}{5} \ln|x+1| - \frac{1}{10} \ln[(x-1)^2+1] + \frac{2}{5} \arctan(x-1) + C.
+$$
+
+**一元函数积分学**
+
+展示新知
+
+【例 8】 $I = \int \frac{1}{x(1+x^8)} dx.$
+
+解 （方法一）
+$$
+I = \int \frac{dx}{x(1+x^8)} = \int \frac{x^7 dx}{x^8(1+x^8)}
+$$
+$$
+= \frac{1}{8} \int \frac{du}{u(1+u)} \quad (令 x^8 = u)
+$$
+$$
+= \frac{1}{8} [\ln u - \ln(1+u)] + C
+$$
+$$
+= \frac{1}{8} \ln \frac{x^8}{1+x^8} + C.
+$$
+
+（方法二）
+$$
+I = \int \frac{[(1+x^8)-x^8] dx}{x(1+x^8)} = \int \left( \frac{1}{x} - \frac{x^7}{1+x^8} \right) dx
+$$
+$$
+= \ln|x| - \frac{1}{8} \ln(1+x^8) + C.
+$$
+
+（方法三）
+$$
+I = \int \frac{dx}{x^8 \left(1+\frac{1}{x^8}\right)} = -\frac{1}{8} \int \frac{dx^{-8}}{1+x^{-8}} = -\frac{1}{8} \ln|1+x^{-8}| + C.
+$$
+
+展示新知
+
+【例 9】 $I = \int \frac{1+x^4}{1+x^6} dx.$
+
+解
+$$
+I = \int \frac{1+x^4}{1+x^6} dx = \int \frac{1+x^4-x^2+x^2}{1+x^6} dx
+$$
+$$
+= \int \frac{1-x^2+x^4}{1+x^6} dx + \int \frac{x^2}{1+x^6} dx
+$$
+$$
+= \int \frac{1-x^2+x^4}{(1+x^2)(1-x^2+x^4)} dx + \frac{1}{3} \int \frac{dx^3}{1+x^6}
+$$
+$$
+= \int \frac{dx}{1+x^2} + \frac{1}{3} \int \frac{dx^3}{1+(x^3)^2}
+$$
+$$
+= \arctan x + \frac{1}{3} \arctan x^3 + C.
+$$
+
+· 110 ·
+
+【第 111 页 / 共 315 页】
+第三章 一元函数积分学
+
+【此处不清】 解析扫码, 第二页获取
+
+注 类似地, 求 $\int \frac{\mathrm{d}x}{1+x^4}$, $\frac{1}{4\sqrt{3}}\ln\left|\frac{x^2+\sqrt{3}x+1}{x^2-\sqrt{3}x+1}\right|+\frac{1}{2}\arctan x+\frac{1}{6}\arctan x^3+C$.
+
+训练思维
+【例 10】 $I=\int \frac{\mathrm{d}x}{1+\sin x}$.
+
+解 (方法一) $I=\int \frac{1-\sin x}{\cos^2 x}\mathrm{d}x=\int \frac{1}{\cos^2 x}\mathrm{d}x+\int \frac{\mathrm{d}\cos x}{\cos^2 x}=\tan x-\frac{1}{\cos x}+C$.
+(方法二) $I=\int \frac{\mathrm{d}x}{1+\cos\left(\frac{\pi}{2}-x\right)}=\int \frac{\mathrm{d}x}{2\cos^2\left(\frac{\pi}{4}-\frac{x}{2}\right)}=\tan\left(\frac{x}{2}-\frac{\pi}{4}\right)+C$.
+(方法三) 令 $\tan \frac{x}{2}=t$, 则 $\mathrm{d}x=\frac{2\mathrm{d}t}{1+t^2}, \sin x=\frac{2t}{1+t^2}$, 从而
+$I=\int \frac{2\mathrm{d}t}{1+t^2} \cdot \frac{1}{1+\frac{2t}{1+t^2}}=2\int \frac{\mathrm{d}t}{(1+t)^2}=\frac{-2}{1+t}+C=\frac{-2}{1+\tan\frac{x}{2}}+C$.
+
+训练思维
+【例 11】 $\int \frac{\mathrm{d}x}{1+\sin x+\cos x}$.
+
+解 令 $\tan\frac{x}{2}=t$, 则
+原式 $=\int \frac{\frac{2}{1+t^2}\mathrm{d}t}{1+\frac{2t}{1+t^2}+\frac{1-t^2}{1+t^2}}$
+$=\int \frac{\mathrm{d}t}{1+t}=\ln|1+t|+C$
+$=\ln\left|1+\tan\frac{x}{2}\right|+C$.
+
+训练思维
+【例 12】 $I=\int \frac{\mathrm{d}x}{\sin^3 x \cdot \cos^5 x}$.
+
+解 (方法一) 本题满足 $R(-\sin x, \cos x)=-R(\sin x, \cos x)$, 所以应凑 $\mathrm{d}\cos x$.
+$I=\int \frac{\sin x \mathrm{d}x}{\sin^4 x \cdot \cos^5 x}=-\int \frac{\mathrm{d}\cos x}{(1-\cos^2 x)\cos^5 x}$ (令 $\cos x=u$)
+$=-\int \frac{\mathrm{d}u}{(1-u^2)u^5}=-\int \frac{(1-u^4)+u^4}{(1-u^4)u^5}\mathrm{d}u$
+$=-\int\left(\frac{1}{u^5}+\frac{1}{u}\right)\mathrm{d}u-\int \frac{\mathrm{d}u}{1-u^4}$
+$=\frac{1}{3u^3}+\frac{1}{u}-\frac{1}{2}\ln\left|\frac{1+u}{1-u}\right|+C$
+$=\frac{1}{3\cos^3 x}+\frac{1}{\cos x}-\frac{1}{2}\ln\left|\frac{1+\cos x}{1-\cos x}\right|+C$.
+
+· 111 ·
+
+【第 112 页 / 共 315 页】
+高等教育出版社 高等数学 辅导讲义
+一元函数积分学
+
+(方法二) 
+$$
+I = \int \frac{\sin^2 x + \cos^2 x}{\sin x \cdot \cos^3 x} dx = \int \frac{\sin x}{\cos^3 x} dx + \int \frac{dx}{\sin x \cos^3 x}
+$$
+$$
+= \frac{1}{3\cos^3 x} + \int \frac{\sin^2 x + \cos^2 x}{\sin x \cdot \cos^3 x} dx
+$$
+$$
+= \frac{1}{3\cos^3 x} + \int \frac{\sin x dx}{\cos^2 x} + \int \frac{dx}{\sin x}
+$$
+$$
+= \frac{1}{3\cos^3 x} + \frac{1}{\cos x} - \ln |\csc x + \cot x| + C.
+$$
+
+训练思维
+【例 13】 
+$$
+I = \int \frac{dx}{a^2 \sin^2 x + b^2 \cos^2 x}.
+$$
+解 (1) 若 $a \neq 0, b = 0$, 则 
+$$
+I = \int \frac{dx}{a^2 \sin^2 x} = -\frac{1}{a^2} \cot x + C.
+$$
+(2) 若 $a = 0, b \neq 0$, 则 
+$$
+I = \int \frac{dx}{b^2 \cos^2 x} = \frac{1}{b^2} \tan x + C.
+$$
+(3) 若 $a \neq 0, b \neq 0$, 此时满足 $R(-\sin x, -\cos x) = R(\sin x, \cos x)$, 所以应凑 $d\tan x$.
+$$
+I = \int \frac{dx}{\cos^2 x (b^2 + a^2 \tan^2 x)} = \int \frac{du}{b^2 + a^2 u^2} \quad (\text{令 } \tan x = u)
+$$
+$$
+= \frac{1}{ab} \arctan \frac{au}{b} + C = \frac{1}{ab} \arctan \frac{a \tan x}{b} + C.
+$$
+
+【此处不清】
+
+训练思维
+【例 14】 
+$$
+\int \frac{1}{x} \sqrt{\frac{x+1}{x-1}} dx.
+$$
+解 令 $\sqrt{\frac{x+1}{x-1}} = t$, 则
+$$
+\text{原式} = -4 \int \frac{t^2}{(t^2 + 1)(t^2 - 1)} dt = -2 \int \frac{(t^2 + 1) + (t^2 - 1)}{(t^2 + 1)(t^2 - 1)} dt
+$$
+$$
+= \ln \left| \frac{1 + t}{1 - t} \right| - 2 \arctan t + C
+$$
+$$
+= \ln \left| x + \sqrt{x^2 - 1} \right| - 2 \arctan \sqrt{\frac{x+1}{x-1}} + C.
+$$
+
+题型二 不定积分杂例
+
+训练思维
+【例 1】 若 $\int x f(x) dx = \arcsin x + C$, 求 $I = \int \frac{1}{f(x)} dx$.
+解 由 $\int x f(x) dx = \arcsin x + C$ 知
+$$
+x f(x) = (\arcsin x + C)' = \frac{1}{\sqrt{1 - x^2}},
+$$
+则
+$$
+I = \int \frac{1}{f(x)} dx = \int x \sqrt{1 - x^2} dx = -\frac{1}{3} (1 - x^2)^{\frac{3}{2}} + C.
+$$
+
+· 112 ·
+
+【第 113 页 / 共 315 页】
+以下是图片中文字的完整转录，保留原文结构和 LaTeX 公式格式：
+
+---
+
+**第三章 一元函数积分学**
+
+**训练思维**
+
+【例2】 若 $\ln(x+\sqrt{1+x^2})$ 为 $f(x)$ 的一个原函数，求 $I=\int xf'(x)dx$.
+
+**解** $I=\int xf'(x)dx = xf(x)-\int f(x)dx$
+$=x[\ln(x+\sqrt{1+x^2})]'-\ln(x+\sqrt{1+x^2})+C$
+$=\frac{x}{\sqrt{1+x^2}}-\ln(x+\sqrt{1+x^2})+C.$
+
+**训练思维**
+
+【例3】 设 $F(x)$ 为 $f(x)$ 的原函数，且当 $x\ge 0$ 时，$F(x)f(x)=\frac{xe^x}{2(1+x)^2}$，已知 $F(0)=1$，$F(x)>0$，求 $f(x)$.
+
+**解** （方法一） 由 $F(x)f(x)=F(x)F'(x)=\frac{1}{2}[F^2(x)]'=\frac{xe^x}{2(1+x)^2}$，得
+$F^2(x)=\int \frac{xe^x}{(1+x)^2}dx=\int \frac{(x+1)-1}{(1+x)^2}e^x dx$
+$=\int \frac{e^x}{1+x}dx-\int \frac{e^x}{(1+x)^2}dx$
+$=\int \frac{e^x}{1+x}dx-\left(-\frac{e^x}{1+x}+\int \frac{e^x}{1+x}dx\right)$
+$=\frac{e^x}{1+x}+C.$
+
+由 $F(0)=1$，得 $C=0$，从而 $F^2(x)=\frac{e^x}{1+x}$，即 $F(x)=\sqrt{\frac{e^x}{1+x}}$，于是
+$f(x)=F'(x)=\left(\sqrt{\frac{e^x}{1+x}}\right)'=\frac{xe^x}{2(1+x)^2}\sqrt{\frac{1+x}{e^x}}.$
+
+（方法二） $F^2(x)=\int \frac{xe^x}{(1+x)^2}dx=-\int (xe^x)d\frac{1}{1+x}$
+$=-\frac{xe^x}{1+x}+\int \frac{e^x(1+x)}{1+x}dx$
+$=-\frac{xe^x}{1+x}+e^x+C=\frac{e^x}{1+x}+C.$
+
+由 $F(0)=1$ 得 $F(x)=\sqrt{\frac{e^x}{1+x}}$，从而
+$f(x)=\frac{1}{F(x)}\cdot\frac{xe^x}{2(1+x)^2}=\frac{xe^x}{2(1+x)^2}\sqrt{\frac{1+x}{e^x}}.$
+
+**训练思维**
+
+【例4】 设 $f'(e^x)=\sin x$，求 $f(x)$.
+
+**解** （方法一） 令 $e^x=t$，则 $f'(t)=\sin \ln t$，从而
+$f(t)=\int \sin \ln t dt = t\sin \ln t-\int t\cos \ln t\cdot \frac{1}{t}dt$
+
+$$\cdot \quad 113 \quad \cdot$$
+
+【第 114 页 / 共 315 页】
+以下是图片中文字的完整、准确转录：
+
+**高等数学 辅导讲义**
+**二元函数积分学**
+
+$$
+= t \sin \ln t - t \cos \ln t - \int t \sin \ln t \cdot \frac{1}{t} \mathrm{d}t,
+$$
+
+则
+$$
+f(t) = \frac{t}{2}(\sin \ln t - \cos \ln t) + C.
+$$
+
+（方法二） 等式 $f'(e^x) = \sin x$ 两端对 $e^x$ 积分得
+$$
+f(e^x) = \int \sin x \mathrm{d}e^x = e^x \sin x - \int e^x \cos x \mathrm{d}x = e^x \sin x - e^x \cos x - \int \sin x \mathrm{d}e^x,
+$$
+则
+$$
+f(e^x) = \frac{e^x}{2}(\sin x - \cos x) + C, \text{从而}
+$$
+$$
+f(x) = \frac{x}{2}(\sin \ln x - \cos \ln x) + C.
+$$
+
+**训练思维**
+**【例5】** 求不定积分 $\int |x| \mathrm{d}x$.
+
+**解** （方法一） $|x| = \begin{cases} \mathrm{e}^{-x}, & x \geqslant 0 \\ \mathrm{e}^x, & x < 0 \end{cases}$, $\int |x| \mathrm{d}x = \begin{cases} -\mathrm{e}^{-x} + C_1, & x \geqslant 0 \\ \mathrm{e}^x + C_2, & x < 0 \end{cases}$.
+
+$\mathrm{e}^{-|x|}$ 连续，原函数 $F(x)$ 必连续，从而 $F(x)$ 在 $x = 0$ 连续. 由于
+$$
+\lim\limits_{x \to 0^+} F(x) = \lim\limits_{x \to 0^+} (-\mathrm{e}^{-x} + C_1) = -1 + C_1,
+$$
+$$
+\lim\limits_{x \to 0^-} F(x) = \lim\limits_{x \to 0^-} (\mathrm{e}^x + C_2) = 1 + C_2,
+$$
+故有 $-1 + C_1 = 1 + C_2$, 令 $C_1 = C$, 则 $C_2 = -2 + C$. 因此
+$$
+\int |x| \mathrm{d}x = \begin{cases} -\mathrm{e}^{-x} + C, & x \geqslant 0 \\ \mathrm{e}^{x} - 2 + C, & x < 0 \end{cases}.
+$$
+
+（方法二） 由于 $\mathrm{e}^{-|x|}$ 连续，则 $F(x) = \int_0^x \mathrm{e}^{-|t|} \mathrm{d}t$ 是其一个原函数，又
+$$
+F(x) = \int_0^x \mathrm{e}^{-|t|} \mathrm{d}t = \begin{cases} \int_0^x \mathrm{e}^{-t} \mathrm{d}t, & x < 0 \\ \int_0^x \mathrm{e}^{t} \mathrm{d}t, & x \geqslant 0 \end{cases} = \begin{cases} \mathrm{e}^{-x} - 1, & x < 0 \\ 1 - \mathrm{e}^{-x}, & x \geqslant 0 \end{cases},
+$$
+则 $\int |x| \mathrm{d}x = F(x) + C$.
+
+---
+**注** 类似地，
+**解析扫描二维码获取**
+
+(1) 求不定积分 $\int \max\{1, x^2\} \mathrm{d}x$.
+$$
+\int \max\{1, x^2\} \mathrm{d}x = \begin{cases} \frac{1}{3}x^3 - \frac{2}{3} + C, & x \leqslant -1 \\ x + C, & -1 < x < 1 \\ \frac{1}{3}x^3 + \frac{2}{3} + C, & x \geqslant 1 \end{cases}
+$$
+
+(2) 已知函数 $f(x) = \begin{cases} 2(x-1), & x < 1 \\ \ln x, & x \geqslant 1 \end{cases}$, 则 $f(x)$ 的一个原函数是
+(A) $F(x) = \begin{cases} (x-1)^2, & x < 1 \\ x(\ln x - 1), & x \geqslant 1 \end{cases}$ (B) $F(x) = \begin{cases} (x-1)^2, & x < 1 \\ x(\ln x + 1), & x \geqslant 1 \end{cases}$
+(C) $F(x) = \begin{cases} (x-1)^2, & x < 1 \\ x(\ln x - 1) + 1, & x \geqslant 1 \end{cases}$ (D) $F(x) = \begin{cases} (x-1)^2, & x < 1 \\ x(\ln x + 1) - 1, & x \geqslant 1 \end{cases}$
+
+(D)
+
+---
+<p align="center">· 114 ·</p>
+
+【第 115 页 / 共 315 页】
+第三章 一元函数积分学
+
+# 第二节 定积分
+
+### 一、考试内容要点精讲
+
+#### （一）定积分的概念
+
+设函数 $f(x)$ 在区间 $[a,b]$ 上有定义，在区间 $[a,b]$ 内任意插入 $n-1$ 个分点 $a = x_0 < x_1 < x_2 < \cdots < x_{n-1} < x_n = b$，
+
+将区间 $[a,b]$ 分成 $n$ 个小区间 $[x_{i-1},x_i], i = 1,2,\cdots,n$，记 $\Delta x_i = x_i - x_{i-1}$ 表示第 $i$ 个小区间的长度.
+
+在 $[x_{i-1},x_i]$ 上任取一点 $\xi_i$，作和式 $\sum_{i=1}^{n} f(\xi_i)\Delta x_i$，记
+$$
+\lambda = \max\{\Delta x_1, \Delta x_2, \cdots, \Delta x_n\},
+$$
+若 $\lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i)\Delta x_i$ 存在，且此极限值不依赖于区间 $[a,b]$ 的分法，也不依赖于点 $\xi_i$ 的取法，则称此极限值为 $f(x)$ 在区间 $[a,b]$ 上的定积分，记为 $\int_a^b f(x)\mathrm{d}x$，即
+$$
+\int_a^b f(x)\mathrm{d}x = \lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i)\Delta x_i.
+$$
+
+ **注** (1) 定积分表示一个数值，它取决于积分区间 $[a,b]$ 与被积函数 $f(x)$，与积分变量无关，因此有
+$$
+\int_a^b f(x)\mathrm{d}x = \int_a^b f(t)\mathrm{d}t.
+$$
+
+(2) 若 $f(x)$ 在区间 $[0,1]$ 上连续，则积分 $\int_0^1 f(x)\mathrm{d}x$ 存在. 将 $[0,1]$ 区间 $n$ 等分，此时 $\Delta x_i = \frac{1}{n}$，取 $\xi_i = \frac{i}{n}$，由定积分的定义得
+$$
+\int_0^1 f(x)\mathrm{d}x = \lim_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_i)\Delta x_i = \lim_{n \to \infty} \frac{1}{n} \sum_{i=1}^{n} f\left(\frac{i}{n}\right).
+$$
+等式右端的极限可通过等式左端的积分来计算.
+
+#### （二）定积分的几何意义
+
+(1) 设 $\int_a^b f(x)\mathrm{d}x$ 存在，若在 $[a,b]$ 上 $f(x) \geqslant 0$，则 $\int_a^b f(x)\mathrm{d}x$ 的值等于以曲线 $y = f(x), x = a, x = b$ 及 $x$ 轴所围成的曲边梯形的面积.
+
+(2) 若在 $[a,b]$ 上 $f(x) \leqslant 0$，则 $\int_a^b f(x)\mathrm{d}x$ 的值等于以曲线 $y = f(x), x = a, x = b$ 及 $x$ 轴所围成的曲边梯形面积的负值.
+
+· 115 ·
+
+**一元函数积分学** (右侧边缘垂直文字)
+
+【第 116 页 / 共 315 页】
+【图片顶部页眉】
+高等数学 辅导讲义
+
+【图片左侧竖排装饰文字】
+一元函数积分学
+【装饰图标旁文字】
+【此处不清】
+
+---
+
+(3) 若在 $[a,b]$ 上 $f(x)$ 的值有正有负，则 $\int_a^b f(x) \mathrm{d}x$ 在几何上表示 $y=f(x)$，$x=a,x=b$ 及 $x$ 轴所围成的 $x$ 轴上方图形的面积减去下方图形的面积所得之差.
+
+### (三) 可积性
+
+#### 1. 必要条件
+
+若 $\int_a^b f(x) \mathrm{d}x$ 存在，则 $f(x)$ 在 $[a,b]$ 上有界.
+
+#### 2. 充分条件
+
+(1) 若 $f(x)$ 在 $[a,b]$ 上连续，则 $f(x)$ 在 $[a,b]$ 上可积，即 $\int_a^b f(x) \mathrm{d}x$ 必定存在.
+
+(2) 若 $f(x)$ 在 $[a,b]$ 上有界，且只有有限个间断点，则 $f(x)$ 在 $[a,b]$ 上可积，即 $\int_a^b f(x) \mathrm{d}x$ 必定存在.
+
+(3) 若 $f(x)$ 在 $[a,b]$ 上只有有限个第一类间断点，则 $f(x)$ 在 $[a,b]$ 上可积，即 $\int_a^b f(x) \mathrm{d}x$ 必定存在.
+
+---
+
+### (四) 定积分的计算
+
+定积分的计算常用方法有以下五种：
+
+#### 1. 牛顿-莱布尼茨公式
+
+如果函数 $F(x)$ 是连续函数 $f(x)$ 在区间 $[a,b]$ 上的一个原函数，则
+$$
+\int_a^b f(x) \mathrm{d}x = F(b) - F(a).
+$$
+
+#### 2. 换元积分法
+
+设 $f(x)$ 在区间 $[a,b]$ 上连续，函数 $x = \varphi(t)$ 满足以下条件：
+(1) $\varphi(a) = a, \varphi(\beta) = b$;
+(2) $\varphi(t)$ 在 $[\alpha,\beta]$ (或 $[\beta,\alpha]$) 上具有连续导数，且其值域 $R_\varphi = [a,b]$，则
+$$
+\int_a^b f(x) \mathrm{d}x = \int_\alpha^\beta f(\varphi(t))\varphi'(t) \mathrm{d}t.
+$$
+
+#### 3. 分部积分法
+
+设函数 $u(x)$ 和 $v(x)$ 在 $[a,b]$ 上有连续一阶导数，则
+$$
+\int_a^b u \mathrm{d}v = uv \Big|_a^b - \int_a^b v \mathrm{d}u.
+$$
+
+#### 4. 利用奇偶性和周期性
+
+(1) 设 $f(x)$ 为 $[-a,a]$ 上的连续函数 $(a>0)$，则
+$$
+\int_{-a}^a f(x) \mathrm{d}x = 
+\begin{cases} 
+0, & f(x) \text{ 为奇函数}, \\
+2\int_0^a f(x) \mathrm{d}x, & f(x) \text{ 为偶函数}.
+\end{cases}
+$$
+
+---
+
+【页面底部】
+· 116 ·
+【右下角水印】
+【此处不清】
+
+【第 117 页 / 共 315 页】
+以下是图片中文字内容的完整转录（数学公式以 LaTeX 表示）：
+
+**右上角页眉：**
+第二节 一元函数积分学
+
+---
+
+(2) 设 $f(x)$ 是以 $T$ 为周期的连续函数，则对任给数 $a$，总有
+$$
+\int_{a}^{a+T} f(x) \mathrm{d} x = \int_{0}^{T} f(x) \mathrm{d} x.
+$$
+
+5. 利用公式
+
+(1)
+$$
+\int_{0}^{\frac{\pi}{2}} \sin^{n} x \mathrm{d} x = \int_{0}^{\frac{\pi}{2}} \cos^{n} x \mathrm{d} x =
+\begin{cases}
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2}, & n \text{ 为偶数}, \\
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3}, & n \text{ 为大于 1 的奇数}.
+\end{cases}
+$$
+
+(2)
+$$
+\int_{0}^{\frac{\pi}{2}} x f(\sin x) \mathrm{d} x = \frac{\pi}{2} \int_{0}^{\frac{\pi}{2}} f(\sin x) \mathrm{d} x \quad (\text{其中} f(x) \text{ 连续}).
+$$
+
+**（五）变上限积分： $\int_{a}^{x} f(t) \mathrm{d} t$**
+
+**定理** 若 $f(x)$ 在 $[a,b]$ 上连续，则 $\int_{a}^{x} f(t) \mathrm{d} t$ 在 $[a,b]$ 上可导且
+$$
+\left( \int_{a}^{x} f(t) \mathrm{d} t \right)' = f(x).
+$$
+
+**变上限求导的三个类型**
+
+(1)
+$$
+\left( \int_{a}^{\psi(x)} f(t) \mathrm{d} t \right)' = f(\psi(x)) \psi'(x) - f(\varphi(x)) \varphi'(x);
+$$
+
+(2)
+$$
+\left( \int_{\varphi(x)}^{\psi(x)} f(x,t) \mathrm{d} t \right)' = \int_{\varphi(x)}^{\psi(x)} \frac{\partial f(x,t)}{\partial x} \mathrm{d} t + f(x,\psi(x)) \psi'(x) - f(x,\varphi(x)) \varphi'(x);
+$$
+
+(3)
+$$
+\left( \int_{a}^{x} f(x,t) \mathrm{d} t \right)' = \int_{a}^{x} \frac{\partial f(x,t)}{\partial x} \mathrm{d} t.
+$$
+
+**【例】 设 $f$ 连续，试求下列函数的导数**
+
+(1) $\int_{e^{x}}^{x^{2}} f(t) \mathrm{d} t$; \qquad (2) $\int_{0}^{x} (t-x) f(t) \mathrm{d} t$;
+
+(3) $\int_{0}^{x} \sin(x-t)^{2} \mathrm{d} t$; \qquad (4) $\int_{1}^{x} f(x+t) \mathrm{d} t$.
+
+**解**
+
+(1)
+$$
+\left( \int_{e^{x}}^{x^{2}} f(t) \mathrm{d} t \right)' = 2x f(x^{2}) - e^{x} f(e^{x}).
+$$
+
+(2)
+$$
+\int_{0}^{x} (t-x) f(t) \mathrm{d} t = \int_{0}^{x} t f(t) \mathrm{d} t - x \int_{0}^{x} f(t) \mathrm{d} t,
+$$
+$$
+\frac{\mathrm{d}}{\mathrm{d} x} \int_{0}^{x} (t-x) f(t) \mathrm{d} t = x f(x) - x f(x) - \int_{0}^{x} f(t) \mathrm{d} t = - \int_{0}^{x} f(t) \mathrm{d} t.
+$$
+
+(3)
+$$
+\int_{0}^{x} \sin(x-t)^{2} \mathrm{d} t \xlongequal{x-t=u} \int_{0}^{x} \sin u^{2} \mathrm{d} u,
+$$
+$$
+\frac{\mathrm{d}}{\mathrm{d} x} \int_{0}^{x} \sin(x-t)^{2} \mathrm{d} t = \frac{\mathrm{d}}{\mathrm{d} x} \int_{0}^{x} \sin u^{2} \mathrm{d} u = \sin x^{2}.
+$$
+
+(4)
+$$
+\int_{1}^{x} f(x+t) \mathrm{d} t \xlongequal{x+t=u} \int_{x+1}^{x+2} f(u) \mathrm{d} u,
+$$
+$$
+\frac{\mathrm{d}}{\mathrm{d} x} \int_{1}^{x} f(x+t) \mathrm{d} t = f(x+2) - f(x+1).
+$$
+
+---
+
+**右侧竖排文字：** 一元函数积分学
+
+**页码：** 117
+
+【第 118 页 / 共 315 页】
+### 专升本数学 辅导讲义
+
+#### 一元函数积分学 
+##### 本章小结
+
+---
+
+**(六) 定积分的性质**
+
+**1. 不等式**
+
+(1) 若 $f(x) \leqslant g(x), x \in [a, b]$, 则 $\int_a^b f(x) \, \mathrm{d}x \leqslant \int_a^b g(x) \, \mathrm{d}x$.
+
+(2) 若 $f(x)$ 在 $[a, b]$ 上连续, 则 $m(b - a) \leqslant \int_a^b f(x) \, \mathrm{d}x \leqslant M(b - a)$, 其中 $m, M$ 分别为 $f(x)$ 在 $[a, b]$ 上的最小值与最大值.
+
+(3) $\left| \int_a^b f(x) \, \mathrm{d}x \right| \leqslant \int_a^b |f(x)| \, \mathrm{d}x$.
+
+**2. 积分中值定理**
+
+(1) 若 $f(x)$ 在 $[a, b]$ 上连续, 则 $\int_a^b f(x) \, \mathrm{d}x = f(\xi)(b - a), a < \xi < b$.
+
+> **注** 注意这里的 $\xi$ 是在开区间里, 这给定理的应用带来方便.
+
+(2) 若 $f(x), g(x)$ 在 $[a, b]$ 上连续, 且 $g(x)$ 不变号, 则
+$$\int_a^b f(x) g(x) \, \mathrm{d}x = f(\xi) \int_a^b g(x) \, \mathrm{d}x, a < \xi < b,$$
+通常称 (1) 为积分中值定理, 称 (2) 为广义积分中值定理. 显然, (1) 是 (2) 的特例, 在 (2) 中取 $g(x) = 1$ 便可得到 (1).
+
+**【例】** 设 $f(x)$ 在 $[a, b]$ 上连续, 在 $(a, b)$ 内可导, 且 $\frac{1}{b - a} \int_a^b f(x) \, \mathrm{d}x = f(b)$. 求证: 在 $(a, b)$ 内至少存在一点 $c$, 使 $f'(c) = 0$.
+
+**【证明】** 由积分中值定理得
+$$\int_a^b f(x) \, \mathrm{d}x = f(\xi)(b - a), a < \xi < b,$$
+代入 $\frac{1}{b - a} \int_a^b f(x) \, \mathrm{d}x = f(b)$ 得, $f(\xi) = f(b)$, 由罗尔定理得至少存在一点 $c \in (\xi, b) \subset (a, b)$ 使 $f'(c) = 0$.
+
+---
+
+### 二、常考题型的方法与技巧
+
+#### 题型一 定积分的概念、性质及几何意义
+
+**展示新知**
+
+**【例 1】** 求 $\lim_{n \to \infty} \left[ \left(1 + \frac{1^2}{n^2}\right) \cdot \left(1 + \frac{2^2}{n^2}\right) \cdot \cdots \cdot \left(1 + \frac{n^2}{n^2}\right) \right]^{\frac{1}{n}}$.
+
+**解** 令 $y_n = \left[ \left(1 + \frac{1^2}{n^2}\right) \left(1 + \frac{2^2}{n^2}\right) \cdots \left(1 + \frac{n^2}{n^2}\right) \right]^{\frac{1}{n}}$, 则
+$$\ln y_n = \frac{1}{n} \left[ \ln\left(1 + \frac{1^2}{n^2}\right) + \ln\left(1 + \frac{2^2}{n^2}\right) + \cdots + \ln\left(1 + \frac{n^2}{n^2}\right) \right].$$
+
+---
+
+· 118 ·
+
+【第 119 页 / 共 315 页】
+第三章 一元函数积分学
+
+$$
+\lim_{n\to\infty} y_n = \int_0^1 \ln(1+x^2) dx = x\ln(1+x^2) \Big|_0^1 - \int_0^1 \frac{2x^2}{1+x^2} dx
+$$
+$$
+= \ln 2 - 2\left(1 - \frac{\pi}{4}\right).
+$$
+
+原式 $= e^{\ln 2 - 2\left(1 - \frac{\pi}{4}\right)} = 2e^{\frac{\pi}{4} - 2}.$
+
+---
+
+**注** 类似地， <span style="float:right">解析扫封面二维码获取</span>
+
+求极限 $\lim_{n\to\infty} \frac{\sqrt[n]{(1^2+n^2)(2^2+n^2)\cdots(n^2+n^2)}}{1+2+\cdots+n}.$  $\left(4e^{\frac{\pi}{4}-2}\right)$
+
+---
+
+### 展示新知
+
+【例2】 设 $f(x)$ 连续, 且 $\lim_{x\to+\infty} f(x) = 1$, 则 $\lim_{x\to+\infty} \int_x^{x+2} t \sin\left(\frac{3}{t}\right) f(t) dt =$ ______.
+
+**解** $\lim_{x\to+\infty} \int_x^{x+2} t \sin\left(\frac{3}{t}\right) f(t) dt$ （利用积分中值定理）
+
+$= \lim_{x\to+\infty} 2\xi \sin\left(\frac{3}{\xi}\right) f(\xi) \quad (x < \xi < x+2)$
+
+$= 6.$
+
+---
+
+**注** 类似地， <span style="float:right">解析扫封面二维码获取</span>
+
+(1) 求极限 $\lim_{n\to\infty} \int_n^{n+p} \frac{\sin x}{\sqrt{x}} dx.$  (0)
+
+(2) 求极限 $\lim_{x\to 0} \int_x^{2x} \frac{(1-2t)^{\frac{1}{t}}}{t} dt.$  $\left(\frac{1}{3e^2}\right)$
+
+---
+
+### 训练思维
+
+【例3】 求极限 $\lim_{n\to\infty} \int_0^1 x^n \sqrt{1+x^2} dx.$
+
+**解** (方法一) 由于
+
+$$
+0 \le \int_0^1 x^n \sqrt{1+x^2} dx < \sqrt{2} \int_0^1 x^n dx = \frac{\sqrt{2}}{n+1},
+$$
+
+而 $\lim_{n\to\infty} \frac{\sqrt{2}}{n+1} = 0$, 故 $\lim_{n\to\infty} \int_0^1 x^n \sqrt{1+x^2} dx = 0.$
+
+(方法二) 由广义积分中值定理得
+
+$$
+\int_0^1 x^n \sqrt{1+x^2} dx = \sqrt{1+\xi^2} \int_0^1 x^n dx,
+$$
+
+由于 $\int_0^1 x^n dx = \frac{1}{n+1} \to 0 (n\to\infty)$ 为无穷小量, $\sqrt{1+\xi^2}$ 介于 1 与 $\sqrt{2}$ 之间为有界量, 则
+
+$$
+\lim_{n\to\infty} \int_0^1 x^n \sqrt{1+x^2} dx = 0.
+$$
+
+---
+
+**注** 有人用积分中值定理得 <span style="float:right">解析扫封面二维码获取</span>
+
+$$
+\int_0^1 x^n \sqrt{1+x^2} dx = \xi^n \sqrt{1+\xi^2}, \text{ 由于 } 0 < \xi < 1, \text{所以有}
+$$
+
+$$
+\lim_{n\to\infty} \int_0^1 x^n \sqrt{1+x^2} dx = \lim_{n\to\infty} \xi^n \sqrt{1+\xi^2} = 0.
+$$
+
+· 119 ·

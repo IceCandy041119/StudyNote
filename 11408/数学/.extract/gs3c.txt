@@ -1,0 +1,860 @@
+===== 文件: 27武忠祥高数辅导讲义-强化.pdf =====
+【第 136 页 / 共 315 页】
+**高等数学 精讲讲义**
+
+**一元函数积分学**
+
+---
+
+**定义 2** 设 $f(x)$ 为 $(-\infty, b]$ 上的连续函数，则可类似地定义函数 $f(x)$ 在无穷区间 $(-\infty, b]$ 上的反常积分
+$$
+\int_{-\infty}^{b} f(x) \mathrm{d}x = \lim_{a \to -\infty} \int_{a}^{b} f(x) \mathrm{d}x.
+$$
+
+**定义 3** 设 $f(x)$ 为 $(-\infty, +\infty)$ 上的连续函数，如果反常积分 $\int_{-\infty}^{0} f(x) \mathrm{d}x$ 和 $\int_{0}^{+\infty} f(x) \mathrm{d}x$ 都收敛，则称反常积分 $\int_{-\infty}^{+\infty} f(x) \mathrm{d}x$ 收敛，且
+$$
+\int_{-\infty}^{+\infty} f(x) \mathrm{d}x = \int_{-\infty}^{0} f(x) \mathrm{d}x + \int_{0}^{+\infty} f(x) \mathrm{d}x.
+$$
+如果 $\int_{-\infty}^{0} f(x) \mathrm{d}x$ 与 $\int_{0}^{+\infty} f(x) \mathrm{d}x$ 之一发散，则称 $\int_{-\infty}^{+\infty} f(x) \mathrm{d}x$ 发散.
+
+**定理 1 (比较判别法)** 设 $f(x), g(x)$ 在 $[a, +\infty)$ 上连续，且 $0 \leqslant f(x) \leqslant g(x)$，则
+(1) 当 $\int_{a}^{+\infty} g(x) \mathrm{d}x$ 收敛时，$\int_{a}^{+\infty} f(x) \mathrm{d}x$ 收敛；
+(2) 当 $\int_{a}^{+\infty} f(x) \mathrm{d}x$ 发散时，$\int_{a}^{+\infty} g(x) \mathrm{d}x$ 发散.
+
+**定理 2 (比较法的极限形式)** 设 $f(x), g(x)$ 在 $[a, +\infty)$ 上非负连续，且 $\lim_{x \to +\infty} \frac{f(x)}{g(x)} = \lambda$ (有限或无穷)，则
+(1) 当 $\lambda > 0$ 时，$\int_{a}^{+\infty} f(x) \mathrm{d}x$ 与 $\int_{a}^{+\infty} g(x) \mathrm{d}x$ 同敛散；
+(2) 当 $\lambda = 0$ 时，若 $\int_{a}^{+\infty} g(x) \mathrm{d}x$ 收敛，则 $\int_{a}^{+\infty} f(x) \mathrm{d}x$ 也收敛；
+(3) 当 $\lambda = +\infty$ 时，若 $\int_{a}^{+\infty} g(x) \mathrm{d}x$ 发散，则 $\int_{a}^{+\infty} f(x) \mathrm{d}x$ 也发散.
+
+**常用结论** $\int_{a}^{+\infty} \frac{1}{x^p} \mathrm{d}x \begin{cases} p > 1, & \text{收敛} \\ p \leqslant 1, & \text{发散} \end{cases} \quad (a > 0).$
+
+---
+
+**(二) 无界函数的反常积分**
+
+如果函数 $f(x)$ 在点 $a$ 的任一邻域内都无界，那么点 $a$ 称为函数 $f(x)$ 的瑕点（也称为无界点）. 无界函数的反常积分也称为瑕积分.
+
+**定义 1** 设函数 $f(x)$ 在 $(a, b]$ 上连续，点 $a$ 为函数 $f(x)$ 的瑕点. 如果极限
+$$
+\lim_{\varepsilon \to 0^{+}} \int_{a+\varepsilon}^{b} f(x) \mathrm{d}x
+$$
+存在，则称此极限为函数 $f(x)$ 在区间 $[a, b]$ 上的反常积分，记作 $\int_{a}^{b} f(x) \mathrm{d}x$，即
+$$
+\int_{a}^{b} f(x) \mathrm{d}x = \lim_{\varepsilon \to 0^{+}} \int_{a+\varepsilon}^{b} f(x) \mathrm{d}x,
+$$
+这时也称反常积分 $\int_{a}^{b} f(x) \mathrm{d}x$ 收敛. 如果上述极限不存在，则称反常积分 $\int_{a}^{b} f(x) \mathrm{d}x$ 发散.
+
+**定义 2** 设函数 $f(x)$ 在 $[a, b)$ 上连续，点 $b$ 为函数 $f(x)$ 的瑕点，则可类似地定义函数【此处不清，原文被截断】
+
+---
+
+$\cdot 136 \cdot$
+
+【第 137 页 / 共 315 页】
+第三节 一元函数积分学
+
+$f(x)$ 在区间 $[a,b]$ 上的反常积分
+$$ \int_a^b f(x) \mathrm{d}x = \lim_{t \to b^-} \int_a^t f(x) \mathrm{d}x. $$
+
+定义 3 设函数 $f(x)$ 在 $[a,b]$ 上除点 $c$ ($a < c < b$) 外连续, 点 $c$ 为函数 $f(x)$ 的瑕点.
+如果反常积分 $\int_a^c f(x) \mathrm{d}x$ 和 $\int_c^b f(x) \mathrm{d}x$ 都收敛, 则称反常积分 $\int_a^b f(x) \mathrm{d}x$ 收敛, 且
+$$ \int_a^b f(x) \mathrm{d}x = \int_a^c f(x) \mathrm{d}x + \int_c^b f(x) \mathrm{d}x. $$
+如果 $\int_a^c f(x) \mathrm{d}x$ 与 $\int_c^b f(x) \mathrm{d}x$ 之一发散, 则称 $\int_a^b f(x) \mathrm{d}x$ 发散.
+
+定理 1 (比较判别法) 设 $f(x), g(x)$ 在 $(a,b]$ 上连续, 且 $0 \leqslant f(x) \leqslant g(x)$, $x=a$ 为 $f(x)$ 和 $g(x)$ 的瑕点. 则
+(1) 当 $\int_a^b g(x) \mathrm{d}x$ 收敛时, $\int_a^b f(x) \mathrm{d}x$ 收敛;
+(2) 当 $\int_a^b f(x) \mathrm{d}x$ 发散时, $\int_a^b g(x) \mathrm{d}x$ 发散.
+
+定理 2 (比较法的极限形式) 设 $f(x), g(x)$ 在 $(a,b]$ 上非负连续, 且 $\lim_{x \to a^+} \frac{f(x)}{g(x)} = \lambda$ (有限或无穷), 则
+(1) 当 $\lambda > 0$ 时, $\int_a^b f(x) \mathrm{d}x$ 与 $\int_a^b g(x) \mathrm{d}x$ 同敛散;
+(2) 当 $\lambda = 0$ 时, 若 $\int_a^b g(x) \mathrm{d}x$ 收敛, 则 $\int_a^b f(x) \mathrm{d}x$ 也收敛;
+(3) 当 $\lambda = +\infty$ 时, 若 $\int_a^b g(x) \mathrm{d}x$ 发散, 则 $\int_a^b f(x) \mathrm{d}x$ 也发散.
+
+常用结论
+$$ \int_a^b \frac{1}{(x-a)^p} \mathrm{d}x \begin{cases} p < 1, & \text{收敛}, \\ p \geqslant 1, & \text{发散}; \end{cases} $$
+$$ \int_a^b \frac{1}{(b-x)^p} \mathrm{d}x \begin{cases} p < 1, & \text{收敛}, \\ p \geqslant 1, & \text{发散}. \end{cases} $$
+
+二、常考题型的方法与技巧
+
+题型一 反常积分的敛散性
+
+**1 展示新知**
+
+【例 1】 下列广义积分发散的是
+(A) $\int_1^2 \frac{\mathrm{d}x}{\sqrt{1-\sin x}}$
+(B) $\int_{-1}^1 \frac{\mathrm{d}x}{\sqrt{1-x^2}}$
+(C) $\int_0^{+\infty} e^{-x} \mathrm{d}x$
+(D) $\int_2^{+\infty} \frac{\mathrm{d}x}{x \ln^2 x}$
+
+· 137 ·
+
+【第 138 页 / 共 315 页】
+以下是图片中文字的完整转录：
+
+**右上角标题栏：**
+高等数学 辅导讲义
+
+**右上角小字：**
+手慢免费资料同步更新QQ群：1097122063【此处不清】
+
+**左侧竖排文字：**
+一元函数积分学 专项
+
+---
+
+**正文开始：**
+
+**例** （方法一） 排除法
+
+$$
+\int_{-1}^{1} \frac{\mathrm{d}x}{\sqrt{1-x^2}} = \arcsin x \bigg|_{-1}^{1} = \pi, \text{故收敛};
+$$
+
+$$
+\int_{0}^{+\infty} e^{-x^2} \mathrm{d}x \text{ 肯定收敛, 因为 } \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-\frac{x^2}{2}} \mathrm{d}x = 1 \text{ (概率积分)};
+$$
+
+$$
+\int_{2}^{+\infty} \frac{\mathrm{d}x}{x \ln^2 x} = -\frac{1}{\ln x} \bigg|_{2}^{+\infty} = \frac{1}{\ln 2}, \text{故收敛}.
+$$
+
+故应选(A).
+
+（方法二） 直接法
+
+$$
+\int_{-1}^{1} \frac{\mathrm{d}x}{\sin x} = \int_{-1}^{0} \frac{\mathrm{d}x}{\sin x} + \int_{0}^{1} \frac{\mathrm{d}x}{\sin x},
+$$
+
+由于当 $x \to 0^+$ 时, $\sin x \sim x$, 则 $\int_{0}^{1} \frac{\mathrm{d}x}{\sin x}$ 与 $\int_{0}^{1} \frac{\mathrm{d}x}{x}$ 同敛散, 而 $\int_{0}^{1} \frac{\mathrm{d}x}{x}$ 发散, 则 $\int_{0}^{1} \frac{\mathrm{d}x}{\sin x}$ 发散,
+
+故选(A).
+
+或者当 $x \in (0,1]$ 时, $\frac{1}{\sin x} > \frac{1}{x}$, 而 $\int_{0}^{1} \frac{\mathrm{d}x}{x}$ 发散, 则 $\int_{0}^{1} \frac{\mathrm{d}x}{\sin x}$ 发散.
+
+---
+
+**展示新题**
+
+**【例2】** 若反常积分 $\int_{0}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 收敛, 则
+
+(A) $a < 1, b > 1$.
+(B) $a > 1, b > 1$.
+(C) $a < 1, a+b > 1$.
+(D) $a > 1, a+b > 1$.
+
+**解**
+$$
+\int_{0}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x = \int_{0}^{1} \frac{1}{x^a(1+x)^b} \mathrm{d}x + \int_{1}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x.
+$$
+
+由于 $\lim_{x \to 0^+} \frac{\frac{1}{x^a(1+x)^b}}{\frac{1}{x^a}} = 1 \neq 0$, 则反常积分 $\int_{0}^{1} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 与 $\int_{0}^{1} \frac{1}{x^a} \mathrm{d}x$ 同敛散, 而 $\int_{0}^{1} \frac{1}{x^a} \mathrm{d}x$ 当且仅当 $a < 1$ 时收敛, 则 $\int_{0}^{1} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 当且仅当 $a < 1$ 时收敛.
+
+由于 $\lim_{x \to +\infty} \frac{\frac{1}{x^a(1+x)^b}}{\frac{1}{x^{a+b}}} = 1 \neq 0$, 则反常积分 $\int_{1}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 与 $\int_{1}^{+\infty} \frac{1}{x^{a+b}} \mathrm{d}x$ 同敛散, 而 $\int_{1}^{+\infty} \frac{1}{x^{a+b}} \mathrm{d}x$ 当且仅当 $a+b > 1$ 时收敛, 则 $\int_{1}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 当且仅当 $a+b > 1$ 时收敛.
+
+综上可知, 若反常积分 $\int_{0}^{+\infty} \frac{1}{x^a(1+x)^b} \mathrm{d}x$ 收敛, 则 $a < 1$, 且 $a+b > 1$, 故选(C).
+
+---
+
+**注** 类似地
+
+已知 $p$ 为实数, $\int_{0}^{+\infty} \frac{\arctan x}{x^p(1+x)} \mathrm{d}x$ 收敛, 则 $p$ 的取值范围为 $\underline{\qquad}$. $(0 < p < 2)$
+
+**右侧红色小字：**
+编辑栏扫描二维码获取
+
+**页码：**
+· 138 ·
+
+【第 139 页 / 共 315 页】
+第三章 一元函数积分学
+
+训练思维
+
+【例3】 设 $m,n$ 均是正整数，则反常积分 $\int_{0}^{1} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx$ 的收敛性
+(A) 仅与 $m$ 的取值有关.
+(B) 仅与 $n$ 的取值有关.
+(C) 与 $m,n$ 的取值都有关.
+(D) 与 $m,n$ 的取值都无关.
+
+解
+$$
+\int_{0}^{1} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx = \int_{0}^{\frac{1}{2}} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx + \int_{\frac{1}{2}}^{1} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx.
+$$
+由于
+$$
+\lim_{x \to 0^+} \frac{\frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}}}{\frac{x^{\frac{2}{n}}}{x^{\frac{1}{m}}}} = 1,
+$$
+且反常积分
+$$
+\int_{0}^{\frac{1}{2}} \frac{x^{\frac{2}{n}}}{x^{\frac{1}{m}}} dx = \int_{0}^{\frac{1}{2}} \frac{dx}{x^{\frac{1}{m}-\frac{2}{n}}}
+$$
+收敛 ($m,n$ 为正整数, $\frac{1}{m}-\frac{2}{n} < 1$),
+
+则反常积分
+$$
+\int_{0}^{\frac{1}{2}} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx
+$$
+收敛.
+
+由于
+$$
+\lim_{x \to 1^-} \frac{\frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}}}{\frac{1}{\sqrt{1-x}}} = \lim_{x \to 1^-} \sqrt{1-x} \ln^{\frac{2}{n}}(1-x) = 0,
+$$
+且反常积分
+$$
+\int_{\frac{1}{2}}^{1} \frac{1}{\sqrt{1-x}} dx
+$$
+收敛, 则反常积分
+$$
+\int_{\frac{1}{2}}^{1} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx
+$$
+收敛.
+
+故反常积分
+$$
+\int_{0}^{1} \frac{\sqrt[n]{\ln^2(1-x)}}{\sqrt[m]{x}} dx
+$$
+的收敛性与 $m,n$ 的取值都无关,
+选(D).
+
+注 类似地, 解析扫封面二维码获取
+设 $p$ 为常数, 若反常积分
+$$
+\int_{1}^{e} \frac{\ln x}{x^p (1-x)^{1-p}} dx
+$$
+收敛, 则 $p$ 的取值范围是
+(A) $(-1,1)$. (B) $(-1,2)$. (C) $(-\infty,1)$. (D) $(-\infty,2)$. (A)
+
+训练思维
+
+【例4】 设函数
+$$
+f(x) = \begin{cases} \frac{1}{(x-1)^{p-1}}, & 1 < x < e, \\ \frac{1}{x \ln^{p+1} x}, & x \ge e, \end{cases}
+$$
+若反常积分
+$$
+\int_{1}^{+\infty} f(x) dx
+$$
+收敛, 则
+(A) $a < -2$. (B) $a > 2$. (C) $-2 < a < 0$. (D) $0 < a < 2$.
+
+解
+$$
+\int_{1}^{+\infty} f(x) dx = \int_{1}^{e} \frac{dx}{(x-1)^{p-1}} + \int_{e}^{+\infty} \frac{dx}{x \ln^{p+1} x}.
+$$
+由
+$$
+\int_{1}^{e} \frac{dx}{(x-1)^{p-1}}
+$$
+收敛知 $p-1 < 1$, 即 $p < 2$. 又
+$$
+\int_{e}^{+\infty} \frac{dx}{x \ln^{p+1} x} = \int_{e}^{+\infty} \frac{d \ln x}{\ln^{p+1} x} \overset{t=\ln x}{=} \int_{1}^{+\infty} \frac{dt}{t^{p+1}},
+$$
+由该积分收敛知 $p+1 > 1$, 即 $p > 0$. 故 $0 < p < 2$, 应选(D).
+
+· 139 ·
+
+【第 140 页 / 共 315 页】
+以下是图片内容的完整转录：
+
+**高等数学 辅导讲义**
+
+**题型二 反常积分计算**
+
+**【展示新知】**
+**【例1】** 计算 $\int_{1}^{+\infty} \frac{\arctan x}{x^2} dx$.
+
+**解** 原式 $= -\int_{1}^{+\infty} \arctan x \, d\frac{1}{x} = -\left. \frac{\arctan x}{x} \right|_{1}^{+\infty} + \int_{1}^{+\infty} \frac{dx}{x(1+x^2)}$
+$= \frac{\pi}{4} + \ln \left. \frac{x}{\sqrt{1+x^2}} \right|_{1}^{+\infty} = \frac{\pi}{4} + \frac{1}{2} \ln 2.$
+
+---
+
+**【展示新知】**
+**【例2】** 计算 $\int_{3}^{+\infty} \frac{dx}{(x-1)^4 \sqrt{x^2-2x}}$.
+
+**解** 原式 $= \int_{3}^{+\infty} \frac{dx}{(x-1)^4 \sqrt{(x-1)^2-1}}$
+（令 $x-1=\sec t$）
+$= \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} \frac{\sec t \tan t \, dt}{\sec^4 t \tan t}$
+$= \int_{\frac{\pi}{3}}^{\frac{\pi}{2}} \cos^3 t \, dt = \frac{2}{3} - \frac{3\sqrt{3}}{8}.$
+
+---
+
+**【展示新知】**
+**【例3】** 计算 $\int_{0}^{+\infty} \frac{xe^{-x}}{(1+e^{-x})^2} dx$.
+
+**解** 原式 $= \int_{0}^{+\infty} \frac{xe^x}{(1+e^x)^2} dx = -\int_{0}^{+\infty} x \, d\frac{1}{1+e^x} = -\left. \frac{x}{1+e^x} \right|_{0}^{+\infty} + \int_{0}^{+\infty} \frac{dx}{1+e^x}$
+$= \int_{0}^{+\infty} \frac{e^{-x}}{1+e^{-x}} dx = -\ln(1+e^{-x}) \bigg|_{0}^{+\infty} = \ln 2.$
+
+---
+
+**【训练思维】**
+**【例4】** 求证：$\int_{0}^{+\infty} \frac{x^4}{1+x^6} dx = \int_{0}^{+\infty} \frac{1}{1+x^6} dx$, 并求其值.
+
+**解** 令 $x=\frac{1}{t}$, 得
+左端 $= \int_{+\infty}^{0} \frac{x^4}{1+x^6} dx = \int_{+\infty}^{0} \frac{\frac{1}{t^4}}{1+\frac{1}{t^6}} \cdot \left(-\frac{1}{t^2}\right) dt = \int_{0}^{+\infty} \frac{1}{1+t^6} dt =$ 右端.
+
+原式 $= \frac{1}{2} \int_{0}^{+\infty} \frac{x^4+1}{1+x^6} dx = \frac{1}{2} \int_{0}^{+\infty} \frac{1+\frac{1}{x^4}}{x^2+\frac{1}{x^2}} dx$
+$= \frac{1}{2} \int_{0}^{+\infty} \frac{d\left(x-\frac{1}{x}\right)}{\left(x-\frac{1}{x}\right)^2 + 2} = \frac{1}{2} \cdot \frac{1}{\sqrt{2}} \arctan \frac{x-\frac{1}{x}}{\sqrt{2}} \Bigg|_{0}^{+\infty}$
+
+**· 140 ·**
+
+（注：左侧边栏竖排文字为“一元函数积分学”，由于图片遮挡，此处省略。）
+
+【第 141 页 / 共 315 页】
+【右上角竖排文字】
+第三章 一元函数积分学
+
+$$
+= \frac{1}{2\sqrt{2}} \left[ \lim_{x \to 0^+} \arctan \frac{x-\frac{1}{x}}{\sqrt{2}} - \lim_{x \to 0^-} \arctan \frac{x-\frac{1}{x}}{\sqrt{2}} \right]
+$$
+$$
+= \frac{1}{2\sqrt{2}} \left( \frac{\pi}{2} - \left( -\frac{\pi}{2} \right) \right) = \frac{\pi}{2\sqrt{2}}
+$$
+
+**第四节 定积分应用**
+
+**一、考试内容要点精讲**
+
+用定积分可以计算一些几何量与物理量（平面图形的面积、平面曲线的弧长、旋转体的体积及侧面积、平行截面面积为已知的立体体积、变力做功、压力、引力和函数平均值等），解决这些问题经常采用的就是所谓的“元素法”。
+
+**（一）几何应用**
+
+**1. 平面图形的面积**
+
+计算平面图形的面积时，利用二重积分比利用一元定积分的元素法方便。设有平面域 $D$，则该平面域 $D$ 的面积为
+$$
+S = \iint\limits_{D} 1 d\sigma. \quad (\text{注：图中积分号下的字符似为 } 1，\text{应为 } D，\text{此处不清})
+$$
+(1) 若平面域 $D$ 由曲线 $y = f(x), y = g(x) (f(x) \geqslant g(x)), x = a, x = b(a < b)$ 所围成（如图 3-4），则
+$$
+S = \iint\limits_{D} 1 d\sigma = \int_a^b dx \int_{g(x)}^{f(x)} 1 dy = \int_a^b [f(x) - g(x)] dx.
+$$
+(2) 若平面域 $D$ 由曲线 $r = r(\theta), \theta = \alpha, \theta = \beta(\alpha < \beta)$ 所围成（如图 3-5），则其面积为
+$$
+S = \iint\limits_{D} 1 d\sigma = \int_\alpha^\beta d\theta \int_0^{r(\theta)} r dr = \frac{1}{2} \int_\alpha^\beta r^2(\theta) d\theta.
+$$
+
+**注** 平面域 $D$ 的面积直接用二重积分 $S = \iint\limits_{D} 1 d\sigma$ 计算，然后根据积分域 $D$ 选择计算二重积分的方法（直角坐标、极坐标、奇偶性、对称性）。
+
+**2. 空间体的体积**
+
+(1) 旋转体的体积
+
+旋转体的体积的一般问题是平面域 $D$ 绕直线 $L: ax + by + c = 0$（该直线不穿过区域 $D$，如图 3-6）旋转所得旋转体体积，记该体积为 $V$。解决该问题利用二重积分比利用一元定
+
+【页面底部页码】
+· 141 ·
+
+【图注】
+图 3-4
+图 3-5
+
+【第 142 页 / 共 315 页】
+积分的元素法方便.在区域 $ D $ 中取一小区域 $ (d\sigma) $,其面积记为 $ d\sigma $,$ (x,y) $ 为区域 $ (d\sigma) $ 中的任一点,则该小区域绕直线 $ L $ 旋转所得环状体的体积近似值为
+$$
+dV = 2\pi r(x,y)d\sigma,
+$$
+其中 $ r(x,y) $ 为点 $ (x,y) $ 到直线 $ L $ 的距离,即
+$$
+r(x,y) = \frac{|ax+by+c|}{\sqrt{a^2+b^2}},
+$$
+则
+$$
+V = 2\pi \iint_D r(x,y)d\sigma.
+$$
+特别地,若区域 $ D $ 由曲线 $ y = f(x) $ ($ f(x) \geq 0 $) 和直线 $ x = a $, $ x = b $ ($ 0 \leq a < b $) 及 $ x $ 轴所围成(如图 3-7),则
+
+① 区域 $ D $ 绕 $ x $ 轴旋转 ($ r(x,y) = y $) 一周所得旋转体的体积为
+$$
+V_x = 2\pi \iint_D y d\sigma = 2\pi \int_a^b dx \int_0^{f(x)} y dy = \pi \int_a^b f^2(x)dx.
+$$
+② 区域 $ D $ 绕 $ y $ 轴旋转 ($ r(x,y) = x $) 一周所得旋转体的体积为
+$$
+V_y = 2\pi \iint_D x d\sigma = 2\pi \int_a^b dx \int_0^{f(x)} x dy = 2\pi \int_a^b x f(x)dx.
+$$
+
+注 平面域 $ D $ 绕直线 $ L: ax+by+c=0 $ (该直线不穿过区域 $ D $) 旋转所得旋转体体积直接用二重积分 $ V = 2\pi \iint_D r(x,y)d\sigma $ 计算,然后选择计算二重积分的方法(直角坐标、极坐标、奇偶性、对称性). 用这个方法比用一元函数法简单得多.
+
+(2) 已知横截面面积的体积
+$$
+V = \int_a^b S(x)dx.
+$$
+
+3. 曲线弧长【数学三不要】
+(1) 设曲线段 $ C $ 由直角坐标方程 $ y = y(x) $ ($ a \leq x \leq b $) 给出,其中 $ y(x) $ 在 $ [a,b] $ 上有一阶连续导数,则该曲线段的弧长为
+$$
+s = \int_a^b \sqrt{1+y'^2}dx.
+$$
+(2) 设曲线段 $ C $ 由参数方程 $ \begin{cases} x = x(t), \\ y = y(t), \end{cases} $ ($ \alpha \leq t \leq \beta $) 给出,其中 $ x(t),y(t) $ 在 $ [\alpha,\beta] $ 上有一阶连续导数,则该曲线段的弧长为
+$$
+s = \int_\alpha^\beta \sqrt{x'^2(t)+y'^2(t)} dt.
+$$
+(3) 设曲线段 $ C $ 由极坐标方程 $ r = r(\theta) $ ($ \alpha \leq \theta \leq \beta $) 给出,其中 $ r(\theta) $ 在 $ [\alpha,\beta] $ 上有一
+
+· 142 ·
+
+【第 143 页 / 共 315 页】
+第三章 一元函数积分学
+
+阶连续导数,则该曲线段的弧长为
+$$
+s = \int_{\alpha}^{\beta} \sqrt{r^2(\theta) + r'^2(\theta)} d\theta.
+$$
+
+4. 旋转体侧面积(数学三不要求)
+曲线 $y=f(x)\ (f(x)\ge 0)$ 和直线 $x=a, x=b\ (0\le a<b)$ 及 $x$ 轴所围成区域绕 $x$ 轴旋转所得旋转体的侧面积为
+$$
+S = 2\pi \int_{a}^{b} f(x) \sqrt{1 + f'^2(x)} dx.
+$$
+
+(二) 物理应用(数学三不要求)
+物理应用主要有以下三个问题
+1. 变力沿直线所做的功;
+2. 液体的压力;
+3. 引力.
+
+二、常考题型的方法与技巧
+
+题型一 几何应用
+
+展示新知
+【例】 设 $f(x) = \int_{-1}^{x} (1 - |t|) dt\ (x \ge -1)$, 求曲线 $y=f(x)$ 与 $x$ 轴所围图形的面积.
+
+解
+$$
+f(x) = \begin{cases}
+\int_{-1}^{x} (1+t) dt, & -1 \le x \le 0, \\
+\int_{-1}^{0} (1+t) dt + \int_{0}^{x} (1-t) dt, & x > 0
+\end{cases}
+$$
+$$
+= \begin{cases}
+\frac{1}{2}(1+x)^2, & -1 \le x \le 0, \\
+\frac{1}{2}(1+2x-x^2), & x > 0.
+\end{cases}
+$$
+
+令 $1+2x-x^2=0$, 得 $x_{1,2} = 1 \pm \sqrt{2}$, 从而
+$$
+S = \int_{-1}^{0} \frac{1}{2}(1+x)^2 dx + \int_{0}^{1+\sqrt{2}} \frac{1}{2}(1+2x-x^2) dx = 1 + \frac{2}{3}\sqrt{2}.
+$$
+
+图 3-9
+
+注 类似地, 解析扫封面二维码获取
+已知当 $x \in [2,4]$ 时, $ax + b \ge \ln x$, 若 $\int_{2}^{4} (ax + b - \ln x) dx$ 取得最小值, 则 $a+b =$ ______.
+$\left( \ln 3 - \frac{2}{3} \right)$
+
+· 143 ·
+
+【第 144 页 / 共 315 页】
+高等数学 辅导讲义
+
+一元函数积分学
+
+**训练思维**
+
+【例2】设平面图形 $A$ 由 $x^2 + y^2 \leq 2x$ 与 $y \geq x$ 所确定，求图形 $A$ 绕 $x = 2$ 旋转一周所得旋转体的体积。
+
+**解**（方法一）如图 3-10 所示，利用一元函数的微元法，对 $x$ 积分
+
+$$
+\begin{aligned}
+dV &= 2\pi(2-x)(\sqrt{2x-x^2} - x)dx \\
+V &= 2\pi \int_0^1 (2-x)(\sqrt{2x-x^2} - x)dx \\
+&= 2\pi \left[ \int_0^1 (1-x)\sqrt{2x-x^2}dx + \int_0^1 \sqrt{2x-x
+
+【第 145 页 / 共 315 页】
+以下是图片中文字内容的完整转录，按原文顺序保留段落、编号和列表结构，数学公式已转换为 LaTeX 格式。
+
+---
+
+**第三章 一元函数积分学**  *(右上角)*
+
+*(右侧竖排文字)* **一元函数积分学**
+
+$$
+\begin{cases}
+x_0^2 = k(x_0 - 1), \\
+2x_0 = k.
+\end{cases}
+$$
+
+由上式解得 $x_0 = 2, k = 4$，切线方程为 $y = 4(x - 1)$，从而
+
+$$A = \iint\limits_D 1\mathrm{d}\sigma = \int_0^1 \mathrm{d}y \int_{\sqrt{y}}^{y/4 + 1} \mathrm{d}x = \frac{2}{3}.$$
+
+$$(2) V_x = 2\pi \iint\limits_D r(x,y)\mathrm{d}\sigma = 2\pi \int_0^1 y \mathrm{d}y \int_{\sqrt{y}}^{y/4+1} \mathrm{d}x = \frac{16}{15}\pi.$$
+
+$$(3) V_y = 2\pi \iint\limits_D r(x,y)\mathrm{d}\sigma = 2\pi \int_0^2 x \mathrm{d}x \int_1^{x^2/4+1} \mathrm{d}y = \frac{4}{3}\pi.$$
+
+$$(4) V_{y=1} = 2\pi \iint\limits_D r(x,y)\mathrm{d}\sigma = 2\pi \int_0^2 (4-y) \mathrm{d}y \int_{\sqrt{y}}^{y/4+1} \mathrm{d}x = \frac{64}{15}\pi.$$
+
+*(图 3-12 图示，坐标轴标签为 x, y，图中标注有 y=4(x-1) 和阴影区域)*  
+**图 3-12**
+
+---
+
+**训练思维**
+
+**【例 4】** 设对数螺线 $r = e^\theta (0 \leqslant \theta \leqslant \pi)$ 及射线 $\theta = 0$ 和 $\theta = \pi$ 围成平面图形 $D$.
+
+(1) 求 $D$ 的面积 $A$；  
+(2) 求 $D$ 绕极轴旋转一周所得旋转体的体积 $V$.
+
+**解** (1) $S = \iint\limits_D 1\mathrm{d}\sigma = \int_0^\pi \mathrm{d}\theta \int_0^{e^\theta} r\mathrm{d}r = \frac{1}{4}(e^{2\pi} - 1)$.
+
+$$(2) V = 2\pi \iint\limits_D r(x,y)\mathrm{d}\sigma = 2\pi \int_0^\pi y \mathrm{d}\sigma = 2\pi \int_0^\pi \mathrm{d}\theta \int_0^{e^\theta} r \sin\theta \mathrm{d}r$$
+
+$$= \frac{2\pi}{3} \int_0^\pi e^{3\theta} \sin\theta \mathrm{d}\theta = \frac{\pi}{15}(e^{3\pi} + 1).$$
+
+*(图 3-13 图示，坐标轴标签为 x, y，图中标注有 $e^\pi$、$D$ 和阴影区域)*  
+**图 3-13**
+
+---
+
+**训练思维**
+
+**【例 5】** *(数学三不要求)* 设星形线 $\begin{cases} x = a\cos^3 t, \\ y = a\sin^3 t. \end{cases}$ 求：
+
+(1) 它所围的面积；  
+(2) 它的周长；  
+(3) 它绕 $x$ 轴旋转而成旋转体的体积和侧面积.
+
+**解** (1) 面积
+
+$$A = 4 \int_0^a y\mathrm{d}x = 4 \int_{\pi/2}^0 a\sin^3 t (-3a\sin t \cdot \cos^2 t)\mathrm{d}t$$
+
+$$= 12 \int_0^{\pi/2} a^2 (\sin^4 t - \sin^6 t)\mathrm{d}t = \frac{3\pi a^2}{8}.$$
+
+(2) 弧长：$L = 4 \int_0^{\pi/2} \sqrt{x'^2 + y'^2} \mathrm{d}t = 4 \int_0^{\pi/2} 3a\sin t \cdot \cos t \mathrm{d}t = 6a.$
+
+(3) 体积：$V_x = 2 \int_0^a \pi y^2 \mathrm{d}x = 6\pi a^3 \int_0^{\pi/2} \sin^7 t (1 - \sin^2 t)\mathrm{d}t = \frac{32}{105}\pi a^3.$
+
+旋转体侧面积：$S = 2 \int_0^{\pi/2} 2\pi y \sqrt{x'^2 + y'^2} \mathrm{d}t = 12\pi a^2 \int_0^{\pi/2} \sin^3 t \cos t \mathrm{d}t = \frac{12}{5}\pi a^2.$
+
+*(图 3-14 图示，坐标轴标签为 x, y，图中标注有 $a$, $-a$ 和星形线图形)*  
+**图 3-14**
+
+---
+
+*(底部页码)*  
+**· 145 ·**
+
+【第 146 页 / 共 315 页】
+**高等数学 考研讲义**
+
+**一元函数积分学**
+
+**题型二 物理应用(数学三不要求)**
+
+**展示新知**
+
+【例1】 某闸门的形状与大小如图 3-15 所示，闸门的上部为矩形 $ABCD$，其中 $DE=EC=1\mathrm{m}$，下部由二次抛物线与线段 $AB$ 所围成，当水面与闸门的上端相平时，欲使闸门矩形部分承受的水压力与闸门下部承受的水压力之比为 $5:4$，闸门矩形部分的高 $h$ 应为多少 $\mathrm{m}$（米）？
+
+**解** 由题设可知抛物线的方程为 $y=x^2$。闸门矩形部分承受的水压力
+$$
+P_1=2\int_1^{h+1}\rho g(h+1-y)dy=2\rho g\left[(h+1)y-\frac{y^2}{2}\right]_1^{h+1}=\rho gh^2,
+$$
+其中 $\rho$ 为水的密度，$g$ 为重力加速度。
+
+闸门下部承受的水压力
+$$
+P_2=2\int_0^1\rho g(h+1-y)\sqrt{y}dy
+=2\rho g\left[\frac{2}{3}(h+1)y^{\frac{3}{2}}-\frac{2}{5}y^{\frac{5}{2}}\right]_0^1
+=4\rho g\left(\frac{1}{3}h+\frac{2}{15}\right).
+$$
+由题意知 $\frac{P_1}{P_2}=\frac{5}{4}$，即 $\frac{h^2}{4\left(\frac{1}{3}h+\frac{2}{15}\right)}=\frac{5}{4}$。
+
+解之得 $h=2,h=-\frac{1}{3}$（舍去），故 $h=2$，即闸门矩形部分的高应为 $2\mathrm{m}$。
+
+图 3-15
+
+**注 类似地**
+
+边长为 $a$ 和 $b$ 的矩形薄板（$a>b$），放置于与液面成 $\alpha$ 角的液体内，长边平行于液面且位于深 $h$ 处，液体的密度为 $\rho$，则薄板每面所受压力为 __________。$\left(\frac{1}{2}\rho gab(2h+b\sin\alpha)\right)$
+
+解析扫码看二维码获取
+
+**展示新知**
+
+【例2】 一容器的内侧是由曲线 $y=x^2$ 绕 $y$ 轴旋转而成的曲面，其容积为 $72\pi\mathrm{m}^3$，其中盛满水，若将容器中的水从容器的顶部抽出 $64\pi\mathrm{m}^3$，至少需做多少功？（长度单位：$\mathrm{m}$，重力加速度为 $g\mathrm{m/s}^2$，水的密度为 $10^3\mathrm{kg/m}^3$）
+
+**解** 如图 3-16 所示，设容器深度为 $h$，首先建立当容器中的水深为 $h$ 时，容器中水的体积 $V$ 和其深度 $h$ 之间的关系，其体积微元为 $dV=\pi x^2dy=\pi ydy$，从而
+$$
+V=\pi\int_0^h ydy=\frac{\pi}{2}h^2.
+$$
+当 $V=72\pi$ 时，$72\pi=\frac{\pi}{2}h^2,h=12$。
+
+当 $V=72\pi-64\pi=8\pi$ 时，$8\pi=\frac{\pi}{2}h^2,h=4$。
+
+功的微元为 $dW=10^3g(12-y)\pi ydy$，从而
+
+图 3-16
+
+· 146 ·
+
+【第 147 页 / 共 315 页】
+第三篇 一元函数积分学
+解析扫封底二维码获取
+$$
+ W = 10^3 \pi g \int_{4}^{12} y(12-y)dy = \frac{640 \times 10^4}{3}\pi g(J). 
+$$
+
+注 类似地
+半径为 $R$ 的球沉入水中，球的上部与水面相切，球的密度与水相同，现将球从水中取出需要做的功为______。 $\left( \frac{4}{3} \pi g R^4 \right)$
+
+展示新知
+【例 3】 设单位质点 $P, Q$ 分别位于点 $(0,0)$ 和 $(0,1)$ 处，$P$ 从点 $(0,0)$ 出发沿 $x$ 轴正向移动，记 $G$ 为引力常数，则当点 $P$ 移动到点 $(l,0)$ 时，克服质点 $Q$ 的引力所做的功为
+(A) $\int_0^l \frac{G}{x^2+1}dx$. (B) $\int_0^l \frac{Gx}{(x^2+1)^{\frac{3}{2}}}dx$. (C) $\int_0^l \frac{G}{(x^2+1)^{\frac{3}{2}}}dx$. (D) $\int_0^l \frac{G(x+1)}{(x^2+1)^{\frac{3}{2}}}dx$。
+
+注 设质点 $P$ 移动到点 $(x,0)$（$0 \leq x \leq l$）所受质点 $Q$ 的引力为 $F(x)$，则
+$$
+ |F(x)| = \frac{G}{x^2+1}, 
+$$
+该力在 $x$ 轴方向的分力为
+$$
+ |F_x(x)| = \frac{G}{x^2+1} \cdot \frac{x}{\sqrt{x^2+1}} = \frac{Gx}{(x^2+1)^{\frac{3}{2}}}, 
+$$
+则当点 $P$ 移动到点 $(l,0)$ 时，克服质点 $Q$ 的引力所做的功为
+$$
+ W = \int_0^l \frac{Gx}{(x^2+1)^{\frac{3}{2}}}dx. 
+$$
+故应选(B)。
+
+展示新知
+【例 4】 一根长为 1 的细棒位于 $x$ 轴的区间 $[0,1]$ 上，若其线密度 $\rho = -x^2+2x+1$，则该细棒的质心坐标 $\bar{x} =$ ______。
+注 细棒质心坐标为
+$$
+ \bar{x} = \frac{\int_0^1 x\rho(x)dx}{\int_0^1 \rho(x)dx} = \frac{\int_0^1 x(-x^2+2x+1)dx}{\int_0^1 (-x^2+2x+1)dx} = \frac{\frac{11}{12}}{\frac{5}{3}} = \frac{11}{20}. 
+$$
+
+第五节 导数在经济学中的应用（数学一、二不要求）
+
+一、考试内容要点精讲
+
+1. 经济学中常见的函数
+(1) 需求函数。
+【此处不清】
+
+· 147 ·
+
+一元函数积分学
+
+【第 148 页 / 共 315 页】
+高等数学 辅导讲义
+
+$x = \varphi(p)$，其中 $x$ 为某产品的需求量，$p$ 为价格.
+需求函数的反函数 $p = \varphi^{-1}(x)$ 称为价格函数，也常称为需求函数.
+（2）供给函数.
+$x = \psi(p)$，其中 $x$ 为某产品的供给量，$p$ 为价格.
+（3）成本函数.
+成本 $C = C(x)$ 是生产产品的总投入，它由固定成本 $C_1$（常量）和可变成本 $C_1(x)$ 两部分组成，其中 $x$ 表示产量. 即
+$$C = C(x) = C_1 + C_2(x),$$
+称 $\frac{C}{x}$ 为平均成本，记为 $C$ 或 $AC$，即
+$$AC = \frac{C}{x} = \frac{C_1}{x} + \frac{C_2(x)}{x}.$$
+（4）收益（入）函数.
+收益 $R = R(x)$ 是产品售出后所得的收入，是销售量 $x$ 与销售单价 $p$ 之积. 即收益函数为
+$$R = R(x) = px.$$
+（5）利润函数.
+利润 $L = L(x)$ 是收益扣除成本后的余额，由总收益减去总成本组成. 即利润函数为
+$$L = L(x) = R(x) - C(x) \quad (x: \text{销售量}).$$
+
+2. 边际函数与边际分析
+（1）边际函数的有关概念：
+设 $y = f(x)$ 可导，则在经济学中称 $f'(x)$ 为边际函数，$f'(x_0)$ 称为 $f(x)$ 在 $x = x_0$ 处的边际值.
+（2）经济学中常用的边际分析：
+① 边际成本.
+设成本函数为 $C = C(q)$（$q$ 是产量），则边际成本函数 $MC$ 为 $MC = C'(q)$.
+② 边际收益.
+设收益函数为 $R = R(q)$（$q$ 是产量），则边际收益函数 $MR$ 为 $MR = R'(q)$.
+③ 边际利润.
+设利润函数为 $L = L(q)$（$q$ 是销售量），则边际利润函数 $ML$ 为 $ML = L'(q)$.
+（3）弹性函数与弹性分析
+① 弹性函数的有关概念.
+设 $y = f(x)$ 可导，则称 $\frac{\Delta y / y}{\Delta x / x}$ 为函数 $f(x)$ 当 $x$ 从 $x$ 变到 $x + \Delta x$ 时的相对弹性，称
+$$\eta = \lim_{\Delta x \to 0} \frac{\Delta y / y}{\Delta x / x} = f'(x) \frac{x}{y} = \frac{f'(x)}{f(x)}x.$$
+
+• 148 •
+
+【第 149 页 / 共 315 页】
+为函数 $f(x)$ 的弹性函数，记为 $\frac{Ey}{Ex}$，即 $\eta = \frac{Ey}{Ex} = f'(x) \frac{x}{f(x)}$。
+
+它在经济学上解释为函数 $f(x)$ 在 $x$ 处的相对变化率。
+
+② 经济学中常用的弹性分析。
+A. 需求的价格弹性。设需求函数 $Q = \varphi(p)$ ($p$ 为价格)，则需求对价格的弹性为
+$$
+\eta_p = \frac{p}{\varphi(p)} \varphi'(p)。
+$$
+由于 $\varphi(p)$ 是单调减少函数，故 $\varphi'(p)<0$，从而 $\eta_p<0$。其经济学中的解释为：当价格为 $p$ 时，若提价(或降价)1%，则需求量将减少(或增加) $|\eta_p|$%。
+需要注意的是，很多试题中规定需求对价格的弹性 $\eta_p>0$，此时应该有公式
+$$
+\eta_p = -\frac{p}{\varphi(p)} \varphi'(p)。
+$$
+
+B. 供给的价格弹性。设供给函数 $Q = \psi(p)$ ($p$ 为价格)，则供给对价格的弹性为
+$$
+\eta_p = \frac{p}{\psi(p)} \psi'(p)。
+$$
+由于供给函数 $\psi(p)$ 单调增加，故 $\psi'(p)>0$，从而 $\eta_p>0$。其经济学中的解释为：当价格为 $p$ 时，若提价(或降价)1%，则供给量将增加(或减少) $\eta_p$%。
+
+二、常考题型的方法与技巧
+
+展示新知
+【例 1】 设商品的需求函数为 $Q = 100 - 5p$，其中 $Q,p$ 分别表示需求量和价格，如果商品需求弹性的绝对值大于1，则商品价格的取值范围是__________。
+
+解 分析先按定义写出弹性函数，令 $|\eta|>1$，反求出 $p$ 的范围。
+由于 $Q' = -5$，所以
+$$
+\eta = \frac{Q'}{Q} p = \frac{-5p}{100 - 5p}。
+$$
+令 $|\eta|>1$，解得 $p>10$。又由 $Q \ge 0$，即 $100 - 5p \ge 0$，得 $p \le 20$，所以 $p$ 的取值范围为 $(10,20]$。
+注 填 $(10, +\infty)$ 是错误的，原因是 $Q$ 是需求函数，应有 $Q \ge 0$。
+扫一扫获取二维码
+
+训练思维
+【例 2】 一商家销售某种商品的价格满足关系 $p = 7 - 0.2x$(万元/吨)，$x$ 为销售量(单位：吨)，商品的成本函数是 $C = 3x + 1$(万元)。
+(1) 若每销售一吨商品，政府要征税 $t$(万元)，求该商家获最大利润时的销售量；
+(2) $t$ 为何值时，政府税收总额最大？
+解 (1) 依题意，商品销售总收入为 $R = px = (7 - 0.2x)x$，总税收额为 $T = tx$，利润函数为
+
+· 149 ·
+
+（右侧竖排文字：一元函数积分学）
+
+【第 150 页 / 共 315 页】
+以下是图片内容的完整转录：
+
+高等数学 辅导讲义
+
+$$
+\pi = R - C - T = -0.2x^2 + (4-t)x - 1,
+$$
+$$
+\frac{\mathrm{d}\pi}{\mathrm{d}x} = -0.4x + 4 - t.
+$$
+
+令 $\frac{\mathrm{d}\pi}{\mathrm{d}x}=0$, 得驻点 $x = \frac{5}{2}(4-t)$. 又 $\frac{\mathrm{d}^2\pi}{\mathrm{d}x^2} = -0.4 < 0$, 故当 $x = \frac{5}{2}(4-t)$ 时, 利润 $\pi$ 为最大值, 即使利润最大的销售量为 $\frac{5}{2}(4-t)$.
+
+(2) 将 $x = \frac{5}{2}(4-t)$ 代入 $T = tx$, 得
+$$
+T = t \cdot \frac{5}{2}(4-t) = 10t - \frac{5}{2}t^2.
+$$
+
+令 $\frac{\mathrm{d}T}{\mathrm{d}t}=0$, 得 $t=2$. 又 $\frac{\mathrm{d}^2T}{\mathrm{d}t^2}=-5<0$, 故 $t=2$ 是 $T$ 的极大值点, 亦即最大值点. 所以, 当 $t$ 为 2 时, 政府税收总额最大.
+
+---
+
+训练思维
+
+【例 3】 设某商品的需求函数为 $Q = Q(p)$, 收益函数为 $R = pQ$, 其中 $p$ 为商品价格, $Q$ 为需求量 (产品的产量), $Q(p)$ 是单调减少函数. 如果当价格为 $p_0$, 对应产量为 $Q_0$ 时, 边际收益 $\frac{\mathrm{d}R}{\mathrm{d}Q}\bigg|_{Q=Q_0} = a > 0$, 收益对价格的边际效应 $\frac{\mathrm{d}R}{\mathrm{d}p}\bigg|_{p=p_0} = c < 0$, 需求对价格的弹性为 $E_p = b > 1$, 求 $p_0$ 和 $Q_0$.
+
+解：依定义, 需求函数 $Q = Q(p)$ 对价格的弹性为 $E_p = -\frac{p}{Q}\frac{\mathrm{d}Q}{\mathrm{d}p}$, 所以
+$$
+\frac{\mathrm{d}R}{\mathrm{d}Q} = p + Q\frac{\mathrm{d}p}{\mathrm{d}Q} = p - p\left(-\frac{Q}{p}\frac{\mathrm{d}p}{\mathrm{d}Q}\right) = p\left(1 - \frac{1}{E_p}\right).
+$$
+
+由题设知
+$$
+\frac{\mathrm{d}R}{\mathrm{d}Q}\bigg|_{Q=Q_0} = p_0\left(1 - \frac{1}{b}\right) = a,
+$$
+所以有 $p_0 = \frac{ab}{b-1}$.
+
+又
+$$
+\frac{\mathrm{d}R}{\mathrm{d}p} = Q + p\frac{\mathrm{d}Q}{\mathrm{d}p} = Q - Q\left(-\frac{p}{Q}\frac{\mathrm{d}Q}{\mathrm{d}p}\right) = Q(1 - E_p), \text{由题设知}
+$$
+$$
+\frac{\mathrm{d}R}{\mathrm{d}p}\bigg|_{p=p_0} = Q_0(1 - b) = c,
+$$
+所以有 $Q_0 = \frac{c}{1-b}$.
+
+---
+
+训练思维
+
+【例 4】 设某商品需求量 $Q$ 是价格 $p$ 的单调减少函数, $Q = Q(p)$, 其需求弹性 $\eta = \frac{2p^2}{192-p^2} > 0$.
+
+(1) 设 $R$ 为总收益函数, 证明 $\frac{\mathrm{d}R}{\mathrm{d}p} = Q(1 - \eta)$;
+
+(2) 求 $p = 6$ 时总收益对价格的弹性, 并说明其经济意义.
+
+---
+· 150 ·
+
+【第 151 页 / 共 315 页】
+第三章 一元函数积分学
+一元函数积分学
+
+解 (1) 由于 $R = R(p) = pQ(p)$，所以
+$$
+\frac{\mathrm{d}R}{\mathrm{d}p} = Q + p\frac{\mathrm{d}Q}{\mathrm{d}p} = Q - Q\left(-\frac{p}{Q}\frac{\mathrm{d}Q}{\mathrm{d}p}\right) = Q(1 - \eta).
+$$
+(2) $\frac{E_R}{E_p} = \frac{p}{R}\frac{\mathrm{d}R}{\mathrm{d}p} = \frac{p}{pQ}Q(1 - \eta) = 1 - \eta = 1 - \frac{2p^2}{192 - p^2} = \frac{192 - 3p^2}{192 - p^2}$
+所以 $\frac{E_R}{E_p}\Big|_{p=6} = \frac{7}{13} \approx 0.54$。
+其经济意义是：当价格为 6（单位）时，若价格上涨 1%，则总收益将增加 0.54%。
+
+**训练思维**
+**【例5】** 设某商品的需求函数为 $Q = 100 - 5p$，其中价格 $p \in (0,20)$，$Q$ 为需求量。
+(1) 求需求量对价格的弹性 $E_d (E_d > 0)$；
+(2) 推导 $\frac{\mathrm{d}R}{\mathrm{d}p} = Q(1 - E_d)$（其中 $R$ 为收益），并用弹性 $E_d$ 说明价格在何范围内变化时，降低价格反而使收益增加。
+
+**解** (1) $E_d = \left|\frac{p}{Q}Q'\right| = \frac{p}{20 - p}$。
+(2) 由 $R = pQ$，得
+$$
+\frac{\mathrm{d}R}{\mathrm{d}p} = Q + p\frac{\mathrm{d}Q}{\mathrm{d}p} = Q\left(1 + \frac{p}{Q}Q'\right) = Q(1 - E_d).
+$$
+令 $\frac{\mathrm{d}R}{\mathrm{d}p} = 0$，即有 $E_d = \frac{p}{20 - p} = 1$，得 $p = 10$。当 $10 < p < 20$ 时，$E_d > 1$，于是 $\frac{\mathrm{d}R}{\mathrm{d}p} < 0$，故当 $10 < p < 20$ 时，降低价格反而使收益增加。
+
+**高等数学 | 做题进阶 · 三步法**
+
+- 一阶 **夯实基础** 《数学基础过关 660 题》本章对应全部题目
+- 二阶 **强化** 《高等数学辅导讲义·严选题》本章对应全部题目
+- 三阶 **突破** 《数学强化通关 330 题》本章优选题目
+
+| 数学一 | 54 58 59 64 70 77 79 82 85 |
+| :--- | :--- |
+| 数学二 | 93 99 100 108 119 123 132 134 138 |
+| 数学三 | 59 63 64 69 77 86 87 88 91 |
+
+· 151 ·
+
+【第 152 页 / 共 315 页】
+以下是图片中文字的完整转录：
+
+**第四章 常微分方程**
+
+（右上角二维码下方文字：）
+扫码进群
+听武老师唠叨
+
+---
+
+### 基础衔接与强化阶段学习达标自检表
+
+| 考试内容 | 常考题型 | 基础阶段复习要求 | 强化阶段复习要求 |
+| :--- | :--- | :--- | :--- |
+| 常微分方程的基本概念 | 微分方程求解 | 掌握微分方程求解 | 重点突破综合题、应用题 |
+| 一阶微分方程 | 综合题 | 了解综合题、应用题 | |
+| 可降阶的高阶方程 (数二不要求) | 应用题 | | |
+| 高阶线性微分方程 | | | |
+| 差分方程 (数二不要求) | | | |
+
+---
+
+### 考试大纲内容与要求数学一、二、三对比表
+
+| 考试大纲内容 | 考试大纲要求 | | |
+| :--- | :--- | :--- | :--- |
+| | 数一 | 数二 | 数三 |
+| 微分方程及其阶、解、通解、初始条件和特解等概念 | 了解 | 了解 | 了解 |
+| 变量可分离的微分方程及一阶线性微分方程的解法 | 掌握 | 掌握 | 掌握 |
+| 齐次微分方程 | 会解 | 会解 | 掌握 |
+| 自由项为多项式、指数函数、正弦函数、余弦函数以及它们的和与积的二阶常系数非齐次线性微分方程 | 会解 | 会解 | 会解 |
+| 伯努利方程和全微分方程 用简单的变量代换解某些微分方程 欧拉方程 | 会解 | | |
+
+---
+
+· 152 ·

@@ -1,0 +1,947 @@
+===== 文件: 27武忠祥高数辅导讲义-强化.pdf =====
+【第 19 页 / 共 315 页】
+第一章 函数 极限 连续
+
+展示新知
+
+【例 2】 求极限 $\lim_{x \to \infty} (x + \sqrt{1+x^2})^{\frac{1}{x}}$.
+
+解
+$$
+\lim_{x \to \infty} (x + \sqrt{1+x^2})^{\frac{1}{x}} = \lim_{x \to \infty} e^{\frac{\ln(x+\sqrt{1+x^2})}{x}},
+$$
+$$
+\lim_{x \to \infty} \frac{\ln(x+\sqrt{1+x^2})}{x} = \lim_{x \to \infty} \frac{\frac{1}{\sqrt{1+x^2}}}{1} \quad \text{（洛必达法则）}
+$$
+$$
+= 0,
+$$
+则
+$$
+\lim_{x \to \infty} (x + \sqrt{1+x^2})^{\frac{1}{x}} = e^0 = 1.
+$$
+
+方法 5 利用泰勒公式求极限
+
+定理 (带 Peano 余项的泰勒公式) 设 $f(x)$ 在 $x = x_0$ 处 $n$ 阶可导, 则
+$$
+f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(x_0)}{2!}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + o((x-x_0)^n).
+$$
+特别是当 $x_0 = 0$ 时,
+$$
+f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \cdots + \frac{f^{(n)}(0)}{n!}x^n + o(x^n).
+$$
+几个常用的泰勒公式
+
+(1) $e^x = 1 + x + \frac{x^2}{2!} + \cdots + \frac{x^n}{n!} + o(x^n).$
+
+(2) $\sin x = x - \frac{x^3}{3!} + \cdots + (-1)^{n-1} \frac{x^{2n-1}}{(2n-1)!} + o(x^{2n-1}).$
+
+(3) $\cos x = 1 - \frac{x^2}{2!} + \cdots + (-1)^n \frac{x^{2n}}{(2n)!} + o(x^{2n}).$
+
+(4) $\ln(1+x) = x - \frac{x^2}{2} + \cdots + (-1)^{n-1} \frac{x^n}{n} + o(x^n).$
+
+(5) $(1+x)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!}x^2 + \cdots + \frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n + o(x^n).$
+
+展示新知
+
+【例】 求极限 $\lim_{x \to 0} \frac{\frac{x^2}{2} + 1 - \sqrt{1+x^2}}{(\cos x - e^{x^2})\sin x^2}$.
+
+解 (方法一) 由于 $\sqrt{1+x^2} = 1 + \frac{1}{2}x^2 + \frac{\frac{1}{2}(\frac{1}{2}-1)}{2!}x^4 + o(x^4),$
+
+$\cos x = 1 - \frac{1}{2}x^2 + o(x^2),$
+
+$e^{x^2} = 1 + x^2 + o(x^2),$
+
+代入所求极限式得
+
+原式 $= \lim_{x \to 0} \frac{-\frac{1}{8}x^4 + o(x^4)}{[-\frac{3}{2}x^2 + o(x^2)]x^2} = -\frac{1}{12}.$
+
+· 19 ·
+
+函数 极限 连续
+
+【第 20 页 / 共 315 页】
+高等数学 辅导讲义
+
+函数 极限 连续
+
+(方法二)
+
+这道题还有方法，欢迎学有余力的同学开动脑筋
+
+(方法三)
+
+**方法 6 利用夹逼准则求极限**
+
+【例】 求极限 $\lim_{n\to\infty} \left( \frac{1}{n^2+1} + \frac{2}{n^2+2} + \dots + \frac{n}{n^2+n} \right)$.
+
+解
+$$
+\frac{1+2+\dots+n}{n^2+n} \le \frac{1}{n^2+1} + \frac{2}{n^2+2} + \dots + \frac{n}{n^2+n} \le \frac{1+2+\dots+n}{n^2+1},
+$$
+$$
+\lim_{n\to\infty} \frac{1+2+\dots+n}{n^2+n} = \lim_{n\to\infty} \frac{\frac{1}{2}n(n+1)}{n^2+n} = \frac{1}{2},
+$$
+$$
+\lim_{n\to\infty} \frac{1+2+\dots+n}{n^2+1} = \lim_{n\to\infty} \frac{\frac{1}{2}n(n+1)}{n^2+1} = \frac{1}{2},
+$$
+则
+$$
+\lim_{n\to\infty} \left( \frac{1}{n^2+1} + \frac{2}{n^2+2} + \dots + \frac{n}{n^2+n} \right) = \frac{1}{2}.
+$$
+
+注 $1+2+\dots+n = \frac{1}{2}n(n+1)$.
+
+**方法 7 利用定积分的定义求极限**
+
+【例】 求极限 $\lim_{n\to\infty} \left( \frac{1}{n+1} + \frac{1}{n+2} + \dots + \frac{1}{n+n} \right)$.
+
+解
+$$
+\lim_{n\to\infty} \left( \frac{1}{n+1} + \frac{1}{n+2} + \dots + \frac{1}{n+n} \right) = \lim_{n\to\infty} \frac{1}{n} \left( \frac{1}{1+\frac{1}{n}} + \frac{1}{1+\frac{2}{n}} + \dots + \frac{1}{1+\frac{n}{n}} \right)
+$$
+$$
+= \int_0^1 \frac{1}{1+x} dx = \ln 2.
+$$
+
+$\cdot 20 \cdot$
+
+【第 21 页 / 共 315 页】
+第一章 | 函数 极限 连续
+
+函数 极限 连续
+
+由定积分定义可知, 若将区间 $[0,1]$ $n$ 等分, 第 $k$ 个子区间上的 $\xi_k$ 取该子区间右端点, 此时 $\Delta x_k = \frac{1}{n}, \xi_k = \frac{k}{n}$, 则
+
+$$
+\int_0^1 f(x) dx = \lim_{n \to \infty} \sum_{k=1}^n f(\xi_k) \Delta x_k = \lim_{n \to \infty} \sum_{k=1}^n f\left(\frac{k}{n}\right) \cdot \frac{1}{n} = \lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^n f\left(\frac{k}{n}\right),
+$$
+
+上式右端是一种常见的积分和式的极限. 所以, 用定积分定义求极限的一般方法是: 先提“可爱因子” $\frac{1}{n}$, 然后再确定被积函数和积分区间.
+
+方法 8 利用单调有界准则求极限
+
+【展示新知】
+
+【例】 设 $x_1 > 0, x_{n+1} = \frac{1}{2}\left(x_n + \frac{1}{x_n}\right), n = 1, 2, \dots$. 求极限 $\lim_{n \to \infty} x_n$.
+
+由题设知 $x_n > 0$, 且
+
+$$
+x_{n+1} = \frac{1}{2}\left(x_n + \frac{1}{x_n}\right) = \frac{1}{2}\left[ (\sqrt{x_n})^2 + \left(\frac{1}{\sqrt{x_n}}\right)^2 \right] \geq \frac{1}{2} \times 2 \sqrt{x_n} \times \frac{1}{\sqrt{x_n}} = 1,
+$$
+
+$$
+\frac{x_{n+1}}{x_n} = \frac{1}{2}\left(1 + \frac{1}{x_n^2}\right) \leq \frac{1}{2}(1 + 1) = 1,
+$$
+
+则数列 $\{x_n\}$ 单调减少且有下界, 故极限 $\lim_{n \to \infty} x_n$ 存在. 设 $\lim_{n \to \infty} x_n = a$, 由极限保号性知 $a \geq 1$.
+
+对等式 $x_{n+1} = \frac{1}{2}\left(x_n + \frac{1}{x_n}\right)$ 两端取极限, 得 $a = \frac{1}{2}\left(a + \frac{1}{a}\right)$, 又 $a \geq 1$, 由此解得 $a = 1$.
+
+(二) 求极限常见题型
+
+函数的极限
+
+求函数的极限, 常见的是 7 种不定式, 即 $\frac{0}{0}, \frac{\infty}{\infty}, \infty - \infty, 0 \cdot \infty, 1^\infty, \infty^0, 0^0$. 这里考查的重点是 $\frac{0}{0}$ 型和“$1^\infty$”型.
+
+1. $\frac{0}{0}$ 型极限
+
+常用方法
+
+- (1) 洛必达法则;
+- (2) 等价无穷小代换;
+- (3) 泰勒公式.
+
+以上三种方法使用的同时要注意将原式化简, 化简的方法有极限非零的因子极限先求出来、有理化及变量代换等. （右侧小图文字：武忠祥 小课堂）
+
+【展示新知】
+
+【例】 求极限 $\lim_{x \to 0} \frac{\sqrt{1 + \tan x} - \sqrt{1 + \sin x}}{x \ln(1 + x) - x^2}$.
+
+原式 $= \lim_{x \to 0} \left( \frac{\tan x - \sin x}{x[\ln(1+x) - x]} \cdot \frac{1}{\sqrt{1 + \tan x} + \sqrt{1 + \sin x}} \right)$ （有理化）
+
+$= \frac{1}{2} \lim_{x \to 0} \frac{\tan x(1 - \cos x)}{x[\ln(1+x) - x]}$ （先求极限非零因子的极限）
+
+· 21 ·
+
+【第 22 页 / 共 315 页】
+高等数学 辅导讲义
+
+函数极限连续
+
+$$
+= \frac{1}{2}\lim_{x \to 0}\frac{x \times \frac{1}{2}x^2}{x\left(-\frac{1}{2}x^2\right)} \qquad \text{（等价代换）}
+$$
+
+$$
+= -\frac{1}{2}.
+$$
+
+（方法二） 由拉格朗日中值定理得
+
+$$
+\text{原式} = \lim_{x \to 0}\frac{\frac{1}{2\sqrt{1+\xi}}(\tan x - \sin x)}{x[\ln(1+x)-x]} \qquad \text{（}\xi \text{ 在 } \tan x \text{ 与 } \sin x \text{ 之间）}
+$$
+
+$$
+= \frac{1}{2}\lim_{x \to 0}\frac{\tan x - \sin x}{x[\ln(1+x)-x]}.
+$$
+
+以下同方法一.
+
+【例 2】 求极限 $\lim_{x \to 0}\frac{e^{x^2} - e^{2-2\cos x}}{x^4}.$
+
+解 （方法一） $\text{原式} = \lim_{x \to 0}\frac{e^{2-2\cos x}(e^{x^2-2+2\cos x} - 1)}{x^4}$
+
+$$
+= \lim_{x \to 0}\frac{x^2 - 2 + 2\cos x}{x^4} \qquad \text{（先求极限非零因子的极限，等价代换）}
+$$
+
+$$
+= \lim_{x \to 0}\frac{x^2 - 2 + 2\left[1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4)\right]}{x^4} \qquad \text{（泰勒公式）}
+$$
+
+$$
+= \frac{1}{12}.
+$$
+
+（方法二） 由拉格朗日中值定理得
+
+$$
+\lim_{x \to 0}\frac{e^{x^2} - e^{2-2\cos x}}{x^4} = \lim_{x \to 0}\frac{e^{\xi}(x^2 - 2 + 2\cos x)}{x^4} \qquad \text{（}\xi \text{ 在 } x^2 \text{ 与 } 2-2\cos x \text{ 之间）}
+$$
+
+$$
+= \lim_{x \to 0}\frac{x^2 - 2 + 2\cos x}{x^4} = \lim_{x \to 0}\frac{2x - 2\sin x}{4x^3} \qquad \text{（洛必达法则）}
+$$
+
+$$
+= \frac{1}{2}\lim_{x \to 0}\frac{\frac{1}{6}x^3}{x^3} \qquad \text{（}x - \sin x \sim \frac{1}{6}x^3\text{）}
+$$
+
+$$
+= \frac{1}{12}.
+$$
+
+注 本题的两种方法中方法二更简单，这里主要用了拉格朗日中值定理.
+类似地，可求下列极限
+
+(1) $\lim_{x \to 0}\frac{e^{\sin x} - e^x}{\sin x - x}$;    (1)
+
+(2) $\lim_{x \to +\infty}x^2(a^{\frac{1}{x}} - a^{\frac{1}{x+1}})(a>0)$;    ($\ln a$)
+
+(3) $\lim_{x \to +\infty}(\sin \sqrt{x+1} - \sin \sqrt{x})$;    (0)
+
+· 22 ·
+
+【第 23 页 / 共 315 页】
+以下是图片中文字的完整转录（按原文顺序，公式已做 LaTeX 化处理）：
+
+**第一章 函数 极限 连续**
+
+---
+
+(4) $\lim\limits_{n\to\infty}(\cos\sqrt{n+1}-\cos\sqrt{n})$; $\quad(0)$
+
+(5) $\lim\limits_{n\to\infty}n^2\left(\arctan\frac{a}{n}-\arctan\frac{a}{n+1}\right)(a>0); \quad(a)$
+
+(6) $\lim\limits_{x\to+\infty}x^2[\arctan(x+1)-\arctan x]; \quad(1)$
+
+(7) $\lim\limits_{x\to0}\frac{\cos x-\cos(\sin x)}{x^4}. \quad\left(-\frac{1}{6}\right)$
+
+> 右侧竖排文字：函数 极限 连续
+
+---
+
+**训练思维**
+
+**【例 3】** 求极限 $\lim\limits_{x\to0}\frac{\arcsin x-\sin x}{\arctan x-\tan x}$.
+
+**解** 原式 $=\lim\limits_{x\to0}\frac{(\arcsin x-x)-(\sin x-x)}{(\arctan x-x)-(\tan x-x)}$
+
+$\quad\quad\quad=\lim\limits_{x\to0}\frac{\left(\frac{1}{6}x^3\right)-\left(-\frac{1}{6}x^3\right)}{\left(-\frac{1}{3}x^3\right)-\left(\frac{1}{3}x^3\right)}$ $\quad\quad$ (等价代换)
+
+$\quad\quad\quad=\lim\limits_{x\to0}\frac{\frac{1}{3}x^3}{-\frac{2}{3}x^3}=-\frac{1}{2}.$
+
+**注** 本题主要用了等价无穷小代换，类似地，可求下列极限 $\quad$ 【解析扫码见二维码获取】
+
+(1) $\lim\limits_{x\to0}\frac{\arctan x-\sin x}{x^3}; \quad\left(-\frac{1}{6}\right)$
+
+(2) $\lim\limits_{x\to0}\frac{\arcsin x-\arctan x}{\sin x-\tan x}. \quad(-1)$
+
+---
+
+**渗透方法**
+
+**【例 4】** 求极限 $\lim\limits_{x\to0}\frac{x\int_0^x\ln(1+t^2)dt}{x^2-\sin^2x}.$
+
+**解** 原式 $=\lim\limits_{x\to0}\frac{x\times\frac{1}{3}x^3}{(x+\sin x)(x-\sin x)}$ $\quad\quad$ $\left(\int_0^x\ln(1+t^2)dt\sim\int_0^xt^2dt=\frac{1}{3}x^3\right)$
+
+$\quad\quad\quad=\lim\limits_{x\to0}\frac{x\times\frac{1}{3}x^3}{2x\times\frac{1}{6}x^3}$ $\quad\quad$ $(x+\sin x\sim2x;x-\sin x\sim\frac{1}{6}x^3)$
+
+$\quad\quad\quad=1.$
+
+**注** 类似地， $\quad$ 【解析扫码见二维码获取】
+
+求极限 $\lim\limits_{x\to0}\left[\frac{1}{x\int_0^x\tan t^2dt}-\frac{1}{x\int_0^x\sin t^2dt}\right]$. $\quad\left(-\frac{9}{14}\right)$
+
+---
+
+$\cdot 23 \cdot$
+
+【第 24 页 / 共 315 页】
+以下是图片中文字的完整转录：
+
+**高等数学 辅导讲义**
+
+（左侧竖排文字）函数极限连续
+
+---
+
+**渗透方法**
+
+**【例5】** 求极限 $\lim\limits_{x \to 0} \frac{xe^x - \sin x}{(1+x)^x - 1}$。
+
+**【分析】** 本题是一个 $\frac{0}{0}$ 型极限，由于分母中出现幂指函数，直接用洛必达法则不方便，则先改写分母中的幂指函数为指数函数，然后用等价代换。
+$(1+x)^x - 1 = e^{x\ln(1+x)} - 1 \sim x\ln(1+x) \sim x^2$。
+
+**【解】（方法一）**
+$$
+ \lim_{x \to 0} \frac{xe^x - \sin x}{(1+x)^x - 1} = \lim_{x \to 0} \frac{xe^x - \sin x}{x^2} 
+$$
+$$
+ = \lim_{x \to 0} \frac{e^x + xe^x - \cos x}{2x} 
+$$
+$$
+ = \lim_{x \to 0} \frac{2e^x + xe^x + \sin x}{2} = 1. 
+$$
+
+**（方法二）**
+$$
+ \lim_{x \to 0} \frac{xe^x - \sin x}{(1+x)^x - 1} = \lim_{x \to 0} \frac{xe^x - \sin x}{x^2} 
+$$
+$$
+ = \lim_{x \to 0} \frac{xe^x - x + x - \sin x}{x^2} 
+$$
+$$
+ = \lim_{x \to 0} \frac{x(e^x - 1)}{x^2} + \lim_{x \to 0} \frac{x - \sin x}{x^2} = 1. 
+$$
+
+---
+
+**注** 当 $x \to 0$ 时，$(1+x)^\alpha - 1 \sim \alpha x$，这个结论推广可得，若 $\alpha(x) \to 0, \alpha(x)\beta(x) \to 0$，则
+$(1+\alpha(x))^{\beta(x)} - 1 \sim \alpha(x)\beta(x)$。
+由此可得 $(1+x)^x - 1 \sim x^2$。
+类似地，可求下列极限
+(1) $\lim\limits_{x \to 0} \frac{1}{x^2} \left[ \left( \frac{2+\cos x}{3} \right)^x - 1 \right]$;  $\left( -\frac{1}{6} \right)$
+(2) $\lim\limits_{x \to 0} \frac{(3+x)^{\sin x} - 3^{\sin x}}{x^3}$。  $\left( \frac{1}{3} \right)$
+
+**解析扫封面二维码获取** *(此处水印，图片右侧)*
+
+---
+
+**渗透方法**
+
+**【例6】** $\lim\limits_{x \to 0} \frac{\cos x - e^{-\frac{x^2}{2}}}{x^2[x + \ln(1-x)]}$。
+
+**【解】（方法一）**
+$$
+ \ln(1-x) = -x - \frac{x^2}{2} + o(x^2), 
+$$
+$$
+ \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} + o(x^4), 
+$$
+$$
+ e^{-\frac{x^2}{2}} = 1 - \frac{x^2}{2} + \frac{x^4}{2^2 2!} + o(x^4). 
+$$
+原式 $= \lim\limits_{x \to 0} \frac{-\frac{1}{12}x^4 + o(x^4)}{x^2 \left[ -\frac{x^2}{2} + o(x^2) \right]} = \frac{1}{6}$。
+
+**（方法二）** 由于 $x + \ln(1-x) = \ln(1-x) - (-x) \sim -\frac{x^2}{2}$，则
+
+---
+
+（页码）· 24 ·
+
+【第 25 页 / 共 315 页】
+第二章 函数 极限 连续
+
+$$ \begin{aligned} \text{原式} &= \lim_{x \to 0} \frac{\cos x - e^{-\frac{x^2}{2}}}{-\frac{1}{2}x^4} = \lim_{x \to 0} \frac{-\sin x + xe^{-\frac{x^2}{2}}}{-2x^3} \quad \text{（洛必达法则）} \\ &= -\frac{1}{2} \left[ \lim_{x \to 0} \frac{x - \sin x}{x^3} + \lim_{x \to 0} \frac{x(e^{-\frac{x^2}{2}} - 1)}{x^3} \right] \\ &= -\frac{1}{2} \left[ \lim_{x \to 0} \frac{\frac{1}{6}x^3}{x^3} + \lim_{x \to 0} \frac{x\left(-\frac{x^2}{2}\right)}{x^3} \right] \\ &= \frac{1}{6}. \end{aligned} $$
+
+【此处不清】 类似地，
+求极限 $\lim_{x \to 0} \frac{\ln(1+x)\ln(1-x) - \ln(1-x^2)}{x^4}$. $\left( \frac{1}{12} \right)$
+
+解析扫封面二维码获取
+
+2. $\frac{\infty}{\infty}$ 型极限
+
+常用方法
+（1）洛必达法则；
+（2）分子分母同除以分子和分母各项中最高阶的无穷大。
+【此处不清】
+
+展示新知
+【例1】 求极限 $\lim_{x \to +\infty} \frac{\int_0^x (1+t^2)e^{t^2-x^2} dt}{x}$.
+
+解 原式 $= \lim_{x \to +\infty} \frac{\int_0^x (1+t^2)e^{t^2} dt}{x e^{x^2}}$
+$= \lim_{x \to +\infty} \frac{e^{x^2} + x^2 e^{x^2}}{e^{x^2} + 2x^2 e^{x^2}}$  （洛必达法则）
+$= \lim_{x \to +\infty} \frac{\frac{1}{x^2} + 1}{\frac{1}{x^2} + 2} = \frac{1}{2}.$
+
+展示新知
+【例2】 求极限 $\lim_{x \to +\infty} \frac{2^x + x^{100}}{2e^x + \ln^{10} x}$.
+
+解 原式 $= \lim_{x \to +\infty} \frac{\left( \frac{2}{e} \right)^x + \frac{x^{100}}{e^x}}{2 + \frac{\ln^{10} x}{e^x}}$  （分子分母同除以 $e^x$）
+$= 0.$
+
+训练思维
+【例3】 求极限 $\lim_{x \to +\infty} \frac{\sqrt{4x^2+x-1} + x + 1}{\sqrt{x^2 + \sin x}}$.
+
+· 25 ·
+
+【第 26 页 / 共 315 页】
+高等数学 辅导讲义
+
+函数极限连续
+
+解（方法一） 原式 = $$
+ \lim_{x \to -\infty} \frac{\sqrt{4+\frac{1}{x}-\frac{1}{x^2}}-1-\frac{1}{x}}{\sqrt{1+\frac{\sin x}{x^2}}} 
+$$（分子分母同除以 $-x$）
+$$
+ = 1. 
+$$
+
+（方法二） 原式 = $$
+ \lim_{x \to -\infty} \frac{\sqrt{4x^2+x-1}}{\sqrt{x^2+\sin x}} + \lim_{x \to -\infty} \frac{x}{\sqrt{x^2+\sin x}} + \lim_{x \to -\infty} \frac{1}{\sqrt{x^2+\sin x}} 
+$$（拆项）
+$$
+ = 2 - 1 + 0 = 1. 
+$$
+
+训练思维
+
+【例 4】给出下列 4 个命题：
+
+(1) 若 $f(x)$ 可导，则当 $\lim_{x \to +\infty} \frac{f(x)}{x}$ 存在时，$\lim_{x \to +\infty} f'(x)$ 存在；
+
+(2) 若 $\lim_{x \to +\infty} f'(x)$ 存在，则 $\lim_{x \to +\infty} \frac{f(x)}{x}$ 存在；
+
+(3) 若 $\lim_{x \to +\infty} [f'(x) + f(x)]$ 存在，则 $\lim_{x \to +\infty} f(x)$ 存在；
+
+(4) 若 $f(x)$ 连续，则当 $\lim_{x \to +\infty} f(x)$ 存在时，$\lim_{x \to +\infty} \frac{\int_0^x f(t)\mathrm{d}t}{x}$ 存在。
+
+其中正确命题的个数是
+
+(A) 1. (B) 2. (C) 3. (D) 4.
+
+解 应选 (C)
+
+命题(1) 不正确. 令 $f(x) = \sin x$，则 $\lim_{x \to +\infty} \frac{f(x)}{x} = \lim_{x \to +\infty} \frac{\sin x}{x} = 0$，但 $\lim_{x \to +\infty} f'(x) = \lim_{x \to +\infty} \cos x$ 不存在.
+
+命题(2) 正确. 由于 $\lim_{x \to +\infty} f'(x)$ 存在，则由洛必达法则知
+$$
+ \lim_{x \to +\infty} \frac{f(x)}{x} = \lim_{x \to +\infty} \frac{f'(x)}{1} = \lim_{x \to +\infty} f'(x), 
+$$
+故 $\lim_{x \to +\infty} \frac{f(x)}{x}$ 存在.
+
+命题(3) 正确. 由于 $\lim_{x \to +\infty} [f'(x) + f(x)]$ 存在，则由洛必达法则知
+$$
+ \lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} \frac{\mathrm{e}^x f(x)}{\mathrm{e}^x} = \lim_{x \to +\infty} \frac{\mathrm{e}^x [f'(x) + f(x)]}{\mathrm{e}^x} = \lim_{x \to +\infty} [f'(x) + f(x)], 
+$$
+故 $\lim_{x \to +\infty} f(x)$ 存在.
+
+命题(4) 正确. 由于 $\lim_{x \to +\infty} f(x)$ 存在，则由洛必达法则知
+$$
+ \lim_{x \to +\infty} \frac{\int_0^x f(t)\mathrm{d}t}{x} = \lim_{x \to +\infty} \frac{f(x)}{1} = \lim_{x \to +\infty} f(x), 
+$$
+故 $\lim_{x \to +\infty} \frac{\int_0^x f(t)\mathrm{d}t}{x}$ 存在.
+
+· 26 ·
+
+【第 27 页 / 共 315 页】
+这是图片内容的完整转录：
+
+---
+
+**第一章 函数 极限 连续**（右上角小图）
+
+（页面右侧竖排文字：**函数极限连续**）
+
+### 3. “∞-∞”型极限
+
+**常用方法**
+
+1. 通分化为 $\frac{0}{0}$（适用于分式差）；
+2. 根式有理化（适用于根式差）；
+3. 提取无穷因子，然后等价代换或变量代换，泰勒公式。
+
+（右侧小字：**武老师 小课堂**）
+
+---
+
+**📖 展示新知**
+
+【例 1】 求极限 $$\lim_{x\to0}\left(\frac{1}{x^2}-\cot^2x\right).$$
+
+解 原式 $$
+ \begin{aligned} &= \lim_{x\to0}\left(\frac{1}{x^2}-\frac{1}{\tan^2x}\right) \\ &= \lim_{x\to0}\frac{\tan^2x-x^2}{x^2\tan^2x} \\ &= \lim_{x\to0}\frac{\tan x+x}{x}\cdot\frac{\tan x-x}{x^3} \\ &= 2\lim_{x\to0}\frac{\frac{1}{3}x^3}{x^3}=\frac{2}{3}. \end{aligned} 
+$$
+
+（右侧注释：**（通分化为 $\frac{0}{0}$）**）
+
+---
+
+**📝 类似地，可求下列极限**
+
+（右侧小字：**解析见封底二维码找**）
+
+(1) $$\lim_{x\to0}\left(\frac{1}{\sin^2x}-\frac{\cos^2x}{x^2}\right);$$ $\quad\left(\frac{4}{3}\right)$
+
+(2) $$\lim_{x\to0}\left[\frac{1}{\ln(1+\tan^2x)}-\frac{1}{\ln(1+x^2)}\right].$$ $\quad\left(-\frac{2}{3}\right)$
+
+---
+
+**🏃 训练思维**
+
+【例 2】 求极限 $$\lim_{x\to+\infty}(\sqrt{x+\sqrt{x+\sqrt{x}}}-\sqrt{x}).$$
+
+解 （方法一）
+
+$$
+ \begin{aligned} \text{原式} &= \lim_{x\to+\infty}\frac{\sqrt{x+\sqrt{x}}}{\sqrt{x+\sqrt{x+\sqrt{x}}}+\sqrt{x}} \\ &= \lim_{x\to+\infty}\frac{\sqrt{1+\frac{1}{\sqrt{x}}}}{\sqrt{1+\sqrt{\frac{1}{x}+\frac{1}{x\sqrt{x}}}}+1} \\ &= \frac{1}{2}. \end{aligned} 
+$$
+
+（右侧注释：**（有理化）**）
+
+（右侧注释：**（分子分母同除以 $\sqrt{x}$）**）
+
+（方法二）
+
+$$
+ \begin{aligned} \text{原式} &= \lim_{x\to+\infty}\sqrt{x}\left[\sqrt{1+\sqrt{\frac{1}{x}+\frac{1}{x\sqrt{x}}}}-1\right] \\ &= \lim_{x\to+\infty}\sqrt{x}\times\frac{1}{2}\sqrt{\frac{1}{x}+\frac{1}{x\sqrt{x}}}. \end{aligned} 
+$$
+
+（右侧注释：**（提出 $\sqrt{x}$）**）
+
+（右侧注释：**（等价代换）**）
+
+---
+
+（页脚：**· 27 ·**）
+
+【第 28 页 / 共 315 页】
+高等数学 辅导讲义
+
+函数极限连续
+
+$$
+=\frac{1}{2}.
+$$
+
+训练思维
+
+【例3】 求极限 $\lim_{x\to\infty}\left[x-x^2\ln\left(1+\frac{1}{x}\right)\right]$.
+
+解 （方法一） 令 $x=\frac{1}{t}$，则
+
+原式 $=\lim_{t\to0^+}\left[\frac{1}{t}-\frac{1}{t^2}\ln(1+t)\right]=\lim_{t\to0^+}\frac{t-\ln(1+t)}{t^2}=\lim_{t\to0^+}\frac{\frac{1}{2}t^2}{t^2}=\frac{1}{2}$.
+
+（方法二） 由 $\ln(1+x)$ 的泰勒公式得 $\ln\left(1+\frac{1}{x}\right)=\frac{1}{x}-\frac{1}{2x^2}+o\left(\frac{1}{x^2}\right)$，则
+
+原式 $=\lim_{x\to\infty}\left[x-x^2\left(\frac{1}{x}-\frac{1}{2x^2}+o\left(\frac{1}{x^2}\right)\right)\right]=\lim_{x\to\infty}\left[\frac{1}{2}-x^2\cdot o\left(\frac{1}{x^2}\right)\right]=\frac{1}{2}$.
+
+（方法三） 原式 $=\lim_{x\to\infty}x^2\left[\frac{1}{x}-\ln\left(1+\frac{1}{x}\right)\right]$
+
+$$
+\begin{aligned}
+&=\lim_{x\to\infty}x^2\left(\frac{1}{2}\cdot\frac{1}{x^2}\right) \quad (\text{等价无穷小代换}) \\
+&=\frac{1}{2}.
+\end{aligned}
+$$
+
+注 显然，以上三种方法中方法三最简单，类似地，可求下列极限
+
+(1) $\lim_{n\to\infty}\left[n-n^2\ln\left(1+\frac{1}{n}\right)\right]$; $\quad \left(\frac{1}{2}\right)$
+
+(2) $\lim_{x\to\infty}\frac{e^x}{\left(1+\frac{1}{x}\right)^{x^2}}$. $\quad (e^{\frac{1}{2}})$
+
+训练思维
+
+【例4】 $\lim_{x\to\infty}\left[\frac{x^{1+x}}{(1+x)^x}-\frac{x}{e}\right]$.
+
+解 （方法一） 原式 $=\lim_{x\to\infty}\left[\frac{x}{\left(1+\frac{1}{x}\right)^x}-\frac{x}{e}\right]=\lim_{x\to\infty}\frac{x\left[e-\left(1+\frac{1}{x}\right)^x\right]}{e\left(1+\frac{1}{x}\right)^x}$
+
+$$
+\begin{aligned}
+&=\frac{1}{e}\lim_{x\to\infty}\frac{e-\left(1+\frac{1}{x}\right)^x}{\frac{1}{x}}=-\frac{1}{e}\lim_{t\to0^+}\frac{(1+t)^{\frac{1}{t}}-e}{t} \quad \left(\text{令}\frac{1}{x}=t\right) \\
+&=-\frac{1}{e}\lim_{t\to0^+}\frac{e^{\frac{\sin(1+t)}{t}}-e}{t}=-\frac{1}{e}\lim_{t\to0^+}\frac{e^{\frac{\ln(1+t)}{t}}-1}{t} \\
+&=-\frac{1}{e}\lim_{t\to0^+}\frac{\frac{\ln(1+t)}{t}-1}{t} \quad \left(e^{\frac{\ln(1+t)}{t}}-1\sim\frac{\ln(1+t)-t}{t}\right) \\
+&=-\frac{1}{e}\lim_{t\to0^+}\frac{-\frac{1}{2}t^2}{t^2}=\frac{1}{2e}.
+\end{aligned}
+$$
+
+· 28 ·
+
+【第 29 页 / 共 315 页】
+第一章 函数 极限 连续
+
+（方法二） 原式 $= \lim_{x \to +\infty} \left( \frac{x}{\left(1+\frac{1}{x}\right)^x} - \frac{x}{e} \right) = \lim_{x \to +\infty} \frac{x\left[e - \left(1+\frac{1}{x}\right)^x\right]}{e\left(1+\frac{1}{x}\right)^x}$
+$= \frac{1}{e^2} \lim_{x \to +\infty} x\left[e - e^{\ln\left(1+\frac{1}{x}\right)^x}\right]$
+$= \frac{1}{e^2} \lim_{x \to +\infty} e^x\left[1 - x\ln\left(1+\frac{1}{x}\right)\right]$  （拉格朗日定理）
+$= \frac{1}{e} \lim_{x \to +\infty} x^2\left[\frac{1}{x} - \ln\left(1+\frac{1}{x}\right)\right]$
+$= \frac{1}{e} \lim_{x \to +\infty} x^2\left[\frac{1}{2}\left(\frac{1}{x}\right)^2\right] = \frac{1}{2e}$.
+
+4. “$0^0 \cdot \infty$” 型极限
+
+**常用方法**
+化为“$\frac{0}{0}$”型或“$\frac{\infty}{\infty}$”型。
+（此处头像及文字内容较模糊，依据常见标识推测为“小红书 小崔说数”）
+
+**展示新知**
+【例1】 求极限 $\lim_{x \to 1} x \ln|1-x|$.
+
+解 $\ln x = \ln[1+(x-1)] \sim x-1$,
+$\lim_{x \to 1} x \ln|1-x| = \lim_{x \to 1} (x-1) \ln|1-x| = \lim_{x \to 1} \frac{\ln|1-x|}{\frac{1}{x-1}} = \lim_{x \to 1} \frac{\frac{-1}{1-x}}{-\frac{1}{(x-1)^2}} = 0$.
+
+**展示新知**
+【例2】 求极限 $\lim_{x \to +\infty} x\left(1-\frac{\ln x}{x}\right)^x$.
+
+解（方法一） $\lim_{x \to +\infty} x\left(1-\frac{\ln x}{x}\right)^x = \lim_{x \to +\infty} e^{\ln x} \cdot e^{x\ln\left(1-\frac{\ln x}{x}\right)}$
+$= \lim_{x \to +\infty} e^{\ln x + x\ln\left(1-\frac{\ln x}{x}\right)}$,
+$\lim_{x \to +\infty} \left[ \ln x + x\ln\left(1-\frac{\ln x}{x}\right) \right] = \lim_{x \to +\infty} x\left[ \frac{\ln x}{x} + \ln\left(1-\frac{\ln x}{x}\right) \right]$
+$= \lim_{x \to +\infty} x\left[ -\frac{1}{2}\left(-\frac{\ln x}{x}\right)^2 \right]$  （等价无穷小代换）
+$= -\frac{1}{2} \lim_{x \to +\infty} \frac{\ln^2 x}{x} = 0$,
+$\lim_{x \to +\infty} x\left(1-\frac{\ln x}{x}\right)^x = e^0 = 1$.
+
+（方法二） 令 $y = x\left(1-\frac{\ln x}{x}\right)^x$, 则
+$\ln y = \ln x + x\ln\left(1-\frac{\ln x}{x}\right)$
+
+· 29 ·
+
+【第 30 页 / 共 315 页】
+（泰勒公式）
+
+$$= \ln x + x\left[ -\frac{\ln x}{x} - \frac{1}{2}\left(\frac{\ln x}{x}\right)^2 + o\left(\left(\frac{\ln x}{x}\right)^2\right) \right]$$
+
+$$= -\frac{1}{2}\frac{\ln^2 x}{x} + x \cdot o\left(\left(\frac{\ln x}{x}\right)^2\right),$$
+
+$$\lim_{x \to \infty} \ln y = 0,$$
+
+$$\lim_{x \to \infty} x\left( 1 - \frac{\ln x}{x} \right)^x = e^0 = 1.$$
+
+**5. “$1^\infty$” 型极限**
+
+> 常用方法
+> (1) 洛必达法则 $\lim [1 + \varphi(x)]^{\frac{1}{\varphi(x)}} = e$, 其中 $\lim \varphi(x) = 0$ ($\varphi(x) \neq 0$);
+> (2) 改写成指数 $\lim [f(x)]^{g(x)} = \lim e^{g(x) \ln f(x)}$, 用洛必达法则;
+> (3) 利用结论：若 $\lim \alpha(x) = 0, \lim \beta(x) = \infty$, 且 $\lim \alpha(x)\beta(x) = A$, 则
+> $$\lim [1 + \alpha(x)]^{\beta(x)} = e^A.$$
+> 以上三种方法往往第三种方法简单，将其归纳为三步：
+> 第一步：写标准型 原式 = $\lim (1 + \alpha)^\beta$;
+> 第二步：求极限 $\lim \alpha \beta = A$;
+> 第三步：写结果 原式 = $e^A$。
+>
+> 武忠祥 小课堂
+
+> 展示新知
+> 【例】 求极限 $\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}}$.
+>
+> （方法一）
+> $$\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} = \lim_{x \to 0^+} \left\{ [1 + (\cos \sqrt{x} - 1)]^{\frac{1}{\cos \sqrt{x} - 1}} \right\}^{\frac{\cos \sqrt{x} - 1}{x}},$$
+> $$\lim_{x \to 0^+} \frac{\cos \sqrt{x} - 1}{x} = \lim_{x \to 0^+} \frac{-\frac{1}{2}(\sqrt{x})^2}{x} = -\frac{1}{2},$$
+> 则 $\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} = e^{-\frac{1}{2}}$.
+>
+> （方法二）
+> $$\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} = \lim_{x \to 0^+} e^{\frac{\ln \cos \sqrt{x}}{x}},$$
+> $$\lim_{x \to 0^+} \frac{\ln \cos \sqrt{x}}{x} = \lim_{x \to 0^+} \frac{-\sin \sqrt{x}}{\cos \sqrt{x}} \cdot \frac{1}{2\sqrt{x}} = -\frac{1}{2} \lim_{x \to 0^+} \frac{\tan \sqrt{x}}{\sqrt{x}} = -\frac{1}{2},$$
+> 则 $\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} = e^{-\frac{1}{2}}$.
+>
+> （方法三）
+> 由于 $(\cos \sqrt{x})^{\frac{1}{x}} = [1 + (\cos \sqrt{x} - 1)]^{\frac{1}{x}}$, 且
+> $$\lim_{x \to 0^+} \frac{\cos \sqrt{x} - 1}{x} = \lim_{x \to 0^+} \frac{-\frac{1}{2}(\sqrt{x})^2}{x} = -\frac{1}{2},$$
+> 则 $\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} = e^{-\frac{1}{2}}$。
+
+> 注 以上三种方法中方法三最简单。
+
+• 30 •
+
+函数 极限 连续
+
+【第 31 页 / 共 315 页】
+第二章 函数 极限 连续
+
+展示新知
+
+【例 2】 求极限 $\lim_{x \to 0} \left( \frac{\arcsin x}{x} \right)^{\frac{1}{1-\cos x}}$.
+
+解 由于 $\left( \frac{\arcsin x}{x} \right)^{\frac{1}{1-\cos x}} = \left( 1 + \frac{\arcsin x - x}{x} \right)^{\frac{1}{1-\cos x}}$，且
+$$
+\lim_{x \to 0} \frac{\arcsin x - x}{x(1-\cos x)}
+= \lim_{x \to 0} \frac{-\frac{1}{6}x^3}{\frac{1}{2}x^3}
+= -\frac{1}{3},
+$$
+（$\arcsin x - x \sim -\frac{1}{6}x^3,\ 1-\cos x \sim \frac{1}{2}x^2$）
+
+则原式 $= e^{-\frac{1}{3}}$.
+
+训练思维
+
+【例 3】 极限 $\lim_{x \to \infty} \left[ \frac{x^2}{(x-a)(x+b)} \right]^x =$
+
+(A) 1. (B) e. (C) $e^{a-b}$. (D) $e^{b-a}$.
+
+（方法一） 直接法
+$$
+\begin{aligned}
+\lim_{x \to \infty} \left[ \frac{x^2}{(x-a)(x+b)} \right]^x
+&= \lim_{x \to \infty} \left( \frac{x}{x-a} \right)^x \left( \frac{x}{x+b} \right)^x \\
+&= \lim_{x \to \infty} \left( 1 - \frac{a}{x} \right)^{-x} \left( 1 + \frac{b}{x} \right)^{-x} \\
+&= e^a \cdot e^{-b} = e^{a-b}.
+\end{aligned}
+$$
+
+故应选(C).
+
+（方法二） 排除法
+
+取 $a = 0$，则
+$$
+\text{原式} = \lim_{x \to \infty} \left( \frac{x}{x+b} \right)^x
+= \lim_{x \to \infty} \left( 1 + \frac{-b}{x+b} \right)^x
+= e^{-b},
+$$
+选项(A)(B)(D)都不正确，故应选(C).
+
+训练思维
+
+【例 4】 求极限 $\lim_{x \to 0} (\cos 2x + 2x \sin x)^{\frac{1}{x^4}}$.
+
+（方法一） （标准答案） 因为
+$$
+\lim_{x \to 0} (\cos 2x + 2x \sin x)^{\frac{1}{x^4}}
+= \lim_{x \to 0} e^{\frac{\ln(\cos 2x + 2x \sin x)}{x^4}},
+$$
+且
+$$
+\begin{aligned}
+\lim_{x \to 0} \frac{\ln(\cos 2x + 2x \sin x)}{x^4}
+&= \lim_{x \to 0} \frac{1}{\cos 2x + 2x \sin x} \cdot \frac{-2\sin 2x + 2\sin x + 2x\cos x}{4x^3} \\
+&= \lim_{x \to 0} \frac{-2\cos 2x + 2\cos x - x\sin x}{6x^2} \\
+&= \lim_{x \to 0} \frac{4\sin 2x - 3\sin x - x\cos x}{12x} \\
+&= \frac{1}{3}.
+\end{aligned}
+$$
+
+所以 $\lim_{x \to 0} (\cos 2x + 2x \sin x)^{\frac{1}{x^4}} = e^{\frac{1}{3}}$.
+
+· 31 ·
+
+【第 32 页 / 共 315 页】
+高等数学 辅导讲义
+
+函数 极限 连续
+
+---
+
+**(方法二)**
+
+原式 $= \lim_{x\to 0}\left(1-2\sin^{2}x+2x\sin x\right)^{\frac{1}{x^{4}}}$
+
+$= \lim_{x\to 0}\frac{-2\sin^{2}x+2x\sin x}{x^{4}}$
+
+$= \lim_{x\to 0}\frac{2\sin x\left(x-\sin x\right)}{x^{4}}$
+
+$\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad$（等价无穷小代换）
+
+$= \frac{2x\cdot\frac{x^{3}}{6}}{x^{4}}$
+
+$= \frac{1}{3}$
+
+原式 $= e^{\frac{1}{3}}.$
+
+---
+
+**注** 类似地，可以求下列极限
+
+(1) $\lim_{x\to 0}\left(\cos\frac{1}{x}\right)^{x^{2}}; \qquad \qquad \qquad \qquad (e^{-\frac{1}{2}})$
+
+(2) $\lim_{x\to 0}\left(\frac{1+\tan x}{1+\sin x}\right)^{\frac{1}{x^{3}}}; \qquad \qquad \qquad (e^{\frac{1}{2}})$
+
+(3) $\lim_{x\to 0}\left(\sin\frac{2}{x}+\cos\frac{1}{x}\right)^{x}. \qquad \qquad (e^{2})$
+
+【解析】扫码看解析
+
+---
+
+### 6. "$\infty^{0}$" 型和 "$0^{0}$" 型极限
+
+这两种极限的函数一定是幂指函数，即 $\lim\left[f(x)\right]^{g(x)}$。
+
+求解的方法是将其他写成指数形式 $\lim\left[f(x)\right]^{g(x)} = \lim e^{g(x)\ln f(x)}$，从而就化为 "$0\cdot\infty$" 型极限。
+
+武忠祥 小提醒
+
+---
+
+### 展示新知
+
+**【例1】** 求极限 $\lim_{x\to 0^{+}}x^{x^{2}-1}.$
+
+**解** 由于 $\lim_{x\to 0^{+}}x^{x^{2}-1} = \lim_{x\to 0^{+}}e^{\ln x^{x^{2}-1}}$
+
+$= \lim_{x\to 0^{+}}e^{\left(x^{2}-1\right)\ln x}$
+
+> 手写批注：
+> $\lim_{x\to 0^{+}}x\ln x = \lim_{x\to 0^{+}}\frac{\ln x}{\frac{1}{x}} = \lim_{x\to 0^{+}}\frac{\frac{1}{x}}{-\frac{1}{x^{2}}} = 0$
+> 则 $\lim_{x\to 0^{+}}x^{x^{2}} = 1$, 所求极限为 "$0^{0}$" 型.
+
+$\lim_{x\to 0^{+}}x^{x^{2}-1} = \lim_{x\to 0^{+}}e^{\left(x^{2}-1\right)\ln x}$
+
+$\lim_{x\to 0^{+}}\left(x^{2}-1\right)\ln x = \lim_{x\to 0^{+}}\left(e^{x^{2}\ln x}-1\right)\ln x = \lim_{x\to 0^{+}}x^{2}\ln x \quad \left[\left(e^{x^{2}\ln x}-1\right)\sim x^{2}\ln x\right]$
+
+$= \lim_{x\to 0^{+}}\frac{\ln x}{\frac{1}{x^{2}}}$
+
+$= \lim_{x\to 0^{+}}\frac{\frac{1}{x}}{-\frac{2}{x^{3}}}$
+
+$= 2\lim_{x\to 0^{+}}\frac{\ln x}{\frac{1}{x}} = 2\lim_{x\to 0^{+}}\frac{\frac{1}{x}}{-\frac{1}{x^{2}}} = 0$
+
+则 $\lim_{x\to 0^{+}}x^{x^{2}-1} = e^{0} = 1.$
+
+---
+
+$\cdot \ 32 \ \cdot$
+
+【第 33 页 / 共 315 页】
+以下是图片中文字内容的完整转录：
+
+第一章 函数 极限 连续
+
+【训练思维】
+【例 2】 求极限 $\lim\limits_{x \to +\infty} (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}}$.
+
+**解** (方法一) 令 $y = (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}}$, 则
+$$
+\ln y = \frac{\ln(x^{\frac{1}{x}} - 1)}{\ln x} = \frac{\ln(e^{\frac{\ln x}{x}} - 1)}{\ln x},
+$$
+$$
+\lim_{x \to +\infty} \ln y = \lim_{x \to +\infty} \frac{x e^{\frac{\ln x}{x}}}{\ln x} \cdot \frac{1 - \ln x}{x^2}, \quad (\text{洛必达法则})
+$$
+由于 $\lim\limits_{x \to +\infty} \frac{\ln x}{x} = 0$, 则
+$$
+\lim_{x \to +\infty} \ln y = \lim_{x \to +\infty} \frac{x e^{\frac{\ln x}{x}}}{x} \cdot \frac{1 - \ln x}{x^2} = \lim_{x \to +\infty} \frac{1 - \ln x}{\ln x} = -1,
+$$
+故 $\lim\limits_{x \to +\infty} (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}} = e^{-1}$.
+
+(方法二) 由于 $\ln y = \frac{\ln(x^{\frac{1}{x}} - 1)}{\ln x} = \frac{\ln(e^{\frac{\ln x}{x}} - 1)}{\ln x} = \frac{\ln(e^{\frac{\ln x}{x}} - e^0)}{\ln x}$
+$$
+= \frac{\ln(e^{\xi} \frac{\ln x}{x})}{\ln x} \quad (\text{拉格朗日中值定理})
+$$
+$$
+= \frac{\xi + \ln \ln x - \ln x}{\ln x},
+$$
+则 $\lim\limits_{x \to +\infty} \ln y = -1$, $\lim\limits_{x \to +\infty} (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}} = e^{-1}$.
+
+(方法三) 由于 $\lim\limits_{x \to +\infty} \ln y = \lim\limits_{x \to +\infty} \frac{\ln(e^{\frac{\ln x}{x}} - 1)}{\ln x}$
+$$
+= \lim_{x \to +\infty} \frac{\ln \left( \frac{e^{\frac{\ln x}{x}} - 1}{\frac{\ln x}{x}} \right) + \ln \frac{\ln x}{x}}{\ln x}
+= \lim_{x \to +\infty} \frac{\ln \ln x - \ln x}{\ln x} = -1,
+$$
+则 $\lim\limits_{x \to +\infty} (x^{\frac{1}{x}} - 1)^{\frac{1}{\ln x}} = e^{-1}$.
+
+【解析扫封面二维码获取】
+
+**注** 类似地, 可以求极限
+$$
+\lim_{x \to +\infty} \left( \frac{1}{x} \cdot \frac{a^x - 1}{a - 1} \right)^{\frac{1}{x}} (a > 0, a \neq 1).
+$$
+$(0 < a < 1, 1 < a > 1, a)$
+
+# 数列的极限
+
+常见的数列极限有以下 4 种.
+
+1. 不定式
+求数列不定式极限和求函数不定式极限的方法完全相同, 但对数列极限不能直接用洛必达法则, 需改写成函数极限后再用洛必达法则.
+
+【展示新知】
+【例 1】 求极限 $\lim\limits_{n \to \infty} \left( \arctan n - \frac{\pi}{2} \right)$.
+
+· 33 ·
+
+【第 34 页 / 共 315 页】
+以下是图片中文字的完整转录，已按原文顺序分段，数学公式采用 LaTeX 格式：
+
+---
+
+**左侧竖排文字：**
+函数、极限、连续
+
+**右上角标题：**
+高等数学 辅导讲义
+
+---
+
+**例 1：**
+**解** 原式 $= \lim_{n \to \infty} \frac{\arctan n - \frac{\pi}{2}}{\frac{1}{n}} = \lim_{x \to +\infty} \frac{\arctan x - \frac{\pi}{2}}{\frac{1}{x}}$ （改写成函数极限）
+
+$= \lim_{x \to +\infty} \frac{\frac{1}{1 + x^2}}{-\frac{1}{x^2}}$ （洛必达法则）
+
+$= -1.$
+
+---
+
+**训练思维**
+
+**【例2】 求极限 $\lim_{n \to \infty} \left[ \frac{\left(1 + \frac{1}{n}\right)^{n}}{e} \right]^{n}$.**
+
+**解** 原式 $= \lim_{n \to \infty} \left[ \frac{e^{n \ln\left(1 + \frac{1}{n}\right)}}{e} \right]^{n} = \lim_{n \to \infty} \frac{e^{n^2 \ln\left(1 + \frac{1}{n}\right)}}{e^n} = \lim_{n \to \infty} e^{n^2 \ln\left(1 + \frac{1}{n}\right) - n},$
+
+又 $\lim_{n \to \infty} \left[ n - n^2 \ln\left(1 + \frac{1}{n}\right) \right] = \lim_{n \to \infty} n^2 \left[ \frac{1}{n} - \ln\left(1 + \frac{1}{n}\right) \right]$
+
+$= \lim_{n \to \infty} n^2 \cdot \frac{1}{2} \left(\frac{1}{n}\right)^2 = \frac{1}{2},$
+
+则原式 $= e^{-\frac{1}{2}}.$
+
+*(页面中间小字：手慢快资料网微信号 kyw2885121)*
+
+---
+
+**训练思维**
+
+**【例3】 求下列极限**
+
+**(1) $\lim_{n \to \infty} \frac{n^{100} \cdot \ln^{10} n}{2^n}$;**
+
+**(2) $\lim_{n \to \infty} \frac{2^n \cdot (n!) \cdot \ln^{10} n}{n^n}$.**
+
+**解** (1) 由于当 $n \to \infty$ 时, $\ln^\beta n \ll n^\beta \ll a^n \ll n! \ll n^n$, 其中 $a > 0, \beta > 0, a > 1$. 则
+
+$\lim_{n \to \infty} \frac{n^{100} \cdot \ln^{10} n}{2^n} = \lim_{n \to \infty} \frac{n^{100}}{(\sqrt{2})^n} \cdot \lim_{n \to \infty} \frac{\ln^{10} n}{(\sqrt{2})^n} = 0.$
+
+(2) 令 $x_n = \frac{2^n \cdot (n!) \cdot \ln^{10} n}{n^n}$, 则
+
+$\lim_{n \to \infty} \frac{x_{n+1}}{x_n} = \lim_{n \to \infty} \frac{2n^n}{(n+1)^n} \left[ \frac{\ln(n+1)}{\ln n} \right]^{10}$
+
+$= \lim_{n \to \infty} \frac{2}{\left(1 + \frac{1}{n}\right)^n} \left[ \frac{\ln n + \ln\left(1 + \frac{1}{n}\right)}{\ln n} \right]^{10}$
+
+$= \frac{2}{e},$
+
+则 $\lim_{n \to \infty} \frac{2^n \cdot (n!) \cdot \ln^{10} n}{n^n} = 0.$ 这里利用了结论: 若 $\lim_{n \to \infty} \frac{x_{n+1}}{x_n} = a$, 且 $|a| < 1$, 则 $\lim_{n \to \infty} x_n = 0,$
+
+---
+
+**注** 类似地, 可求 $\lim_{n \to \infty} \frac{n^n (n+1)^{10}}{3^n n!}.$ （0）
+
+*(右下角小字：解析扫封面二维码获取)*
+
+---
+
+**页码：**
+$\cdot 34 \cdot$
+
+---
+
+**【此处不清】部分：**
+由于图片左侧边缘有轻微遮挡或反光，以下部分无法完整确认：
+1. 页面最左侧竖排文字下方的小字图标或标注【此处不清】；
+2. 页面上方“高等数学 辅导讲义”左侧的装饰性图标细节【此处不清】。

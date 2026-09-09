@@ -1,0 +1,921 @@
+===== 文件: 27武忠祥高数辅导讲义-强化.pdf =====
+【第 120 页 / 共 315 页】
+这是一张数学讲义的图片，内容转录如下。
+
+---
+
+**左侧竖排文字：**
+高等数学 随堂讲义
+一元函数积分学之
+
+---
+
+**正文第一段：**
+这是一种“经典错误”。原因是积分中值定理中的点 $\xi$ 依赖于积分区间和被积函数，在本题中，随着 $n$ 的不同，被积函数也不同，从而 $\xi$ 在 $(0,1)$ 中的位置也不同，因此应记为 $\xi_n$，即由积分中值定理得到的应该是
+
+$$
+\int_0^1 x^n \sqrt{1+x^2} dx = (\xi_n)^n \sqrt{1+\xi_n^2}.
+$$
+
+虽然 $0 < \xi_n < 1$，但当 $n \to \infty$ 时，$(\xi_n)^n$ 有可能不趋于零（如 $\xi_n = \frac{n}{n+1}$），因而不能推出
+$$
+\lim_{n \to \infty} \int_0^1 x^n \sqrt{1+x^2} dx = \lim_{n \to \infty} \xi_n^n \sqrt{1+\xi_n^2} = 0.
+$$
+
+类似地，
+求极限 $\lim_{n \to \infty} \int_0^1 x^n \sqrt{1+x^2} dx$. $\qquad\qquad\qquad\qquad\qquad\qquad$（$\sqrt{2}$）
+
+---
+
+**训练思维**
+
+【例 1】 如图 3-1，连续函数 $y = f(x)$ 在区间 $[-3,-2], [2,3]$ 上的图形分别是直径为 1 的上、下半圆周，在区间 $[-2,0], [0,2]$ 上的图形分别是直径为 2 的下、上半圆周. 设 $F(x) = \int_0^x f(t) dt$, 则下列结论正确的是
+
+*(此处为图 3-1，坐标轴图形，横轴为 $x$，纵轴为 $y$)*
+
+**图 3-1**
+
+(A) $F(3) = -\frac{3}{4}F(-2)$. $\qquad$ (B) $F(3) = \frac{5}{4}F(2)$.
+
+(C) $F(-3) = \frac{3}{4}F(2)$. $\qquad\quad$ (D) $F(-3) = -\frac{5}{4}F(-2)$.
+
+---
+
+**解** 由图 3-1 可知 $f(x)$ 是奇函数，则 $F(x) = \int_0^x f(t) dt$ 是偶函数，则
+
+$$
+F(-2) = F(2) = \frac{\pi}{2}, \qquad\qquad\qquad\qquad\qquad (\text{几何意义})
+$$
+
+$$
+F(-3) = F(3) = \frac{\pi}{2} - \frac{\pi}{8} = \frac{3}{8}\pi. \qquad\qquad (\text{几何意义})
+$$
+
+故(C) 正确.
+
+---
+
+**题型二 定积分计算**
+
+**展示新知**
+
+【例 2】 $I = \int_{-1}^1 \frac{2x^2 + \sin x}{1 + \sqrt{1 - x^2}} dx.$
+
+---
+
+**页脚：**
+· 120 ·
+
+【第 121 页 / 共 315 页】
+第三章 一元函数积分学
+
+解  $I = 4\int_{0}^{1} \frac{x^2}{1+\sqrt{1-x^2}} dx = 4\int_{0}^{1} [1-\sqrt{1-x^2}] dx$
+$= 4 - 4\int_{0}^{1} \sqrt{1-x^2} dx = 4 - \pi.$
+
+注 由定积分的几何意义知
+$\int_{0}^{a} \sqrt{a^2-x^2} dx = \frac{\pi}{4}a^2; \int_{0}^{2a} \sqrt{2ax-x^2} dx = \frac{\pi}{4}a^2; \int_{0}^{2a} \sqrt{2ax-x^2} dx = \frac{\pi}{2}a^2 (a>0).$
+
+[展示新知]
+【例 2】 $I = \int_{0}^{n\pi} \sqrt{1-\sin 2x} dx.$
+
+解 (方法一) 原式 $= n\int_{0}^{\pi} \sqrt{1-\sin 2x} dx$ （周期性）
+$= n\int_{0}^{\pi} \sqrt{(\cos x - \sin x)^2} dx$
+$= n\int_{0}^{\pi} |\cos x - \sin x| dx$
+$= n\int_{0}^{\frac{\pi}{4}} (\cos x - \sin x) dx + n\int_{\frac{\pi}{4}}^{\pi} (\sin x - \cos x) dx = 2\sqrt{2}n.$
+
+(方法二) 原式 $= n\int_{\frac{\pi}{4}}^{\frac{5\pi}{4}} \sqrt{1-\sin 2x} dx = n\int_{\frac{\pi}{4}}^{\frac{5\pi}{4}} \sqrt{(\cos x - \sin x)^2} dx$
+$= n\int_{\frac{\pi}{4}}^{\frac{5\pi}{4}} (\sin x - \cos x) dx = 2\sqrt{2}n.$
+
+[展示新知]
+【例 3】 $I = \int_{0}^{\pi} x\sin^n x dx (n \geqslant 1).$
+
+解 $I = \int_{0}^{\pi} x\sin^n x dx = \frac{\pi}{2}\int_{0}^{\pi} \sin^n x dx$ （利用 $\int_{0}^{\pi} xf(\sin x) dx = \frac{\pi}{2}\int_{0}^{\pi} f(\sin x) dx$）
+$= \pi\int_{0}^{\frac{\pi}{2}} \sin^n x dx$ （在区间 $[0,\pi]$ 上 $\sin x$ 关于 $x = \frac{\pi}{2}$ 对称）
+$= \begin{cases} \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdot \ldots \cdot \frac{1}{2} \cdot \frac{\pi}{2} \cdot \pi, & n \text{ 为偶数}, \\ \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdot \ldots \cdot \frac{2}{3} \cdot \pi, & n \text{ 为大于 } 1 \text{ 的奇数}, \\ \pi, & n = 1. \end{cases}$
+
+注 特别地, $\int_{0}^{\pi} x\sin^n x dx = \frac{\pi}{2}\int_{0}^{\pi} \sin^n x dx = \pi$ 比用分部积分方便.
+
+[展示新知]
+【例 4】 设 $n$ 为正整数, 证明：
+$\int_{0}^{2\pi} \cos^n x dx = \int_{0}^{2\pi} \sin^n x dx = \begin{cases} 0, & n \text{ 为奇数}, \\ 4\int_{0}^{\frac{\pi}{2}} \sin^n x dx, & n \text{ 为偶数}. \end{cases}$
+
+· 121 ·
+
+【第 122 页 / 共 315 页】
+高等数学 辅导讲义
+
+**证明** $$\int_{0}^{2\pi} \cos^n x dx = \int_{0}^{2\pi} \sin^n \left(x + \frac{\pi}{2}\right) dx \xlongequal{x + \frac{\pi}{2} = t} \int_{\frac{\pi}{2}}^{\frac{5\pi}{2}} \sin^n t dt$$
+$$= \int_{0}^{2\pi} \sin^n x dx \quad (\sin^n x \text{ 以 } 2\pi \text{ 为周期})$$
+
+当 $n$ 为奇数时，$\int_{0}^{2\pi} \sin^n x dx = \int_{-\pi}^{\pi} \sin^n x dx = 0$。
+
+当 $n$ 为偶数时，$\int_{0}^{2\pi} \sin^n x dx = \int_{-\pi}^{\pi} \sin^n x dx = 2 \int_{0}^{\pi} \sin^n x dx$
+$$= 2 \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^n x dx = 4 \int_{0}^{\frac{\pi}{2}} \sin^n x dx$$
+
+**注** 本题所证的结论是一个常用结论，如 $\int_{0}^{2\pi} \cos^2 x dx = 4 \int_{0}^{\frac{\pi}{2}} \sin^2 x dx = 4 \cdot \frac{1}{2} \cdot \frac{\pi}{2} = \pi$。
+
+【训练思维】
+**【例 6】** $I = \int_{0}^{1} \arcsin \sqrt{\frac{x}{1+x}} dx$。
+
+**解** 令 $\arcsin \sqrt{\frac{x}{1+x}} = t$，则 $x = \tan^2 t$，从而
+$$I = \int_{0}^{\frac{\pi}{4}} t d\tan^2 t = t\tan^2 t \bigg|_{0}^{\frac{\pi}{4}} - \int_{0}^{\frac{\pi}{4}} \tan^2 t dt = \frac{\pi}{4} - \sqrt{3}。$$
+
+【训练思维】
+**【例 7】** 设 $f(x) = \int_{0}^{x} \frac{\sin t}{\pi - t} dt$，计算 $\int_{0}^{\pi} f(x) dx$。
+
+**解** (方法一) $\int_{0}^{\pi} f(x) dx = xf(x) \bigg|_{0}^{\pi} - \int_{0}^{\pi} \frac{x\sin x}{\pi - x} dx$
+$$= \pi \int_{0}^{\pi} \frac{\sin t}{\pi - t} dt - \int_{0}^{\pi} \frac{x\sin x}{\pi - x} dx$$
+$$= \int_{0}^{\pi} \sin x dx = 2。$$
+
+(方法二) $\int_{0}^{\pi} f(x) dx = \int_{0}^{\pi} f(x) d(x - \pi)$
+$$= (x - \pi) f(x) \bigg|_{0}^{\pi} - \int_{0}^{\pi} \frac{(x - \pi)\sin x}{\pi - x} dx$$
+$$= \int_{0}^{\pi} \sin x dx = 2。$$
+
+(方法三) $\int_{0}^{\pi} f(x) dx = \int_{0}^{\pi} dx \int_{0}^{x} \frac{\sin t}{\pi - t} dt$   （累计积分交换次序）
+$$= \int_{0}^{\pi} dt \int_{t}^{\pi} \frac{\sin t}{\pi - t} dx = \int_{0}^{\pi} \sin t dt = 2。$$
+
+【训练思维】
+**【例 7】** 设连续函数 $f(x)$ 在 $(-\infty, +\infty)$ 内满足 $f(x) = f(x - \pi) + \sin x$，且 $\int_{0}^{\pi} f(x) dx = \frac{\pi}{2}$，则 $\int_{\pi}^{2\pi} f(x) dx = \_\_\_\_\_\_$。
+
+· 122 ·
+
+【第 123 页 / 共 315 页】
+第三章 一元函数积分学
+
+6 令 $F(x) = \int_{x-\pi}^{x} f(t)dt$, 则 $F'(x) = f(x) - f(x-\pi) = \sin x$,
+$F(x) = -\cos x + C$,
+$F(\pi) = \int_{0}^{\pi} f(x)dx = \frac{\pi^2}{2}$, 则 $C = \frac{\pi^2}{2} - 1$.
+$F(x) = -\cos x + \frac{\pi^2}{2} - 1$,
+$\int_{0}^{2\pi} f(x)dx = \int_{\pi}^{2\pi} f(x)dx + \int_{0}^{2\pi} f(x)dx = F(2\pi) + F(3\pi) = \pi^2 - 2$.
+
+注 类似地,
+设连续函数 $f(x)$ 满足 $f(x+2)-f(x) = x$, $\int_{0}^{2} f(x)dx = 0$, 则 $\int_{1}^{3} f(x)dx = \_\_\_\_\_\_$.
+
+$\left( \frac{1}{2} \right)$
+
+训练思维
+
+【例 8】 $I = \int_{0}^{\frac{\pi}{2}} \frac{\sin x}{\sin x + \cos x} dx$.
+
+6 （方法一） 令 $\int \frac{\sin x}{\sin x + \cos x} dx = \int \frac{A(\cos x - \sin x) + B(\sin x + \cos x)}{\sin x + \cos x} dx$, 则
+$\begin{cases} 1 = -A + B, \\ 0 = A + B, \end{cases}$ 解得 $A = -\frac{1}{2}, B = \frac{1}{2}$.
+$I = -\frac{1}{2} \int_{0}^{\frac{\pi}{2}} \frac{(\cos x - \sin x) - (\sin x + \cos x)}{\sin x + \cos x} dx$
+$= -\frac{1}{2} [\ln(\sin x + \cos x) - x] \bigg|_{0}^{\frac{\pi}{2}} = \frac{\pi}{4}$.
+
+（方法二） 令 $x = \frac{\pi}{2} - t$, 则
+$I = \int_{0}^{\frac{\pi}{2}} \frac{\sin x}{\sin x + \cos x} dx = \int_{0}^{\frac{\pi}{2}} \frac{\cos t}{\sin t + \cos t} dt$
+$= \frac{1}{2} \left( \int_{0}^{\frac{\pi}{2}} \frac{\sin x}{\sin x + \cos x} dx + \int_{0}^{\frac{\pi}{2}} \frac{\cos x}{\sin x + \cos x} dx \right)$
+$= \frac{1}{2} \int_{0}^{\frac{\pi}{2}} dx = \frac{\pi}{4}$.
+
+注 积分 $\int_{0}^{\frac{\pi}{2}} \frac{\sin^n x}{\sin^n x + \cos^n x} dx$ 和 $\int_{0}^{\frac{\pi}{2}} \frac{1}{1 + \tan^n x} dx (p > 0)$ 都可用方法二的方法求解.
+
+训练思维
+
+【例 9】 $I = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{e^x}{1 + e^x} \sin^4 x dx$.
+
+6 $I = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{e^x}{1 + e^x} \sin^4 x dx = \int_{\frac{\pi}{2}}^{-\frac{\pi}{2}} \frac{e^{-t}}{1 + e^{-t}} \sin^4 t dt$
+$= \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{1}{1 + e^t} \sin^4 t dt$
+
+（右侧竖排文字：一元函数积分学）
+（页面右下角：· 123 ·）
+
+【第 124 页 / 共 315 页】
+以下是根据图片内容转录的完整文字：
+
+**左侧竖向文字：**
+一元函数积分学
+
+**顶部标题：**
+高等数学 辅导讲义
+
+---
+
+**正文数学推导部分：**
+$$
+\begin{aligned}
+&=\frac{1}{2}\left(\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{\mathrm{e}^x}{1+\mathrm{e}^x} \sin^4 x \mathrm{d}x + \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{1}{1+\mathrm{e}^x} \sin^4 x \mathrm{d}x\right) \\
+&=\frac{1}{2} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \sin^4 x \mathrm{d}x = \int_{0}^{\frac{\pi}{2}} \sin^4 x \mathrm{d}x \\
+&=\frac{3}{4} \times \frac{1}{2} \times \frac{\pi}{2} = \frac{3\pi}{16}.
+\end{aligned}
+$$
+
+---
+
+**注：**
+本题和上一题的方法二都是利用变量代换计算定积分，这种变量代换的特点是区间不变，一般地，$\int_a^b f(x)\mathrm{d}x \xlongequal{x=a+b-t} \int_a^b f(a+b-t)\mathrm{d}t$. 这种方法通常用在被积函数原函数不易求出的定积分的计算中。
+
+类似地，
+(1) $\int_{0}^{\frac{\pi}{4}} \frac{x}{\mathrm{e}^x + \mathrm{e}^{-x}} \mathrm{d}x$； $\quad$ $\left( \frac{1}{\mathrm{e}} \left( \arctan \mathrm{e} - \arctan \frac{1}{\mathrm{e}} \right) \right)$
+(2) $\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} |\sin x| \arctan \mathrm{e}^x \mathrm{d}x$. $\quad$ $\left( \frac{\pi}{2} \right)$
+
+---
+
+**训练思维**
+
+**【例 10】** 已知 $f(x)$ 连续，$\int_{0}^{x} t f(x-t)\mathrm{d}t = 1 - \cos x$，求 $\int_{0}^{\frac{\pi}{2}} f(x)\mathrm{d}x$ 的值。
+
+**解** 令 $x-t=u$ 得
+$$
+\begin{aligned}
+\int_{0}^{x} t f(x-t)\mathrm{d}t &= \int_{0}^{x} (x-u) f(u)\mathrm{d}u = x \int_{0}^{x} f(u)\mathrm{d}u - \int_{0}^{x} u f(u)\mathrm{d}u, \\
+\frac{\mathrm{d}}{\mathrm{d}x} \int_{0}^{x} t f(x-t)\mathrm{d}t &= \int_{0}^{x} f(u)\mathrm{d}u + x f(x) - x f(x) = \int_{0}^{x} f(u)\mathrm{d}u.
+\end{aligned}
+$$
+从而有 $\int_{0}^{x} f(u)\mathrm{d}u = \sin x$. 令 $x=\frac{\pi}{2}$ 得
+$$
+\int_{0}^{\frac{\pi}{2}} f(u)\mathrm{d}u = \sin \frac{\pi}{2} = 1.
+$$
+
+---
+
+**训练思维**
+
+**【例 11】** 设 $f'(x) = \arcsin(x-1)^3$，$f(0)=0$，求 $\int_{0}^{1} f(x)\mathrm{d}x$.
+
+**解 (方法一)** 
+$$
+\begin{aligned}
+\int_{0}^{1} f(x)\mathrm{d}x &= x f(x)\bigg|_{0}^{1} - \int_{0}^{1} x \arcsin(x-1)^3 \mathrm{d}x \\
+&= f(1) - \int_{0}^{1} x \arcsin(x-1)^3 \mathrm{d}x \\
+&= \int_{0}^{1} f'(x)\mathrm{d}x - \int_{0}^{1} x \arcsin(x-1)^3 \mathrm{d}x \\
+&= \int_{0}^{1} (1-x) \arcsin(x-1)^3 \mathrm{d}x \\
+&= \frac{1}{2} \int_{0}^{1} \arcsin u \mathrm{d}u \quad (\text{令}(x-1)^3=u) \\
+&= \frac{1}{2} u \arcsin u \bigg|_{0}^{1} - \frac{1}{2} \int_{0}^{1} \frac{u}{\sqrt{1-u^2}} \mathrm{d}u = \frac{\pi}{4} - \frac{1}{2}.
+\end{aligned}
+$$
+
+---
+
+**页脚：**
+$\cdot 124 \cdot$
+
+---
+*注：原图右侧“注”字框上方和右上角的手写小字【此处不清】。*
+
+【第 125 页 / 共 315 页】
+以下是根据图片内容转录的文字：
+
+**右上角红色章节提示：**
+第三章 一元函数积分学
+
+---
+
+**(方法二)** 
+$$
+\begin{aligned}
+\int_{0}^{1} f(x) \mathrm{d}x &= \int_{0}^{1} f(x) \mathrm{d}(x-1) \\
+&= (x-1)f(x)\bigg|_{0}^{1} - \int_{0}^{1} (x-1)\arcsin(x-1)^2 \mathrm{d}x \\
+&= \int_{0}^{1} (1-x)\arcsin(x-1)^2 \mathrm{d}x.
+\end{aligned}
+$$
+
+以下同方法一。
+
+**注** （红框内，右侧小字：解析扫封面二维码获取）
+类似地，
+已知 $y'(x) = \arctan(x-1)^2$，且 $y(0)=0$，求 $\int_{0}^{1} y(x) \mathrm{d}x$. $\quad \left( \frac{\pi}{8} - \frac{1}{4} \ln 2 \right)$
+
+---
+
+**训练思维**
+
+**【例 12】** 若 $f(x) = \frac{x}{1+\cos^2 x} - \int_{-\pi}^{\pi} f(x)\sin x \mathrm{d}x$, 求 $f(x)$.
+
+**解** 等式 $f(x) = \frac{x}{1+\cos^2 x} - \int_{-\pi}^{\pi} f(x)\sin x \mathrm{d}x$ 两端同乘 $\sin x$ 并从 $-\pi$ 到 $\pi$ 积分得
+$$
+\begin{aligned}
+\int_{-\pi}^{\pi} f(x)\sin x \mathrm{d}x &= \int_{-\pi}^{\pi} \frac{x\sin x}{1+\cos^2 x} \mathrm{d}x = 2\int_{0}^{\pi} \frac{x\sin x}{1+\cos^2 x} \mathrm{d}x \\
+&= \pi \int_{0}^{\pi} \frac{\sin x}{1+\cos^2 x} \mathrm{d}x = -\pi \arctan \cos x \bigg|_{0}^{\pi} = \frac{\pi^2}{2},
+\end{aligned}
+$$
+则 $f(x) = \frac{x}{1+\cos^2 x} - \frac{\pi^2}{2}$.
+
+**注** （红框内，右侧小字：解析扫封面二维码获取）
+类似地，
+若 $f(x) = x - \int_{0}^{2a} \sqrt{2ax-x^2} f(x) \mathrm{d}x$, 其中 $a>0$, 则 $f(x) = \underline{\quad\quad\quad}$. $\quad \left( x - \frac{\pi a^3}{2 + \pi a^4} \right)$
+
+---
+
+**题型三 变上限积分函数及其应用**
+
+与变上限积分有关的题目主要考查变上限积分函数的连续性、可导性及奇偶性，其中变上限求导是重点，其常用的结论有
+
+**1. 连续性**
+若 $f(x)$ 在 $[a,b]$ 上可积，则 $\int_{a}^{x} f(t)\mathrm{d}t$ 在 $[a,b]$ 上连续.
+
+**2. 可导性**
+有关 $F(x) = \int_{a}^{x} f(t)\mathrm{d}t$ 的可导性的结论
+
+如果 $f(x)$ 在 $[a,b]$ 上除点 $x = x_0 \in (a,b)$ 外均连续，则在点 $x = x_0$ 处
+
+$f(x) \quad\quad F(x) = \int_{a}^{x} f(t)\mathrm{d}t$
+
+(1) 连续 $\longrightarrow$ 可导, 且 $F'(x_0) = f(x_0)$
+
+---
+
+**页脚：**
+$\cdot 125 \cdot$
+
+**右侧竖排文字：**
+一元函数积分学
+（底部有部分被裁切的文字，无法完整识别，此处略）
+
+【第 126 页 / 共 315 页】
+以下是根据图片内容转录的文字。左侧边缘竖排文字“一元函数积分学”及页面上部的水印文字属于页面背景/标记，未纳入正文转录。
+
+---
+
+**高等数学 辅导讲义**
+
+（2）可去 $\rightarrow$ 可导，且 $F'(x_0) = \lim_{x \to x_0} f(x)$
+（3）跳跃 $\rightarrow$ 连续但不可导，且 $F'_-(x_0) = f(x_0^-), F'_+(x_0) = f(x_0^+)$
+3. 奇偶性
+设 $f(x)$ 连续
+（1）若 $f(x)$ 为奇函数，则 $\int_0^x f(t)dt$ 为偶函数.
+（2）若 $f(x)$ 为偶函数，则 $\int_0^x f(t)dt$ 为奇函数.
+
+**展示新知**
+
+**【例 1】** 设 $f(x)$ 是奇函数，除 $x=0$ 外处处连续，$x=0$ 是第一类间断点，则 $\int_0^x f(t)dt$ 是
+（A）连续的奇函数. （B）在 $x=0$ 间断的奇函数.
+（C）连续的偶函数. （D）在 $x=0$ 间断的偶函数.
+
+**解** 由于 $f(x)$ 是奇函数，则 $\int_0^x f(t)dt$ 是偶函数. 由题设知 $f(x)$ 可积，则 $\int_0^x f(t)dt$ 连续，故选（C）.
+
+**展示新知**
+
+**【例 2】** 设 $g(x) = \int_0^x f(u)du$，其中 $f(x) = \begin{cases} \frac{1}{2}(x^2+1), 0 \le x < 1, \\ \frac{1}{3}(x-1), 1 \le x \le 2, \end{cases}$ 则 $g(x)$ 在区间 $(0,2)$ 内
+（A）无界. （B）递减. （C）不连续. （D）连续.
+
+**解** 由于 $x=1$ 为 $f(x)$ 的跳跃间断点（第一类），则 $f(x)$ 在 $[0,2]$ 上可积，从而 $g(x) = \int_0^x f(u)du$ 在 $(0,2)$ 内连续，故选（D）.
+
+**训练思维**
+
+**【例 3】** 设 $f(x)$ 是连续函数，$F(x)$ 是 $f(x)$ 的原函数，则
+（A）$f(x)$ 是奇函数 $\Rightarrow F(x)$ 必是偶函数.
+（B）$f(x)$ 是偶函数 $\Rightarrow F(x)$ 必是奇函数.
+（C）$f(x)$ 是周期函数 $\Rightarrow F(x)$ 必是周期函数.
+（D）$f(x)$ 是单调增函数 $\Rightarrow F(x)$ 必是单调增函数.
+
+**解** 由 $f(x)$ 连续且为奇函数可知，$G(x) = \int_0^x f(u)du$ 为偶函数，而 $F(x) = G(x)+C$，则 $F(x)$ 为偶函数. 故选（A）.
+
+**训练思维**
+
+**【例 4】** 设 $F(x)$ 是连续函数 $f(x)$ 的一个原函数，“$M \Leftrightarrow N$”表示“$M$ 的充分必要条件是 $N$”，则必有
+（A）$F(x)$ 是偶函数 $\Leftrightarrow f(x)$ 是奇函数.
+（B）$F(x)$ 是奇函数 $\Leftrightarrow f(x)$ 是偶函数.
+（C）$F(x)$ 是周期函数 $\Leftrightarrow f(x)$ 是周期函数.
+（D）$F(x)$ 是单调函数 $\Leftrightarrow f(x)$ 是单调函数.
+
+· 126 ·
+
+【第 127 页 / 共 315 页】
+图片中的文字内容转录如下：
+
+【页面右上角红色字体】（第三章 一元函数积分学）
+
+【红色方框】
+评 由上题可知(A)正确.
+
+【图标】训练思维
+
+【例题5】 设函数 $f(x) = \begin{cases} \sin x, & 0 \leqslant x < \pi, \\ 2, & \pi \leqslant x \leqslant 2\pi, \end{cases}$ $F(x) = \int_{0}^{x} f(t)\mathrm{d}t$, 则
+(A) $x = \pi$ 是函数 $F(x)$ 的跳跃间断点.
+(B) $x = \pi$ 是函数 $F(x)$ 的可去间断点.
+(C) $F(x)$ 在 $x = \pi$ 处连续但不可导.
+(D) $F(x)$ 在 $x = \pi$ 处可导.
+
+【图标】解 （方法一）
+$$
+F(x) = \int_{0}^{x} f(t)\mathrm{d}t = \begin{cases} \int_{0}^{x} \sin t \mathrm{d}t, & 0 \leqslant x < \pi, \\ \int_{0}^{\pi} \sin t \mathrm{d}t + \int_{\pi}^{x} 2 \mathrm{d}t, & \pi \leqslant x \leqslant 2\pi \end{cases}
+$$
+$$
+= \begin{cases} 1 - \cos x, & 0 \leqslant x < \pi, \\ 2 + 2x - 2\pi, & \pi \leqslant x \leqslant 2\pi. \end{cases}
+$$
+
+因为 $\lim_{x \to \pi^{-}} F(x) = \lim_{x \to \pi^{+}} F(x) = F(\pi) = 2$, 所以, $F(x)$ 在 $x = \pi$ 处连续.
+
+而
+$$
+F'_{-}(\pi) = \lim_{x \to \pi^{-}} \frac{F(x) - F(\pi)}{x - \pi} = \lim_{x \to \pi^{-}} \frac{1 - \cos x - 2}{x - \pi} = \lim_{x \to \pi^{-}} \frac{\sin x}{1} = 0,
+$$
+$$
+F'_{+}(\pi) = \lim_{x \to \pi^{+}} \frac{F(x) - F(\pi)}{x - \pi} = \lim_{x \to \pi^{+}} \frac{2 + 2x - 2\pi - 2}{x - \pi} = 2,
+$$
+
+由此可知 $F'_{-}(\pi) \neq F'_{+}(\pi)$, 即 $F(x)$ 在 $x = \pi$ 处不可导.
+故应选(C).
+
+【红色字体】注 这里也可以用求导代值的方法求 $F(x)$ 在 $x = \pi$ 处的左、右导数
+$$
+F'_{-}(\pi) = (1 - \cos x)'|_{x = \pi} = 0,
+$$
+$$
+F'_{+}(\pi) = (2 + 2x - 2\pi)'|_{x = \pi} = 2,
+$$
+为什么可以这样做？你知道吗？
+
+（方法二） 由于 $x = \pi$ 为 $f(x)$ 的跳跃间断点, 则 $F(x) = \int_{0}^{x} f(t)\mathrm{d}t$ 在 $x = \pi$ 处连续但不可导,
+故应选(C).
+
+【图标】渗透方法
+
+【例题6】 设函数 $f(x)$ 连续, 且 $f(0) \neq 0$, 求极限 $\lim_{x \to 0} \frac{\int_{0}^{x} (x - t)f(t)\mathrm{d}t}{x \int_{0}^{x} f(x - t)\mathrm{d}t}$.
+
+【图标】解 （方法一） $\int_{0}^{x} f(x - t)\mathrm{d}t = \int_{0}^{x} f(u)\mathrm{d}u$, (令 $x - t = u$)
+
+原式 $= \lim_{x \to 0} \frac{x \int_{0}^{x} f(t)\mathrm{d}t - \int_{0}^{x} t f(t)\mathrm{d}t}{x \int_{0}^{x} f(t)\mathrm{d}t}$
+$$
+= \lim_{x \to 0} \frac{\int_{0}^{x} f(t)\mathrm{d}t + x f(x) - x f(x)}{\int_{0}^{x} f(t)\mathrm{d}t + x f(x)}
+$$
+(洛必达法则)
+
+【页面底部】
+· 127 ·
+
+【页面右侧竖排文字】
+一元函数积分学
+
+【第 128 页 / 共 315 页】
+以下是图片中文字内容的完整转录，按原文顺序保留结构。数学公式已使用 LaTeX 格式。
+
+---
+
+**高等数学 辅导讲义**
+<div style="text-align: center; background-color: #f0f0f0; color: #a00000; font-weight: bold;">【此处不清，疑似“一元函数积分学”】</div>
+
+$$
+=\lim_{x \to 0} \frac{\int_{0}^{x} f(t)dt}{\int_{0}^{x} f(t)dt + xf(x)}
+$$
+
+$$
+=\lim_{x \to 0} \frac{xf(c)}{xf(c) + xf(x)} \quad \text{（积分中值定理，}c\text{ 在 } 0 \text{ 与 } x \text{ 之间）}
+$$
+
+$$
+=\frac{f(0)}{f(0) + f(0)} = \frac{1}{2}.
+$$
+
+---
+
+**（方法二）** 同方法一原式 $=\lim_{x \to 0} \frac{x \int_{0}^{x} f(t)dt - \int_{0}^{x} tf(t)dt}{x \int_{0}^{x} f(t)dt}$.
+
+由 $f(0) \neq 0$ 得，当 $x \to 0$ 时，
+
+$$
+\int_{0}^{x} f(t)dt \sim \int_{0}^{x} f(0)dt = f(0)x, \quad \left( \lim_{x \to 0} \frac{f(x)}{f(0)} = 1 \right)
+$$
+
+$$
+\int_{0}^{x} tf(t)dt \sim \int_{0}^{x} f(0)tdt = \frac{f(0)}{2}x^2, \quad \left( \lim_{x \to 0} \frac{xf(x)}{xf(0)} = 1 \right)
+$$
+
+则原式 $= 1 - \lim_{x \to 0} \frac{\int_{0}^{x} tf(t)dt}{x \int_{0}^{x} f(t)dt} = 1 - \lim_{x \to 0} \frac{\frac{f(0)}{2}x^2}{f(0)x^2} = \frac{1}{2}$.
+
+---
+
+**（方法三）** 原式 $= \lim_{x \to 0} \frac{f(\xi) \int_{0}^{x} (x - t)dt}{x^2 f(x - c)}$ （这里分子用了广义积分中值定理，分母用了积分中值定理，其中 $\xi, c$ 都介于 $0$ 与 $x$ 之间）
+
+$$
+= \lim_{x \to 0} \frac{\int_{0}^{x} (x - t)dt}{x^2} \quad \text{（这里 } \lim_{x \to 0} f(\xi) = \lim_{x \to 0} f(x - c) = f(0) \neq 0 \text{）}
+$$
+
+$$
+= \lim_{x \to 0} \frac{\frac{1}{2}x^2}{x^2} = \frac{1}{2}.
+$$
+
+---
+
+<div style="float: right; font-size: small; color: #a00000;">解析扫封面二维码获取</div>
+
+**注** （1）方法二中用到一个关于变上限积分的等价代换的结论：
+
+若 $f(x)$ 和 $g(x)$ 在 $x = 0$ 的某邻域内连续，且 $\lim_{x \to 0} \frac{f(x)}{g(x)} = 1$，则
+
+$$
+\int_{0}^{x} f(t)dt \sim \int_{0}^{x} g(t)dt.
+$$
+
+（2）本题中所用的三种解法是处理变上限积分有关极限问题常用的三种方法：
+
+① 洛必达法则；② 等价无穷小代换；③ 积分中值定理。
+
+类似地，可以求解下列题目
+
+1. 设 $f(x)$ 连续，且 $f(1) = 1$，求 $\lim_{x \to 1} \frac{\int_{1}^{x} f(xt)dt}{x^3 - 1}$.  \hfill $\left( -\frac{1}{3} \right)$
+
+2. 求极限 $\lim_{x \to 0^+} \frac{\int_{0}^{x} \sqrt{x - t} e^t dt}{\sqrt{x^3}}$. \hfill $\left( \frac{2}{3} \right)$
+
+---
+
+<div style="text-align: center;">• 128 •</div>
+
+【第 129 页 / 共 315 页】
+第三章 一元函数积分学
+
+3. 设函数 $f(x)$ 连续，且 $f(0)\neq 0$，求极限 $\lim\limits_{x \to 0}\displaystyle\frac{x \int_{0}^{x} f(x-t) \mathrm{d}t}{\int_{0}^{x} t f(x-t) \mathrm{d}t}$. $$(2)$$
+
+> **渗透方法**
+> 【例 7】 设 $F(x) = \int_{x}^{x+2\pi} \mathrm{e}^{\sin t} \cdot \sin t \mathrm{d}t$，则 $F(x)$
+> (A) 为正常数.  (B) 为负常数.
+> (C) 为 0.  (D) 不是常数.
+>
+> **解** 由 $F'(x) = \mathrm{e}^{\sin(x+2\pi)} \sin(x+2\pi) - \mathrm{e}^{\sin x} \sin x = 0$，知 $F(x) = C$.
+>
+> 图 3-2
+>
+> 也可由 $\mathrm{e}^{\sin t} \sin t$ 以 $2\pi$ 为周期得
+> $F(x) = \int_{x}^{x+2\pi} \mathrm{e}^{\sin t} \sin t \mathrm{d}t = \int_{0}^{2\pi} \mathrm{e}^{\sin t} \sin t \mathrm{d}t = C$.
+> 又 $F(0) = \int_{0}^{2\pi} \mathrm{e}^{\sin t} \sin t \mathrm{d}t = - \int_{0}^{2\pi} \mathrm{e}^{\sin t} \mathrm{d}\cos t$
+> $= - \mathrm{e}^{\sin t} \cos t \Big|_{0}^{2\pi} + \int_{0}^{2\pi} \mathrm{e}^{\sin t} \cos^2 t \mathrm{d}t$
+> $= \int_{0}^{2\pi} \mathrm{e}^{\sin t} \cos^2 t \mathrm{d}t > 0$，
+> 故 $F(x)$ 为正常数，应选(A).
+>
+> **注** 说明积分 $\int_{0}^{2\pi} \mathrm{e}^{\sin t} \sin t \mathrm{d}t > 0$ 最简单的方法是几何的方法(如图 3-3).
+>
+> 图 3-3
+>
+> 类似地，可求解
+> 设 $I_k = \int_{0}^{2\pi} \mathrm{e}^{\sin x} \sin kx \mathrm{d}x \ (k=1,2,3)$，则有
+> (A) $I_1 < I_2 < I_3$.  (B) $I_3 < I_2 < I_1$.
+> (C) $I_2 < I_3 < I_1$.  (D) $I_2 < I_1 < I_3$.
+
+> **渗透方法**
+> 【例 8】 试证：$F(x) = \int_{0}^{x} (t-t^2) \sin^{2n} t \mathrm{d}t$ 在 $x \ge 0$ 上最大值不超过 $\frac{1}{(2n+2)(2n+3)}$.
+>
+> **证明** (方法一) 令 $F'(x) = (x-x^2) \sin^{2n} x = 0$，得 $x=1, x=k\pi, \ k=1,2, \cdots$.
+> 由于在 $x=k\pi$ 邻近两侧 $F'(x)$ 不变号，则 $x=k\pi$ 不是 $F(x)$ 的极值点.
+> 当 $0<x<1$ 时，$F'(x)>0$，当 $1<x<\pi$ 时，$F'(x)<0$，则 $F(x)$ 在 $x=1$ 处取极大值，又因为 $x=1$ 为 $F(x)$ 在 $[0,+\infty)$ 上唯一的极值点，则该极大值为最大值.
+> $F(1) = \int_{0}^{1} (t-t^2) \sin^{2n} t \mathrm{d}t \le \int_{0}^{1} (t-t^2) t^{2n} \mathrm{d}t = \frac{1}{(2n+2)(2n+3)}$，
+> 原题得证.
+> (方法二) $F'(x) = x(1-x) \sin^{2n} x$，则
+> 当 $0<x<1$ 时，$F'(x)>0$，$F(x)$ 单调增加；
+> 当 $x>1$ 时，$F'(x) \le 0$，$F(x)$ 单调不增. 则 $F(1)$ 为 $F(x)$ 在区间 $[0,+\infty)$ 上的最大值. 以下
+
+· 129 ·
+
+【第 130 页 / 共 315 页】
+同方法一.
+
+**注** 类似地，
+函数 $ f(x) = \int_{x}^{x+1} |t(t^2-1)| \, \mathrm{d}t $ 的最小值为 $\underline{\qquad}$。 $\left( \frac{7}{32} \right)$
+
+---
+
+💡**渗透方法**
+
+**【例 9】** 设 $ f(x) $ 在区间 $ [0, +\infty) $ 上可导，$ f(0) = 0 $，且其反函数为 $ g(x) $. 若
+$$
+\int_{0}^{f(x)} g(t) \, \mathrm{d}t = x^2 e^x,
+$$
+求 $ f(x) $.
+
+**解** 等式 $\int_{0}^{f(x)} g(t) \, \mathrm{d}t = x^2 e^x$ 两端对 $ x $ 求导得
+$$
+g[f(x)]f'(x) = 2xe^x + x^2 e^x,
+$$
+而 $ g[f(x)] = x $, 故
+$$
+xf'(x) = 2xe^x + x^2 e^x,
+$$
+$$
+f'(x) = 2e^x + xe^x \quad (x > 0),
+$$
+$$
+f(x) = \int (2e^x + xe^x) \, \mathrm{d}x = (x+1)e^x + C \quad (x > 0),
+$$
+由 $ f(x) $ 在区间 $ [0, +\infty) $ 上可导知
+$$
+0 = f(0) = \lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} [(x+1)e^x + C] = 1 + C,
+$$
+即有 $ C = -1 $, 从而
+$$
+f(x) = (x+1)e^x - 1.
+$$
+
+---
+
+💡**渗透方法**
+
+**【例 10】** 设函数 $ f(x) $ 在 $ (0, +\infty) $ 内连续，$ f(1) = \frac{5}{2} $，且对所有 $ x, t \in (0, +\infty) $ 满足条件
+$$
+\int_{1}^{xt} f(u) \, \mathrm{d}u = t \int_{1}^{x} f(u) \, \mathrm{d}u + x \int_{1}^{t} f(u) \, \mathrm{d}u, \text{ 求 } f(x).
+$$
+
+**解** 等式 $\int_{1}^{xt} f(u) \, \mathrm{d}u = t \int_{1}^{x} f(u) \, \mathrm{d}u + x \int_{1}^{t} f(u) \, \mathrm{d}u$ 两端对 $ t $ 求导得
+$$
+xf(xt) = \int_{1}^{x} f(u) \, \mathrm{d}u + xf(t),
+$$
+令 $ t = 1 $ 得
+$$
+xf(x) = \int_{1}^{x} f(u) \, \mathrm{d}u + \frac{5}{2}x,
+$$
+上式两端对 $ x $ 求导得
+$$
+f(x) + xf'(x) = f(x) + \frac{5}{2},
+$$
+即
+$$
+f'(x) = \frac{5}{2} \cdot \frac{1}{x},
+$$
+从而
+$$
+f(x) = \frac{5}{2} \ln x + C.
+$$
+又 $ f(1) = \frac{5}{2} $，代入得 $ C = \frac{5}{2} $，从而
+$$
+f(x) = \frac{5}{2}(\ln x + 1).
+$$
+
+---
+
+· 130 ·
+
+【第 131 页 / 共 315 页】
+以下是图片内容的完整转录：
+
+---
+
+**第三章 一元函数积分学**
+
+**【例11】** 设 $f(t)$ 连续，$f(t)>0$，$f(-t)=f(t)$. 令
+$$
+F(x) = \int_{-a}^a |x-t|f(t)\,dt, \quad -a \leqslant x \leqslant a.
+$$
+
+(1) 试证曲线 $y=F(x)$ 在 $[-a,a]$ 上是凹的；
+(2) 当 $x$ 为何值时，$F(x)$ 取得最小值；
+(3) 若 $F(x)$ 的最小值可表示为 $f(a)-a^2-1$，试求 $f(t)$.
+
+---
+
+**解** (1) 由于
+$$
+\begin{aligned}
+F(x) &= \int_{-a}^a |x-t|f(t)\,dt = \int_{-a}^x (x-t)f(t)\,dt + \int_x^a (t-x)f(t)\,dt \\
+&= x\int_{-a}^x f(t)\,dt - \int_{-a}^x tf(t)\,dt + \int_x^a tf(t)\,dt - x\int_x^a f(t)\,dt, \\
+F'(x) &= \int_{-a}^x f(t)\,dt + xf(x) - xf(x) - xf(x) + xf(x) - \int_x^a f(t)\,dt \\
+&= \int_{-a}^x f(t)\,dt - \int_x^a f(t)\,dt, \\
+F''(x) &= f(x) + f(x) = 2f(x) > 0,
+\end{aligned}
+$$
+故曲线 $y=F(x)$ 在 $[-a,a]$ 上是凹的.
+
+(2) 令 $F'(x) = \int_{-a}^x f(t)\,dt - \int_x^a f(t)\,dt = 0$，得 $F'(0)=0$ ($f(x)$ 为偶函数).
+
+又 $F''(x)>0$，则 $F'(x)$ 单调增加，从而 $x=0$ 为 $F(x)$ 在 $[-a,a]$ 上唯一的驻点.
+又 $F''(0)>0$，则 $F(x)$ 在 $x=0$ 取极小值，由唯一性知，$F(x)$ 在 $x=0$ 取最小值.
+
+(3) $F(x)$ 在 $[-a,a]$ 上的最小值为
+$$
+F(0) = \int_{-a}^a |t|f(t)\,dt = 2\int_0^a tf(t)\,dt,
+$$
+从而有
+$$
+2\int_0^a tf(t)\,dt = f(a)-a^2-1,
+$$
+上式两端对 $a$ 求导得，$2af(a) = f'(a)-2a$，解此一阶线性微分方程得 $f(a) = Ce^{a^2}-1$. 又 $f(0)=1$，则 $C=2$，从而
+$$
+f(t) = 2e^{t^2}-1.
+$$
+
+---
+
+### 题型四 积分不等式
+
+**证明积分不等式常用的方法**
+
+(1) 变量代换；
+(2) 积分中值定理；
+(3) 变上限积分；
+(4) 柯西积分不等式 $\left( \int_a^b f(x)g(x)\,dx \right)^2 \leqslant \int_a^b f^2(x)\,dx \int_a^b g^2(x)\,dx$.
+
+*(右侧注：武老师 小提示)*
+
+---
+*(页码：131)*
+
+---
+*注：右侧竖排文字“一元函数积分学”为页面装饰，已略去。*
+
+【第 132 页 / 共 315 页】
+以下是图片中文字的完整转录：
+
+**高等数学 精讲讲义**
+
+**展示新知**
+
+**【例1】** 设 $I_1=\int_{0}^{\frac{\pi}{4}} \frac{\tan x}{x} \mathrm{d}x, I_2=\int_{0}^{\frac{\pi}{4}} \frac{x}{\tan x} \mathrm{d}x$，则
+(A) $I_1>I_2>1$.
+(B) $1>I_1>I_2$.
+(C) $I_2>I_1>1$.
+(D) $1>I_2>I_1$.
+
+**解** （方法一） 由于 $\sin x < x < \tan x, (0 < x < \frac{\pi}{2})$，则 $\frac{x}{\tan x} < \frac{\tan x}{x}$，即 $I_2 < I_1$，从而(C)和(D)均不正确。
+又
+$$I_2 = \int_{0}^{\frac{\pi}{4}} \frac{x}{\tan x} \mathrm{d}x < \int_{0}^{\frac{\pi}{4}} x \mathrm{d}x = \frac{\pi^2}{32} < 1,$$
+则(A)不正确，故应选(B).
+
+（方法二） 由于 $\sin x < x < \tan x \left(0 < x < \frac{\pi}{2}\right)$，则
+$$\frac{x}{\tan x} < \frac{\tan x}{x} < \frac{\tan x}{\sin x} = \frac{1}{\cos x},$$
+从而有
+$$\int_{0}^{\frac{\pi}{4}} \frac{x}{\tan x} \mathrm{d}x < \int_{0}^{\frac{\pi}{4}} \frac{\tan x}{x} \mathrm{d}x < \int_{0}^{\frac{\pi}{4}} \frac{1}{\cos x} \mathrm{d}x,$$
+$$\int_{0}^{\frac{\pi}{4}} \frac{1}{\cos x} \mathrm{d}x = \ln(\sec x + \tan x) \bigg|_{0}^{\frac{\pi}{4}} = \ln(1+\sqrt{2}) < \ln \mathrm{e} = 1.$$
+故应选(B).
+
+（方法三）
+这道题还有方法，欢迎学有余力的同学开动脑筋。
+
+（方法四）
+
+---
+**练 类比地，**
+设 $I_1=\int_{0}^{1} \frac{x}{2(1+\cos x)} \mathrm{d}x, I_2=\int_{0}^{1} \frac{\ln(1+x)}{1+\cos x} \mathrm{d}x, I_3=\int_{0}^{1} \frac{2x}{1+\sin x} \mathrm{d}x$，则
+(A) $I_1 < I_2 < I_3$.
+(B) $I_2 < I_3 < I_1$.
+(C) $I_1 < I_3 < I_2$.
+(D) $I_2 < I_1 < I_3$. (A)
+*(注：答案“(A)”位于右侧副边框内)*
+
+---
+*页码：132*
+
+【第 133 页 / 共 315 页】
+第三章 一元函数积分学
+
+展示新知
+【例 2】 设 $f(x)$ 在 $[0,1]$ 上连续, 单调减少. 求证:
+$$
+\int_0^a f(x) dx \geq a \int_0^1 f(x) dx \quad (0 < a < 1).
+$$
+
+证明
+（方法一） 只要证 $\int_0^a f(x) dx \geq a \int_0^1 f(x) dx + a \int_0^a f(x) dx$, 即
+$$
+(1-a) \int_0^a f(x) dx \geq a \int_a^1 f(x) dx,
+$$
+由积分中值定理知
+$$
+(1-a) \int_0^a f(x) dx = a(1-a) f(c_1), \quad 0 < c_1 < a,
+$$
+$$
+a \int_a^1 f(x) dx = a(1-a) f(c_2), \quad a < c_2 < 1.
+$$
+由于 $f(x)$ 单调减少, 则 $f(c_1) > f(c_2)$, 从而
+$$
+(1-a) \int_0^a f(x) dx \geq a \int_a^1 f(x) dx.
+$$
+原题得证.
+
+（方法二） $\int_0^a f(x) dx \xlongequal{令 x = at} a \int_0^1 f(at) dt = a \int_0^1 f(ax) dx.$
+由于 $f(x)$ 单调减少, 而 $ax < x$, 则 $f(ax) \geq f(x)$, 从而有
+$$
+a \int_0^1 f(ax) dx \geq a \int_0^1 f(x) dx,
+$$
+即 $\int_0^a f(x) dx \geq a \int_0^1 f(x) dx.$
+
+（方法三） 令 $F(a) = \int_0^a f(x) dx - a \int_0^1 f(x) dx \ (0 \leq a \leq 1)$, 则
+$$
+F'(a) = f(a) - \int_0^1 f(x) dx = f(a) - f(c), \ 0 < c < 1,
+$$
+由于 $f(x)$ 单调减少, 则当 $0 < a < c$ 时, $F'(a) > 0$, $F(a)$ 单调增加; 当 $c < a < 1$ 时, $F'(a) < 0$, $F(a)$ 单调减少. 则 $F(a)$ 在 $[0,1]$ 上的最小值必在区间的端点取到. 又 $F(0) = F(1) = 0$, 则
+$$
+F(a) \geq 0 \quad (0 < a < 1),
+$$
+原题得证.
+
+训练思维
+【例 3】 设 $f(x)$ 在 $[0,1]$ 上可导, 且 $f(0) = 0, 0 < f'(x) < 1$. 求证:
+$$
+\left( \int_0^1 f(x) dx \right)^2 > \int_0^1 f^3(x) dx.
+$$
+
+证明
+令 $F(x) = \left( \int_0^x f(t) dt \right)^2 - \int_0^x f^3(t) dt$, 只要证 $F(1) > 0$.
+由 $f(0) = 0, 0 < f'(x) < 1$ 知, $f(x) > 0, x \in (0,1]$. 又
+$$
+F'(x) = 2f(x) \int_0^x f(t) dt - f^3(x) = f(x) \left[ 2 \int_0^x f(t) dt - f^2(x) \right],
+$$
+令 $\varphi(x) = 2 \int_0^x f(t) dt - f^2(x)$, 则
+
+一元函数积分学
+
+· 133 ·
+
+【第 134 页 / 共 315 页】
+以下是图片中文字的完整转录：
+
+**高等数学 辅导讲义**
+
+$$
+\varphi'(x) = 2f(x) - 2f(x)f'(x) = 2f(x)(1 - f'(x)) > 0,
+$$
+从而 $\varphi(x)$ 单调增加. 又 $\varphi(0) = 0$. 则
+$$
+\varphi(x) > 0, x \in (0,1],
+$$
+从而 $F'(x) > 0, x \in (0,1]$, 则 $F(x)$ 单调增加, 从而 $F(1) > F(0) = 0$, 原题得证.
+
+**训练思维**
+【例4】 设函数 $f(x), g(x)$ 在区间 $[a,b]$ 上连续, 且 $f(x)$ 单调增加, $0 \leqslant g(x) \leqslant 1$.
+证明: (1) $0 \leqslant \int_a^x g(t)dt \leqslant x - a, x \in [a,b]$;
+(2) $\int_a^{a+\int_a^b g(t)dt} f(x)dx \leqslant \int_a^b f(x)g(x)dx$.
+
+**详解** (1) 由 $0 \leqslant g(x) \leqslant 1$ 得
+$$
+0 \leqslant \int_a^x g(t)dt \leqslant \int_a^x 1dt = x - a, x \in [a,b].
+$$
+(2) 令 $F(u) = \int_a^u f(x)g(x)dx - \int_a^{a+\int_a^b g(t)dt} f(x)dx$, 只要证明 $F(b) \geqslant 0$. 显然 $F(a) = 0$, 只要证明 $F(u)$ 单调增加.
+$$
+\begin{aligned}
+F'(u) &= f(u)g(u) - f\left(a + \int_a^b g(t)dt\right)g(u) \\
+&= g(u)\left[f(u) - f\left(a + \int_a^b g(t)dt\right)\right].
+\end{aligned}
+$$
+由 (1) 的结论 $0 \leqslant \int_a^x g(t)dt \leqslant x - a$ 知, $a \leqslant a + \int_a^b g(t)dt \leqslant x$, 即
+$$
+a \leqslant a + \int_a^b g(t)dt \leqslant u.
+$$
+又 $f(x)$ 单调增加, 则 $f(u) \geqslant f\left(a + \int_a^b g(t)dt\right)$, 因此, $F'(u) \geqslant 0$, 从而 $F(b) \geqslant 0$, 即
+$$
+\int_a^{a+\int_a^b g(t)dt} f(x)dx \leqslant \int_a^b f(x)g(x)dx.
+$$
+
+**训练思维**
+【例5】 设 $f(x)$ 在 $[a,b]$ 上有连续导数, $f(a) = 0$, 求证:
+$$
+\max_{a \leqslant x \leqslant b} |f'(x)| \geqslant \frac{2}{(b-a)^2} \int_a^b |f(x)| dx.
+$$
+
+**详解** (方法一) 由于 $f(x) = \int_a^x f'(t)dt$, 故
+$$
+|f(x)| = \left| \int_a^x f'(t)dt \right| \leqslant \int_a^x |f'(t)| dt \leqslant (x-a) \max_{a \leqslant x \leqslant b} |f'(x)|,
+$$
+$$
+\int_a^b |f(x)| dx \leqslant \int_a^b (x-a)dx \cdot \max_{a \leqslant x \leqslant b} |f'(x)| = \frac{1}{2}(b-a)^2 \max_{a \leqslant x \leqslant b} |f'(x)|.
+$$
+从而 $\max_{a \leqslant x \leqslant b} |f'(x)| \geqslant \frac{2}{(b-a)^2} \int_a^b |f(x)| dx$.
+
+(方法二) 由拉格朗日中值定理知 $f(x) = f(x) - f(a) = f'(\xi)(x-a)$, 则当 $a \leqslant x \leqslant b$ 时,
+$$
+|f(x)| = |f'(\xi)|(x-a) \leqslant \max_{a \leqslant x \leqslant b} |f'(x)| (x-a).
+$$
+
+**左侧边栏文字：**
+一元函数积分学
+
+**底部页码：**
+· 134 ·
+
+【第 135 页 / 共 315 页】
+第三章 一元函数积分学
+
+上式两端从 $a$ 到 $b$ 积分得
+$$
+\int_a^b |f(x)| \, dx \leqslant \int_a^b (x-a) \, dx \cdot \max_{a \leqslant x \leqslant b} |f'(x)| = \frac{1}{2} (b-a)^2 \max_{a \leqslant x \leqslant b} |f'(x)|.
+$$
+故 $\max_{a \leqslant x \leqslant b} |f'(x)| \geqslant \frac{2}{(b-a)^2} \int_a^b |f(x)| \, dx.$
+
+注 类似地，可以证明
+设 $f(x)$ 在 $[0,1]$ 上具有一阶连续导数，且 $f(0) = f(1) = 0$，证明
+$$
+\left| \int_0^1 f(x) \, dx \right| \leqslant \frac{1}{4} \max_{0 \leqslant x \leqslant 1} \{ |f'(x)| \}.
+$$
+（右侧小字：解析扫封面二维码获取）
+
+渗透方法
+【例 6】 设 $f(x)$ 在 $[0,1]$ 上有连续导数，且 $f(0)=0$，求证：
+$$
+\int_0^1 f^2(x) \, dx \leqslant \frac{1}{2} \int_0^1 f'^2(x) \, dx.
+$$
+
+证明 由于 $f(x) = \int_0^x f'(t) \, dt$，故
+$$
+f^2(x) = \left( \int_0^x f'(t) \, dt \right)^2 \leqslant \int_0^x 1^2 \, dt \cdot \int_0^x f'^2(t) \, dt \quad (\text{柯西积分不等式})
+$$
+$$
+= x \int_0^x f'^2(t) \, dt \leqslant x \int_0^1 f'^2(t) \, dt,
+$$
+$$
+\int_0^1 f^2(x) \, dx \leqslant \int_0^1 x \, dx \cdot \int_0^1 f'^2(t) \, dt = \frac{1}{2} \int_0^1 f'^2(t) \, dt.
+$$
+
+注 本题若再加一个条件 $f(1)=0$，便可证明
+$$
+\int_0^1 f^2(x) \, dx \leqslant \frac{1}{4} \int_0^1 f'^2(x) \, dx \quad \text{及} \quad \int_0^1 f^2(x) \, dx \leqslant \frac{1}{8} \int_0^1 f'^2(x) \, dx.
+$$
+（右侧小字：解析扫封面二维码获取）
+
+第三节 反常积分
+
+一、考试内容要点精讲
+（一）无穷区间上的反常积分
+
+定义 1 设 $f(x)$ 为 $[a, +\infty)$ 上的连续函数，如果极限 $\lim_{b \to +\infty} \int_a^b f(x) \, dx$ 存在，则称此极限为函数 $f(x)$ 在无穷区间 $[a, +\infty)$ 上的反常积分，记作 $\int_a^{+\infty} f(x) \, dx$，即
+$$
+\int_a^{+\infty} f(x) \, dx = \lim_{b \to +\infty} \int_a^b f(x) \, dx,
+$$
+这时也称反常积分 $\int_a^{+\infty} f(x) \, dx$ 收敛. 如果上述极限不存在，则称反常积分 $\int_a^{+\infty} f(x) \, dx$ 发散.
+
+· 135 ·

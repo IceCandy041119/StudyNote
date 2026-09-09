@@ -1,0 +1,1023 @@
+===== 文件: 27李永乐线代辅导讲义.pdf =====
+【第 48 页 / 共 211 页】
+```markdown
+线性代数 辅导讲义
+
+学习札记
+
+矩阵
+
+**分析** $A$ 是正交矩阵 $\iff AA^T = E$, 因为
+$$
+(E + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T)(E + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T)^T = (E + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T)(E + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T)
+$$
+$$
+= E + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T + k\boldsymbol{\alpha}\boldsymbol{\alpha}^T + k^2\boldsymbol{\alpha}\boldsymbol{\alpha}^T\boldsymbol{\alpha}\boldsymbol{\alpha}^T,
+$$
+且
+$$
+\boldsymbol{\alpha}^T\boldsymbol{\alpha} = (1, -2, 1) \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} = 6,
+$$
+故
+$$
+AA^T = E + (2k + 6k^2)\boldsymbol{\alpha}\boldsymbol{\alpha}^T = E \iff 2k + 6k^2 = 0.
+$$
+又 $k \neq 0$, 故 $k = -\frac{1}{3}$.
+
+**展示新知**
+
+【例 2.16】(2004,4) 设 $A = [a_{ij}]_{3 \times 3}$ 是正交矩阵, 且 $a_{11} = 1, \boldsymbol{b} = (1,0,0)^T$, 则线性方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 的解是 ______.
+
+**分析** 由正交矩阵的几何意义, 列(行)向量均是单位向量, 因 $a_{11} = 1$,
+必有
+$$
+A = \begin{bmatrix} 1 & 0 & 0 \\ 0 & a_{22} & a_{23} \\ 0 & a_{32} & a_{33} \end{bmatrix},
+$$
+即方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 为
+$$
+\begin{cases}
+x_1 = 1, \\
+a_{22}x_2 + a_{23}x_3 = 0, \\
+a_{32}x_2 + a_{33}x_3 = 0.
+\end{cases}
+$$
+由 $A$ 可逆, $\begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} \neq 0$, 故有唯一解 $(1,0,0)^T$.
+
+**展示新知**
+
+【例 2.17】设 $A, B$ 均为 $n$ 阶正交矩阵, 且 $|A| + |B| = 0$,
+证明 $|A + B| = 0$.
+
+**证明**
+$$
+|A + B| = |EA + BE| = |(BB^T)A + B(A^TA)|
+$$
+$$
+= |B(B^T + A^T)A| = |B(A + B)^TA|
+$$
+$$
+= |B| \cdot |(A + B)^T| \cdot |A| = -|B|^2 \cdot |A + B|
+$$
+$$
+= -|A + B|, (\text{注意对正交矩阵 } B, \text{有 } |B|^2 = 1)
+$$
+所以 $|A + B| = 0$.
+
+**4. 行最简形矩阵**
+**行阶梯形矩阵**
+
+① 如果矩阵中有零行(即这一行元素全是0), 则零行在矩阵的底部.
+② 每个非零行的主元(即该行最左边的第1个非零元), 它们的列指标随着行指标的递增而严格增大.
+
+· 48 ·
+```
+
+【第 49 页 / 共 211 页】
+第二章 矩阵——基础、进阶篇
+
+学习札记
+
+矩阵
+
+**行阶梯矩阵**
+
+例 $\begin{bmatrix}2 & 1 & 3 \\ 0 & 0 & 0 \\ 0 & 0 & 5\end{bmatrix}, \begin{bmatrix}1 & 3 & -2 \\ 0 & 1 & 4 \\ 0 & 2 & 5\end{bmatrix}$ 都不是行阶梯矩阵.
+
+例 $\begin{bmatrix}1 & 2 & 0 & 3 \\ 0 & 1 & -1 & 5 \\ 0 & 0 & 0 & 6\end{bmatrix}, \begin{bmatrix}3 & 0 & 1 & -4 \\ 0 & 0 & 2 & 7 \\ 0 & 0 & 0 & 0\end{bmatrix}$ 是行阶梯矩阵.
+
+**行最简矩阵**
+
+一个行阶梯矩阵，如果还满足：
+非零行的主元都是1，且主元所在的列的其他元素都是0，则称其为行最简矩阵.
+
+例 $\begin{bmatrix}1 & 0 & 3 & 1 \\ 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}, \begin{bmatrix}1 & 1 & 2 & 0 \\ 0 & 1 & 3 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}, \begin{bmatrix}1 & -1 & 0 & 0 \\ 0 & 2 & 1 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}$ 都不是行最简矩阵.
+
+例 $\begin{bmatrix}1 & 0 & -1 & 0 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0 & 0 & 2 \\ 0 & 1 & 0 & 3 \\ 0 & 0 & 0 & 0\end{bmatrix}$ 是行最简矩阵.
+
+**初等变换，初等矩阵**
+
+左乘行变换，右乘列变换.
+
+$E_{ij}^{-1}(k) = E_{ij}(-k), E_{ij}^{-1} = E_{ij}, E_i^{-1}(k) = E_i\left(\frac{1}{k}\right).$
+
+初等矩阵的 $n$ 次方：
+
+$\begin{bmatrix}1 & 0 & 0 \\ k & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}^n = \begin{bmatrix}1 & 0 & 0 \\ nk & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}, \begin{bmatrix}1 & 0 & 0 \\ 0 & k & 0 \\ 0 & 0 & 1\end{bmatrix}^n = \begin{bmatrix}1 & 0 & 0 \\ 0 & k^n & 0 \\ 0 & 0 & 1\end{bmatrix},$
+
+$\begin{bmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix}^{2n} = \begin{bmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{bmatrix}, \begin{bmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix}^{2n-1} = \begin{bmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix}.$
+
+**展示新知**
+
+【例 2.18】 已知
+
+$A = \begin{bmatrix}a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}\end{bmatrix}, B = \begin{bmatrix}a_{11} & a_{13} & a_{12} \\ a_{21} + 2a_{31} & a_{23} + 2a_{33} & a_{22} + 2a_{32} \\ a_{31} & a_{33} & a_{32}\end{bmatrix}$
+
+若 $A^{-1} = \begin{bmatrix}1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}$，则 $B^{-1} = \_\_\_\_\_\_\_\_$.
+
+· 49 ·
+
+【第 50 页 / 共 211 页】
+### 左侧边栏
+**线性代数 辅导讲义**
+**学习札记**
+**矩阵**
+
+---
+
+### 正文部分
+
+**分析** $A$ 经过行变换（第 3 行的 2 倍加至第 2 行）和列变换（2,3 两列互换）得到矩阵 $B$，即
+
+$$
+B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix} A \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix},
+$$
+
+所以
+
+$$
+\begin{aligned}
+B^{-1} &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 2 \\ 0 & 0 & 1 \end{bmatrix}^{-1} A^{-1} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix}^{-1} \\
+&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & -2 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix} \\
+&= \begin{bmatrix} 1 & 2 & -1 \\ 0 & 0 & 6 \\ 0 & 4 & -3 \end{bmatrix}.
+\end{aligned}
+$$
+
+---
+
+#### 展示新知
+**【例 2.19】** 已知 $A$ 是三阶矩阵，$P$ 是三阶可逆矩阵，且 $P^{-1}AP = \begin{bmatrix} 1 & & \\ & 3 & \\ & & 2 \end{bmatrix}$，若 $P = [\alpha_1, \alpha_2, \alpha_3]$，$Q = [\alpha_1, \alpha_2 + \alpha_1, -2\alpha_3]$，则 $Q^{-1}AQ =$
+
+(A) $\begin{bmatrix} 1 & 2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & -2 \end{bmatrix}$.  
+(B) $\begin{bmatrix} 1 & -2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2 \end{bmatrix}$.  
+(C) $\begin{bmatrix} 1 & 0 & 0 \\ 2 & 3 & 0 \\ 0 & 0 & -2 \end{bmatrix}$.  
+(D) $\begin{bmatrix} 1 & 0 & 0 \\ -2 & 3 & 0 \\ 0 & 0 & 2 \end{bmatrix}$.
+
+**分析** 由下标知矩阵 $P$ 经两次列变换（第 1 列加至第 2 列；第 3 列乘以 $-2$）得到矩阵 $Q$。即
+
+$$
+Q = P \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -2 \end{bmatrix} = PP_1P_2,
+$$
+
+(注：此处有文字水印“一手高端资料同步VX: koy985121”，其中部分内容识别不清，故标注)
+
+那么
+
+$$
+\begin{aligned}
+Q^{-1}AQ &= (PP_1P_2)^{-1}A(PP_1P_2) = P_2^{-1}P_1^{-1}P^{-1}APP_1P_2 \\
+&= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{2} \end{bmatrix} \begin{bmatrix} 1 & -1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & & \\ & 3 & \\ & & 2 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -2 \end{bmatrix}.
+\end{aligned}
+$$
+
+---
+
+### 页脚
+· 50 ·
+
+【第 51 页 / 共 211 页】
+$$= \begin{bmatrix} 1 & -2 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2 \end{bmatrix}$$
+
+**展示新知**
+
+【例 2.20】 已知三阶矩阵 $A$ 可逆，将 $A$ 的第 2 列与第 3 列交换得矩阵 $B$，把 $B$ 的第 2 列乘以 $-2$ 得矩阵 $C$，则满足 $PA^* = C^*$ 的矩阵 $P$ 为 ______.
+
+**分析** 按已知，右乘初等矩阵为列变换，有
+$$A \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix} = B, B \begin{bmatrix} 1 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 1 \end{bmatrix} = C,$$
+
+于是
+$$A \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 1 \end{bmatrix} = C,$$
+
+有
+$$2|A| = |C|,$$
+
+且
+$$\begin{bmatrix} 1 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 1 \end{bmatrix}^{-1} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix}^{-1} \frac{A^*}{|A|} = \frac{C^*}{|C|},$$
+
+故
+$$P = 2 \begin{bmatrix} 1 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 1 \end{bmatrix}^{-1} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix}^{-1}$$
+$$= 2 \begin{bmatrix} 1 & 0 & 0 \\ 0 & -\frac{1}{2} & 0 \\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{bmatrix} = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 2 & 0 \end{bmatrix}$$
+
+**展示新知**
+
+【例 2.21】 $$\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix}^{2010} \begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix} \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}^{2011} = \_\_\_\_.$$
+
+**分析** 因为
+$$\begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix} \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix} = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{bmatrix},$$
+$$\begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix} \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}^2 = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix}.$$
+
+· 51 ·
+
+【第 52 页 / 共 211 页】
+以下是图片中文字的完整转录：
+
+线性代数 辅导讲义
+
+---
+
+学习札记
+
+矩阵
+▲
+
+---
+
+所以
+$$
+\begin{bmatrix} 1 & 2 & 3 \\ 2 & 3 & 4 \\ 3 & 4 & 5 \end{bmatrix} \begin{bmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}^{2011} = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{bmatrix}.
+$$
+
+又因
+$$
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix} \begin{bmatrix} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{bmatrix} \stackrel{\text{记}}{=} \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix} \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{bmatrix} = \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 + 2\alpha_2 \end{bmatrix},
+$$
+
+则
+$$
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix}^2 \begin{bmatrix} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 5 & 4 & 3 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix} \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 + 2\alpha_2 \end{bmatrix} = \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 + 2\alpha_2 + 2\alpha_2 \end{bmatrix},
+$$
+
+故
+$$
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 2 & 1 \end{bmatrix}^{2010} \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 \end{bmatrix} = \begin{bmatrix} \alpha_1 \\ \alpha_2 \\ \alpha_3 + 2010(2\alpha_2) \end{bmatrix} = \begin{bmatrix} 3 & 2 & 1 \\ 4 & 3 & 2 \\ 16085 & 12064 & 8043 \end{bmatrix}.
+$$
+
+手最快资料同步QQ: kxs865121
+
+---
+
+练习 1 （2026，$\frac{1}{2,3}$） 已知 $A = GH$，其中 $G = \begin{bmatrix} 1 & 1 \\ 0 & -1 \\ -1 & 0 \\ -1 & -2 \end{bmatrix}, H = \begin{bmatrix} 1 & 0 & -1 & 1 \\ 0 & 1 & 1 & -1 \end{bmatrix}$，则 $A^{10} = \_\_\_\_\_\_\_\_\_\_$。
+
+**解题笔记**
+
+---
+
+练习 2 设矩阵 $A = \begin{bmatrix} 1 & 0 & 1 \\ a & -1 & 1 \\ 0 & 2 & a \end{bmatrix}$ 与 $B = \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{bmatrix}$ 等价，则 $a = \_\_\_\_\_\_$。
+
+**解题笔记**
+
+---
+
+· 52 ·
+
+【第 53 页 / 共 211 页】
+以下是图片中文字的完整、准确转录：
+
+---
+
+**右上角（绿色竖排小字）：** 第二章 矩阵——基础、防混淆
+
+**左侧页眉（绿色横排小字）：** 学习札记
+
+---
+
+**标题：** 分块矩阵
+
+**示意图及标注：**
+*   $\left[ \begin{array}{c|c} & \\ \hline & \end{array} \right], AB, A^T, A^{-1}.$
+*   $\left[ \begin{array}{c|c} & \\ \hline & \end{array} \right],$ 向量线性表出，秩，方程组.
+
+---
+
+**第一块绿色背景区域：**
+
+> **展示新知**
+>
+> **【例 2.22】** 设 $\boldsymbol{A} = \begin{bmatrix} 3 & 1 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 3 & 9 \\ 0 & 0 & 1 & 3 \end{bmatrix}$，则 $\boldsymbol{A}^n = \underline{\hspace{3cm}}.$
+
+---
+
+**“分析”文字内容：**
+
+> **分析** 由分块矩阵公式 $\begin{bmatrix} \boldsymbol{B} & \boldsymbol{O} \\ \boldsymbol{O} & \boldsymbol{C} \end{bmatrix}^n = \begin{bmatrix} \boldsymbol{B}^n & \boldsymbol{O} \\ \boldsymbol{O} & \boldsymbol{C}^n \end{bmatrix}$，我们只需分别算出 $\begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}^n$ 与 $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}^n$ 的 $n$ 次幂.
+
+> **由** $\begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix} = \begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} + \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix} = 3\boldsymbol{E} + \boldsymbol{B}$，
+
+> **故** $\begin{bmatrix} 3 & 1 \\ 0 & 3 \end{bmatrix}^n = (3\boldsymbol{E} + \boldsymbol{B})^n = (3\boldsymbol{E})^n + n(3\boldsymbol{E})^{n-1}\boldsymbol{B}$
+>
+> $\quad\quad\quad\quad\quad\quad = \begin{bmatrix} 3^n & 0 \\ 0 & 3^n \end{bmatrix} + n \cdot 3^{n-1} \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} 3^n & n \cdot 3^{n-1} \\ 0 & 3^n \end{bmatrix}.$
+
+> **而矩阵** $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}$ 的秩为 1，有 $\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}^n = 6^{n-1}\begin{bmatrix} 3 & 9 \\ 1 & 3 \end{bmatrix}$，从而
+>
+> $$A^n = \begin{bmatrix} 3^n & n \cdot 3^{n-1} & 0 & 0 \\ 0 & 3^n & 0 & 0 \\ 0 & 0 & 3 \cdot 6^{n-1} & 9 \cdot 6^{n-1} \\ 0 & 0 & 6^{n-1} & 3 \cdot 6^{n-1} \end{bmatrix}.$$
+
+---
+
+**第二块绿色背景区域：**
+
+> **展示新知**
+>
+> **【例 2.23】** 已知 $\boldsymbol{AX} = \boldsymbol{B}$，其中 $\boldsymbol{A} = \begin{bmatrix} 1 & 3 & 3 \\ 2 & 6 & 9 \\ -1 & -3 & 3 \end{bmatrix}$，
+> $\boldsymbol{B} = \begin{bmatrix} 2 & -1 & 1 \\ 7 & 4 & -1 \\ 4 & 13 & -7 \end{bmatrix}$，则矩阵 $\boldsymbol{X} = \underline{\hspace{3cm}}.$
+
+---
+
+**底部页码：** · 53 ·
+
+---
+
+**右侧边缘（旋转文字）：** 矩阵
+
+---
+*注：图片右侧边缘有轻微的绿色竖排污渍或印刷痕迹（“矩阵”二字上方），无法完全确认是否有其他文字，此处仅转录出清晰可见的“矩阵”二字。*
+
+【第 54 页 / 共 211 页】
+以下是图片内容的完整、准确转录：
+
+---
+
+**线性代数 辅导讲义**
+
+**学习札记**
+
+**矩阵**
+
+---
+
+**分析** 若 $A$ 可逆，则 $X = A^{-1}B$，本题的 $A$ 是不可逆的，可转换为解非齐次线性方程组.
+
+设 $X = \begin{bmatrix} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ x_3 & y_3 & z_3 \end{bmatrix}$，则
+
+$$
+\begin{bmatrix} 1 & 3 & 3 \\ 2 & 6 & 9 \\ -1 & -3 & 3 \end{bmatrix} \begin{bmatrix} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ x_3 & y_3 & z_3 \end{bmatrix} = \begin{bmatrix} 2 & -1 & 1 \\ 7 & 4 & -1 \\ 4 & 13 & -7 \end{bmatrix},
+$$
+
+即 $Ax = \beta_1, Ay = \beta_2, Az = \beta_3$,
+
+$$
+\begin{cases}
+x_1 + 3x_2 + 3x_3 = 2, \\
+2x_1 + 6x_2 + 9x_3 = 7, \\
+-x_1 - 3x_2 + 3x_3 = 4,
+\end{cases}
+\quad
+\begin{cases}
+y_1 + 3y_2 + 3y_3 = -1, \\
+2y_1 + 6y_2 + 9y_3 = 4, \\
+-y_1 - 3y_2 + 3y_3 = 13,
+\end{cases}
+\quad
+\begin{cases}
+z_1 + 3z_2 + 3z_3 = 1, \\
+2z_1 + 6z_2 + 9z_3 = -1, \\
+-z_1 - 3z_2 + 3z_3 = -7.
+\end{cases}
+$$
+
+这三个方程组的系数矩阵完全一样，区别仅在常数项，为了计算简捷，这三个方程组的高斯消元可同时进行，即
+
+$$
+\begin{bmatrix}[cccc|ccc]
+1 & 3 & 3 & 2 & -1 & 1 \\
+2 & 6 & 9 & 7 & 4 & -1 \\
+-1 & -3 & 3 & 4 & 13 & -7
+\end{bmatrix} \rightarrow \begin{bmatrix}[cccc|ccc]
+1 & 3 & 0 & -1 & -7 & 4 \\
+0 & 0 & 1 & 1 & 2 & -1 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{bmatrix}.
+$$
+
+从 $\begin{cases} x_1 + 3x_2 = -1, \\ x_3 = 1 \end{cases}$ 解出 $\begin{cases} x_1 = -3t - 1, \\ x_2 = t, \\ x_3 = 1. \end{cases}$
+
+类似地 $\begin{cases} y_1 = -3u - 7, \\ y_2 = u, \\ y_3 = 2, \end{cases}$ $\begin{cases} z_1 = -3v + 4, \\ z_2 = v, \\ z_3 = -1, \end{cases}$
+
+从而 $X = \begin{bmatrix} -3t - 1 & -3u - 7 & -3v + 4 \\ t & u & v \\ 1 & 2 & -1 \end{bmatrix}, t, u, v$ 为任意常数.
+
+---
+
+**展示新知**
+
+**【例 2.24】** （2009, $\frac{1}{2}, 3$）设 $A, B$ 均为二阶矩阵，$A^*, B^*$ 分别为 $A, B$ 的伴随矩阵. 若 $|A| = 2, |B| = 3$，则分块矩阵 $\begin{bmatrix} O & A \\ B & O \end{bmatrix}$ 的伴随矩阵为
+
+(A) $\begin{bmatrix} O & 3B^* \\ 2A^* & O \end{bmatrix}$.  
+(B) $\begin{bmatrix} O & 2B^* \\ 3A^* & O \end{bmatrix}$.  
+(C) $\begin{bmatrix} O & 3A^* \\ 2B^* & O \end{bmatrix}$.  
+(D) $\begin{bmatrix} O & 2A^* \\ 3B^* & O \end{bmatrix}$.
+
+---
+
+**分析** 由拉普拉斯展开式(1.10) 有
+
+---
+
+• 54 •
+
+---
+
+*(注：页面右下角有手写小部分内容，辨认不清，标记为【此处不清】)*
+
+【第 55 页 / 共 211 页】
+第二章 矩阵——基础、防混淆
+学习札记
+
+$$
+\begin{vmatrix} O & A \\ B & O \end{vmatrix} = (-1)^{3 \times 2} |A||B| = 6.
+$$
+
+那么, 矩阵 $\begin{bmatrix} O & A \\ B & O \end{bmatrix}$ 可逆, 从而
+
+$$
+\begin{bmatrix} O & A \\ B & O \end{bmatrix}^* = \begin{bmatrix} O & A \\ B & O \end{bmatrix} \begin{bmatrix} O & A \\ B & O \end{bmatrix}^{-1} = 6 \begin{bmatrix} O & B^{-1} \\ A^{-1} & O \end{bmatrix} = \begin{bmatrix} O & 2B^* \\ 3A^* & O \end{bmatrix}.
+$$
+
+所以应选 (B).
+
+或设 $\begin{bmatrix} O & A \\ B & O \end{bmatrix}^* = \begin{bmatrix} X & Y \\ Z & W \end{bmatrix}$, 则
+
+$$
+\begin{bmatrix} O & A \\ B & O \end{bmatrix} \begin{bmatrix} X & Y \\ Z & W \end{bmatrix} = \begin{bmatrix} O & A \\ B & O \end{bmatrix} E,
+$$
+
+$$
+\begin{bmatrix} X & Y \\ Z & W \end{bmatrix} = 6 \begin{bmatrix} O & A \\ B & O \end{bmatrix}^{-1} = 6 \begin{bmatrix} O & B^{-1} \\ A^{-1} & O \end{bmatrix} = \cdots.
+$$
+
+【评注】 本题考查的知识点有 3 个: 一是用公式 $A^* = |A| A^{-1}$ 求伴随矩阵, 二是行列式的拉普拉斯展开式, 三是分块矩阵的求逆公式. 这些都是线性代数中很重要的基础知识.
+
+练习 1  $[A, B]\begin{bmatrix} E \\ E \end{bmatrix} = \_\_\_\_\_\_.$
+
+$\begin{bmatrix} O & E \\ E & O \end{bmatrix}\begin{bmatrix} O & A \\ B & O \end{bmatrix} = \_\_\_\_\_\_.$
+
+$\begin{bmatrix} E & -A \\ O & E \end{bmatrix}\begin{bmatrix} A & O \\ E & B \end{bmatrix} = \_\_\_\_\_\_.$
+
+$\begin{bmatrix} E & A \\ B & E \end{bmatrix}\begin{bmatrix} E & O \\ -B & E \end{bmatrix} = \_\_\_\_\_\_.$
+
+$[x^T, y^T]\begin{bmatrix} A & O \\ O & B \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} = \_\_\_\_\_\_.$
+
+$\begin{bmatrix} O & E \\ E & O \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix}\begin{bmatrix} O & E \\ E & O \end{bmatrix} = \_\_\_\_\_\_.$
+
+解题笔记
+
+· 55 ·
+
+【第 56 页 / 共 211 页】
+图中文字内容转录如下（文字、公式按原文顺序保留；图片左上角有“线性代数 辅导讲义”和“学习札记”，左侧有“矩阵”等边栏文字）：
+
+线性代数 辅导讲义
+
+学习札记
+
+矩阵
+
+分块矩阵的初等矩阵
+$$\begin{bmatrix} E & O \\ P & E \end{bmatrix} \text{或} \begin{bmatrix} E & P \\ O & E \end{bmatrix}; \begin{bmatrix} P & O \\ O & E \end{bmatrix} \text{或} \begin{bmatrix} E & O \\ O & P \end{bmatrix}; \begin{bmatrix} E & O \\ O & P \end{bmatrix}; \begin{bmatrix} O & E \\ E & O \end{bmatrix}.$$
+$$\begin{bmatrix} E & O \\ P & E \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix} = \begin{bmatrix} A & B \\ PA + C & PB + D \end{bmatrix}.$$
+$$\begin{bmatrix} E & P \\ O & E \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix} = \begin{bmatrix} A + PC & B + PD \\ C & D \end{bmatrix}.$$
+$$\begin{bmatrix} P & O \\ O & E \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix} = \begin{bmatrix} PA & PB \\ C & D \end{bmatrix}.$$
+$$\begin{bmatrix} E & O \\ O & P \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix} = \begin{bmatrix} A & B \\ PC & PD \end{bmatrix}.$$
+$$\begin{bmatrix} O & E \\ E & O \end{bmatrix}\begin{bmatrix} A & B \\ C & D \end{bmatrix} = \begin{bmatrix} C & D \\ A & B \end{bmatrix}.$$
+
+左乘是不是类似于初等矩阵左乘的效果？
+那么右乘会如何？
+
+展示新知
+
+【例 2.25】 设 $H = \begin{bmatrix} A & C \\ O & B \end{bmatrix}$，其中 $A,B$ 分别是 $m$ 阶和 $n$ 阶可逆矩阵，证明矩阵 $H$ 可逆，并求其逆。
+
+证明 因为 $A,B$ 可逆，由拉普拉斯展开式(1.9)有
+$$|H| = \begin{vmatrix} A & C \\ O & B \end{vmatrix} = |A||B| \neq 0,$$
+所以矩阵 $H$ 可逆。
+
+设 $H^{-1} = \begin{bmatrix} X & Y \\ Z & W \end{bmatrix}$，则 $\begin{bmatrix} A & C \\ O & B \end{bmatrix}\begin{bmatrix} X & Y \\ Z & W \end{bmatrix} = \begin{bmatrix} E_m & O \\ O & E_n \end{bmatrix}$，即
+$$\begin{cases} AX + CZ = E, \\ AY + CW = O, \\ BZ = O, \\ BW = E, \end{cases} \quad \text{解出} \quad \begin{cases} X = A^{-1}, \\ Y = -A^{-1}CB^{-1}, \\ Z = O, \\ W = B^{-1}. \end{cases}$$
+故
+$$\begin{bmatrix} A & C \\ O & B \end{bmatrix}^{-1} = \begin{bmatrix} A^{-1} & -A^{-1}CB^{-1} \\ O & B^{-1} \end{bmatrix}.$$
+$[H,E]$ 如果作分块矩阵的初等行变换，
+$$[H,E] = \begin{bmatrix} A & C & E & O \\ O & B & O & E \end{bmatrix} \to \begin{bmatrix} E & A^{-1}C & A^{-1} & O \\ O & B & O & E \end{bmatrix} \to \begin{bmatrix} E & O & A^{-1} & -A^{-1}CB^{-1} \\ O & E & O & B^{-1} \end{bmatrix},$$
+注意 $\begin{bmatrix} A^{-1} & -A^{-1}CB^{-1} \\ O & B^{-1} \end{bmatrix}\begin{bmatrix} A & C \\ O & B \end{bmatrix} = \begin{bmatrix} E & O \\ O & E \end{bmatrix}$，所以
+
+· 56 ·
+
+【第 57 页 / 共 211 页】
+这张图片中的文字内容转录如下（按从上到下、从右到左的阅读顺序，保留原文格式与结构）：
+
+**页眉（右上角）：**
+第二章 矩阵——基础、进阶清
+
+**页眉（左上角，手写小字，识别不清）：**
+【此处不清】
+
+**顶部公式：**
+$$
+\begin{bmatrix} A & C \\ O & B \end{bmatrix}^{-1} = \begin{bmatrix} A^{-1} & -A^{-1}CB^{-1} \\ O & B^{-1} \end{bmatrix}
+$$
+
+**蓝色框内内容（展示新知）：**
+> **展示新知**
+> 
+> **【例 2.26】** 设 $A,B$ 均为 $n$ 阶矩阵，如果 $E-AB$ 可逆，证明 $E-BA$ 可逆。
+
+**证明部分：**
+> **证明** 因
+> $$
+> \begin{bmatrix} E & O \\ -A & E \end{bmatrix}\begin{bmatrix} E & B \\ A & E \end{bmatrix}=\begin{bmatrix} E & B \\ O & E-AB \end{bmatrix},
+> $$
+> $$
+> \begin{bmatrix} E & O \\ -A & E \end{bmatrix}\cdot\begin{bmatrix} E & B \\ A & E \end{bmatrix}=\begin{bmatrix} E & B \\ O & E-AB \end{bmatrix},
+> $$
+> 有
+> $$
+> \begin{vmatrix} E & B \\ A & E \end{vmatrix}=|E-AB|.
+> $$
+> 又
+> $$
+> \begin{bmatrix} E & B \\ A & E \end{bmatrix}\begin{bmatrix} E & O \\ -A & E \end{bmatrix}=\begin{bmatrix} E-BA & B \\ O & E \end{bmatrix},
+> $$
+> 得
+> $$
+> \begin{vmatrix} E & B \\ A & E \end{vmatrix}=|E-BA|.
+> $$
+> 所以 $|E-AB|=|E-BA|$。
+> 
+> 因而，$E-BA$ 可逆。
+> 
+> 或反证法：
+> 
+> 如果 $|E-BA|=0$，则 $(E-BA)x=0$ 有非零解。
+> 
+> 设 $\alpha \neq 0$，$(E-BA)\alpha=0$，于是 $BA\alpha=\alpha \neq 0$，而且 $A\alpha \neq 0$，那么
+> $$
+> (E-AB)A\alpha=A\alpha-ABA\alpha=A\alpha-A\alpha=0.
+> $$
+> 从而 $A\alpha$ 是 $(E-AB)x=0$ 的非零解与 $E-AB$ 可逆相矛盾。
+> 
+> 因而，$E-BA$ 可逆。
+
+---
+
+**中间标题：**
+# 矩阵秩的计算
+
+**相关性质（部分识别不清）：**
+> $r(A)=r \Leftrightarrow A$ 中存在 $r$ 阶子式不为 0，$r+1$ (如果有) 阶子式全为 0.
+> 
+> $r(AB) \leqslant \min(r(A),r(B))$，若 $A$ 可逆，则 $r(AB)=r(B)$.
+
+---
+
+**蓝色框内内容（展示新知）：**
+> **展示新知**
+> 
+> **【例 2.27】** 已知 $A=\begin{bmatrix} 1 & 2 & 5 \\ 2 & a & 7 \\ 1 & 3 & 2 \end{bmatrix}$，若 $r(A)+r(A^*)=3$，则 $a=$________。
+> 
+> **分析** 由 $r(A^*)=\begin{cases} n, & r(A)=n, \\ 1, & r(A)=n-1, \\ 0, & r(A)<n-1 \end{cases}$ 知
+> $$
+> r(A)+r(A^*)=3 \Leftrightarrow r(A)=2,
+> $$
+
+**页面底部页码：**
+• 57 •
+
+---
+*(注：图片中蓝色框内文字上方有“展示新知”四个字，在此转录为小标题。页面右上角的手写图标【学习札记】及旁边的签名/笔迹非常模糊，已按要求标注。部分定义行存在印刷缺失或模糊，已尽量还原为 $r(A)=r$。)*
+
+【第 58 页 / 共 211 页】
+以下是图片中文字内容的完整转录。为了还原图中的两个蓝色例题框，使用了 Markdown 表格（每个框记为一行的单元格）。
+
+---
+
+**线性代数 辅导讲义**
+
+**学习札记**
+
+现 A 中有二阶子式 $\begin{vmatrix} 1 & 2 \\ 1 & 3 \end{vmatrix} \neq 0$, 故 $r(A) = 2 \Rightarrow |A| = 0$。
+由 $|A| = 3(5 - a)$, 所以 $a = 5$。
+
+> **展示新知**
+> 
+> | 【例 2.28】 | 设 $A = \begin{bmatrix} 2 & 3 & 4 \\ 6 & t & 2 \\ 4 & 6 & 3 \end{bmatrix}$, $B = 3 \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}(2,3,4)$, 若秩 $r(A + AB) = 2$, 则 $t = \_\_\_\_\_\_$。 |
+> | :--- | :--- |
+
+> **分析** 由于 $r(A + AB) = r[A(E + B)]$, 又
+> 
+> $E + B = E + 3 \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix} (2,3,4) = E + \begin{bmatrix} 2 & 3 & 4 \\ 6 & 9 & 12 \\ 0 & 0 & 0 \end{bmatrix} = \begin{bmatrix} 3 & 3 & 4 \\ 6 & 10 & 12 \\ 0 & 0 & 1 \end{bmatrix}$
+> 
+> 是可逆矩阵, 故 $r(A + AB) = r(A) = 2$。
+> 
+> 对矩阵 $A$ 作初等变换, 有
+> 
+> $A = \begin{bmatrix} 2 & 3 & 4 \\ 6 & t & 2 \\ 4 & 6 & 3 \end{bmatrix} \rightarrow \begin{bmatrix} 2 & 3 & 4 \\ 0 & t - 9 & -10 \\ 0 & 0 & -5 \end{bmatrix}$。
+> 
+> 那么, $r(A) = 2 \Leftrightarrow t = 9$。
+
+> **展示新知**
+> 
+> | 【例 2.29】 | $n$ 阶矩阵 $A = \begin{bmatrix} a & 1 & 1 & \cdots & 1 \\ 1 & a & 1 & \cdots & 1 \\ 1 & 1 & a & \cdots & 1 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 1 & 1 & \cdots & a \end{bmatrix}$ 的秩 = \_\_\_\_\_\_。 |
+> | :--- | :--- |
+
+> **分析** （方法一） 经初等变换矩阵的秩不变。
+> 
+> $A = \begin{bmatrix} a & 1 & 1 & \cdots & 1 \\ 1 & a & 1 & \cdots & 1 \\ 1 & 1 & a & \cdots & 1 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & 1 & 1 & \cdots & a \end{bmatrix} \rightarrow \begin{bmatrix} a & 1 & 1 & \cdots & 1 \\ 1 - a & a - 1 & 0 & \cdots & 0 \\ 1 - a & 0 & a - 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 1 - a & 0 & 0 & \cdots & a - 1 \end{bmatrix}$
+> 
+> $\rightarrow \begin{bmatrix} a + n - 1 & 1 & 1 & \cdots & 1 \\ 0 & a - 1 & 0 & \cdots & 0 \\ 0 & 0 & a - 1 & \cdots & 0 \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & 0 & 0 & \cdots & a - 1 \end{bmatrix}$。
+> 
+> 若 $a \neq 1$ 且 $a \neq 1 - n$, 则 $r(A) = n$。
+> 
+> 若 $a = 1$, 则 $r(A) = 1$。
+
+页面左侧竖排文字：**矩阵 2**
+
+页面底部页码：**• 58 •**
+
+*(注：页面边缘书页侧边的“矩阵 2”由于是竖排且部分被切，按原样排版为竖排文字；若按照阅读方向水平转录，则为“矩阵 2”)*
+
+【第 59 页 / 共 211 页】
+若 $a=1-n$, 则 $r(A)=n-1$.
+【方法二】 用行列式。
+$$
+|A| = \begin{vmatrix}
+a & 1 & 1 & \cdots & 1 \\
+1 & a & 1 & \cdots & 1 \\
+1 & 1 & a & \cdots & 1 \\
+\vdots & \vdots & \vdots & & \vdots \\
+1 & 1 & 1 & \cdots & a
+\end{vmatrix} = (a+n-1)(a-1)^{n-1}.
+$$
+若 $a \neq 1$ 且 $a \neq 1-n$, 则 $|A| \neq 0$, 故 $r(A)=n$.
+若 $a=1$, 易见 $r(A)=1$.
+若 $a=1-n$, 知 $n-1$ 阶子式
+$$
+A_{11} = \begin{vmatrix}
+a & 1 & \cdots & 1 \\
+1 & a & \cdots & 1 \\
+\vdots & \vdots & & \vdots \\
+1 & 1 & \cdots & a
+\end{vmatrix} = (a+n-2)(a-1)^{n-2} \neq 0, \quad |A|=0,
+$$
+故 $r(A)=n-1$.
+【方法三】 用相似。
+因为 $A$ 是实对称矩阵, $A \sim \Lambda$. 只要求出 $r(\Lambda)$ 就知 $r(A)$, 为此由 $A$ 的特征值入手. 因为
+$$
+A = \begin{bmatrix}
+a-1 & & & \\
+& a-1 & & \\
+& & a-1 & \\
+& & & \ddots & \\
+& & & & a-1
+\end{bmatrix} + \begin{bmatrix}
+1 & 1 & 1 & \cdots & 1 \\
+1 & 1 & 1 & \cdots & 1 \\
+1 & 1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \vdots & & \vdots \\
+1 & 1 & 1 & \cdots & 1
+\end{bmatrix} = (a-1)E + B,
+$$
+而矩阵 $B$ 的秩为 1, 有
+$$
+|\lambda E - B| = \lambda^n - n\lambda^{n-1},
+$$
+得到矩阵 $B$ 的特征值是 $n, 0, 0, \cdots, 0(n-1$ 个), 因此矩阵 $A$ 的特征值是 $n+a-1, a-1, a-1, \cdots, a-1$.
+又因 $A$ 是实对称矩阵，故
+$$
+A \sim \Lambda = \begin{bmatrix}
+n+a-1 & & & \\
+& a-1 & & \\
+& & \ddots & \\
+& & & a-1
+\end{bmatrix},
+$$
+那么
+$$
+r(A) = \begin{cases}
+n, & \text{若 } a \neq 1 \text{ 且 } a \neq 1-n, \\
+n-1, & \text{若 } a = 1-n, \\
+1, & \text{若 } a = 1.
+\end{cases}
+$$
+· 59 ·
+
+【第 60 页 / 共 211 页】
+以下是图片内容的完整转录：
+
+---
+
+**线性代数 辅导讲义**
+
+【学习札记】
+
+**矩阵**
+
+---
+
+**展示新知**
+
+【例 2.10】 已知 $A = \begin{bmatrix} 1 & 2 & -2 \\ 3 & a-2 & 1 \\ 2 & -1 & a \end{bmatrix}$，$B$ 是三阶非零矩阵，且 $AB = O$，证明 $r(A) = 2$。
+
+**证明** 因为 $A$ 中有二阶子式 $\begin{vmatrix} 1 & 2 \\ 3 & 1 \end{vmatrix} \neq 0$，所以
+$$
+r(A) \geq 2. \quad \text{①}
+$$
+又 $AB = O, B \neq O$，知 $Ax = 0$ 有非零解，有
+$$
+r(A) < 3. \quad \text{②}
+$$
+由 ①② 得必有 $r(A) = 2$。
+
+---
+
+### 矩阵方程
+
+对于矩阵方程，经恒等变形之后有三种可能的形式：
+$$
+AX = B; \quad XA = B; \quad AXC = B.
+$$
+如果矩阵 $A, C$ 是可逆的，则依次有
+$$
+X = A^{-1}B; \quad X = BA^{-1}; \quad X = A^{-1}BC^{-1}.
+$$
+然后经计算就可求出 $X$。
+
+注意：$A^{-1}B$ 可以由 $[A \mid B] \to [E \mid A^{-1}B]$ 来求。
+
+因为矩阵乘法没有交换律，所以在恒等变形时，运算法则一定要正确。
+
+---
+
+**展示新知**
+
+【例 2.11】 已知 $A, B$ 均是三阶矩阵，矩阵 $X$ 满足
+$$
+AXA - BXB = BXA - AXB + E,
+$$
+其中 $E$ 是三阶单位矩阵，则 $X =$
+(A) $(A^2 - B^2)^{-1}$.
+(B) $(A - B)^{-1}(A + B)^{-1}$.
+(C) $(A + B)^{-1}(A - B)^{-1}$.
+(D) 条件不足，不能确定.
+
+**分析** 据已知，有
+$$
+AXA - BXA + AXB - BXB = E,
+$$
+即
+$$
+(A - B)XA + (A - B)XB = E,
+$$
+亦即
+$$
+(A - B)X(A + B) = E.
+$$
+上式右端是单位矩阵，说明矩阵 $A - B, A + B$ 均可逆，那么左乘 $(A - B)^{-1}$，右乘 $(A + B)^{-1}$，即知 $X = (A - B)^{-1}(A + B)^{-1}$，故应选 (B)。
+
+---
+
+· 60 ·
+
+【第 61 页 / 共 211 页】
+以下是图片中文字的完整转录：
+
+**展示新知**
+
+【例 2.32】（2000，1）设矩阵 $\mathbf{A}$ 的伴随矩阵
+$$
+\mathbf{A}^{*} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & -3 & 0 & 8 \end{bmatrix},
+$$
+且 $\mathbf{A}\mathbf{B}\mathbf{A}^{-1} = \mathbf{B}\mathbf{A}^{-1} + 3\mathbf{E}$，其中 $\mathbf{E}$ 为四阶单位矩阵，求矩阵 $\mathbf{B}$。
+
+**解** 由 $|\mathbf{A}^{*}| = |\mathbf{A}|^{n-1}$，有 $|\mathbf{A}|^{3} = 8$，得 $|\mathbf{A}| = 2$。用 $\mathbf{A}$ 右乘矩阵方程的两端，得
+$$
+\mathbf{A}\mathbf{B} - \mathbf{B} = 3\mathbf{A}.
+$$
+因为 $\mathbf{A}^{*}\mathbf{A} = \mathbf{A}\mathbf{A}^{*} = |\mathbf{A}|\mathbf{E}$，用 $\mathbf{A}^{*}$ 左乘上式两端，并将 $|\mathbf{A}| = 2$ 代入，得
+$$
+(2\mathbf{E} - \mathbf{A}^{*})\mathbf{B} = 6\mathbf{E}.
+$$
+于是 $2\mathbf{E} - \mathbf{A}^{*}$ 是可逆矩阵，从而
+$$
+\mathbf{B} = 6(2\mathbf{E} - \mathbf{A}^{*})^{-1}
+$$
+$$
+= 6 \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -1 & 0 & 1 & 0 \\ 0 & 3 & 0 & -6 \end{bmatrix}^{-1}
+= 6 \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 1 & 0 \\ 0 & \frac{1}{2} & 0 & -\frac{1}{6} \end{bmatrix}
+= \begin{bmatrix} 6 & 0 & 0 & 0 \\ 0 & 6 & 0 & 0 \\ 6 & 0 & 6 & 0 \\ 0 & 3 & 0 & -1 \end{bmatrix}.
+$$
+
+**练习** （2015，$\frac{2}{3}$）设矩阵 $\mathbf{A} = \begin{bmatrix} a & 1 & 0 \\ 1 & a & -1 \\ 0 & 1 & a \end{bmatrix}$，且 $\mathbf{A}^{3} = \mathbf{O}$。
+（1）求 $a$ 的值；
+（2）若矩阵 $\mathbf{X}$ 满足 $\mathbf{X} - \mathbf{X}\mathbf{A}^{2} - \mathbf{A}\mathbf{X} + \mathbf{A}\mathbf{X}\mathbf{A}^{2} = \mathbf{E}$，其中 $\mathbf{E}$ 为三阶单位矩阵，求 $\mathbf{X}$。
+
+**解题笔记**
+
+---
+
+**页面右侧**（垂直排列文字）：
+矩阵二
+
+**页边其他文字**：
+学习札记
+矩阵（右下角被部分裁切）
+
+**页脚**：
+· 61 ·
+
+【第 62 页 / 共 211 页】
+以下是图片中文字的完整转录，已按原文顺序保留结构，数学公式与符号使用 LaTeX 格式：
+
+**线性代数 辅导讲义**
+
+**学习札记**
+
+---
+
+**四、练习题严选**
+
+---
+
+**1. 填空题**
+
+(1) 已知 $A$ 是三阶矩阵，且所有元素都是 $-1$，则 $A^3 + 2A^2 = \_\_\_\_\_\_$.
+
+(2) 求逆
+
+(A) $\begin{bmatrix} 0 & 0 & 0 & 1 \\ 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 4 & 0 \end{bmatrix}^{-1} = \_\_\_\_\_\_.$
+
+(B) $\begin{bmatrix} 1 & 2 & 0 & 0 \\ 3 & 5 & 0 & 0 \\ 0 & 0 & 2 & -5 \\ 0 & 0 & -1 & 3 \end{bmatrix}^{-1} = \_\_\_\_\_\_.$
+
+(C) $\begin{bmatrix} 1 & 1 & -1 \\ 0 & 1 & 1 \\ 0 & 0 & -1 \end{bmatrix}^{-1} = \_\_\_\_\_\_.$
+
+(D) $\begin{bmatrix} 1 & 1 & 1 \\ 1 & 0 & 0 \\ 1 & -1 & 1 \end{bmatrix}^{-1} = \_\_\_\_\_\_.$
+
+(3) 设 $A$ 是 $n$ 阶矩阵，满足 $(A-E)^3 = (A+E)^3$，则 $(A-2E)^{-1} = \_\_\_\_\_\_.$
+
+(4) 已知 $A = \begin{bmatrix} -3 & 2 & -2 \\ 2 & a & 3 \\ 3 & -1 & 1 \end{bmatrix}, B$ 是三阶非零矩阵，且 $AB = O$，则 $a = \_\_\_\_\_\_.$
+【此处不清：该题下方有一处模糊的手写痕迹，无法辨认】
+
+(5) 设矩阵 $A = \begin{bmatrix} 2 & 1 \\ -1 & 2 \end{bmatrix}, E$ 为二阶单位矩阵，矩阵 $B$ 满足 $BA = B + 2E$，则 $B = \_\_\_\_\_\_.$
+【此处不清：该题下方有一处模糊的手写痕迹，无法辨认】
+
+(6) 设 $A$ 是三阶矩阵，$A^*$ 是 $A$ 的伴随矩阵，若 $|A| = 4$，则 $|A^* - (\frac{1}{2}A)^{-1}| = \_\_\_\_\_\_.$
+【此处不清：该题下方有模糊的手写计算过程，无法辨认】
+
+(7) 设 $A$ 为三阶矩阵，$P = [\alpha_1, \alpha_2, \alpha_3]$ 是三阶可逆矩阵，$Q = [\alpha_1, 2\alpha_1 + \alpha_2, \alpha_3]$，如 $P^{-1}AP = \begin{bmatrix} 1 & 1 & 0 \\ 1 & -1 & 0 \\ 0 & 0 & 2 \end{bmatrix}$，则 $Q^{-1}AQ = \_\_\_\_\_\_.$
+
+---
+
+**· 62 ·**
+
+【第 63 页 / 共 211 页】
+以下是图片中文字的完整转录：
+
+**第二章 矩阵——基础·防混淆**
+
+(8) 已知 $AX = B$，其中
+$$
+A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \\ 3 & 5 \end{bmatrix}, B = \begin{bmatrix} 2 & 5 & -1 \\ 4 & 10 & -2 \\ 7 & 9 & 3 \end{bmatrix},
+$$
+则 $X =$ \_\_\_\_\_\_\_\_\_\_.
+
+**2. 选择题**
+
+(1) 设 $A, B$ 均为 $n$ 阶矩阵，正确命题是
+(A) 若 $AB = O$，则 $(A + B)^2 = A^2 + B^2$.
+(B) 若 $AB \neq O$，则 $|B| \neq 0$.
+(C) 若 $AB \neq O$，则 $B \neq O$.
+(D) 若 $A^2 = O$，则 $A = O$.
+
+(2) (1996, 3) 设 $n$ 阶矩阵 $A$ 非奇异 ($n \geq 2$)，$A^*$ 是 $A$ 的伴随矩阵，则
+(A) $(A^*)^* = |A|^{n-1}A$.
+(B) $(A^*)^* = |A|^{n+1}A$.
+(C) $(A^*)^* = |A|^{n-2}A$.
+(D) $(A^*)^* = |A|^{n+2}A$.
+
+(3) 设 $A = E - 2\alpha\alpha^T$，其中 $\alpha = (a_1, a_2, \cdots, a_n)^T$ 且 $\alpha^T\alpha = 1$，则错误的结论是
+(A) $A^T = A$.
+(B) $A^2 = A$.
+(C) $AA^T = E$.
+(D) $\alpha$ 是 $A$ 的特征向量.
+
+(4) 设矩阵 $A, B$ 满足 $A^*BA = 2BA - 8E$，若 $A = \begin{bmatrix} 1 & 0 & 0 \\ 3 & -2 & 0 \\ 0 & 3 & 1 \end{bmatrix}$，则 $|B| =$
+(A) $-16$.
+(B) $-1$.
+(C) $8$.
+(D) $16$.
+
+(5) 设 $A = \begin{bmatrix} 1 & a & a & a \\ a & 1 & a & a \\ a & a & 1 & a \\ a & a & a & 1 \end{bmatrix}$，若 $A$ 的伴随矩阵 $A^*$ 的秩为 $1$，则 $a =$
+(A) $1$.
+(B) $-1$.
+(C) $-\frac{1}{3}$.
+(D) $3$.
+
+**3. 解答题**
+
+(1) 设 $A$ 是 $n$ 阶矩阵，若 $(A + E)^k = O$，证明矩阵 $A$ 可逆.
+(2) $A$ 是三阶矩阵，交换 $A$ 的 $1, 2$ 两行得到矩阵 $B$，交换 $B$ 的 $1, 2$ 两列得
+$$
+A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+$$
+，求 $A^*$ 和 $BA^*$.
+
+<div style="text-align: center;">· 63 ·</div>
+
+【第 64 页 / 共 211 页】
+以下是图片内容的完整转录：
+
+线性代数 辅导讲义
+学习札记
+矩阵
+
+(3) 设 $\boldsymbol{B}$ 是 $m \times n$ 矩阵，$\boldsymbol{B}\boldsymbol{B}^{\mathrm{T}}$ 可逆，$\boldsymbol{A} = \boldsymbol{E} - \boldsymbol{B}^{\mathrm{T}}(\boldsymbol{B}\boldsymbol{B}^{\mathrm{T}})^{-1}\boldsymbol{B}$，其中 $\boldsymbol{E}$ 是 $n$ 阶单位矩阵。
+证明：( Ⅰ ) $\boldsymbol{A}^2 = \boldsymbol{A}$；
+( Ⅱ ) $\boldsymbol{A}^3 = \boldsymbol{A}$。
+
+参考答案与提示
+
+1. (1) $\begin{bmatrix} 9 & 9 & 9 \\ 9 & 9 & 9 \\ 9 & 9 & 9 \end{bmatrix}$，(2) (A) $\begin{bmatrix} 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{3} & 0 \\ 0 & 0 & 0 & \frac{1}{4} \\ 1 & 0 & 0 & 0 \end{bmatrix}$，(B) $\begin{bmatrix} -5 & 2 & 0 & 0 \\ 3 & -1 & 0 & 0 \\ 0 & 0 & 3 & 5 \\ 0 & 0 & 1 & 2 \end{bmatrix}$，
+(C) $\begin{bmatrix} 1 & -1 & -2 \\ 0 & 1 & 1 \\ 0 & 0 & -1 \end{bmatrix}$，(D) $\begin{bmatrix} 0 & 1 & 0 \\ \frac{1}{2} & 0 & -\frac{1}{2} \\ \frac{1}{2} & -1 & \frac{1}{2} \end{bmatrix}$，(3) $-\frac{3\boldsymbol{A} + 5\boldsymbol{E}}{13}$，
+
+(4) $-3$， (5) $\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}$， (6) 2， (7) $\begin{bmatrix} -1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & 2 \end{bmatrix}$，
+
+(8) $\begin{bmatrix} 4 & -7 & 11 \\ -1 & 6 & -6 \end{bmatrix}$。
+
+【提示】 (1) 秩 $r(\boldsymbol{A}) = 1$，有 $\boldsymbol{A}^2 = l\boldsymbol{A}$，其中 $l = \sum a_{ii} = -3$。
+(2) (A)(B) 用分块求逆；(C)(D) 用初等行变换。
+(3) 由 $(\boldsymbol{A} + \boldsymbol{E})^2 = (\boldsymbol{A} - \boldsymbol{E})^2$ 得 $3\boldsymbol{A}^2 + \boldsymbol{E} = \boldsymbol{O}$，进而有
+$(\boldsymbol{A} - 2\boldsymbol{E})(3\boldsymbol{A} + 6\boldsymbol{E}) + 13\boldsymbol{E} = \boldsymbol{O}$。
+(4) $\boldsymbol{A}\boldsymbol{B} = \boldsymbol{O}, \boldsymbol{B} \neq \boldsymbol{O}$，说明齐次方程组 $\boldsymbol{A}\boldsymbol{x} = \boldsymbol{0}$ 有非零解，故 $|\boldsymbol{A}| = 0$，可将第 3 列加至第 2 列来求 $a$。
+(5) $\boldsymbol{B} = 2(\boldsymbol{A} - \boldsymbol{E})^{-1}$，要会求二阶矩阵的逆。
+(6) 根据 $(k\boldsymbol{A})^{-1} = \frac{1}{k}\boldsymbol{A}^{-1}, \boldsymbol{A}^* = |\boldsymbol{A}|\boldsymbol{A}^{-1}$ 及 $|\boldsymbol{A}^{-1}| = \frac{1}{|\boldsymbol{A}|}$，有
+$\left|\boldsymbol{A}^* - \left(\frac{1}{2}\boldsymbol{A}\right)^{-1}\right| = \left|\boldsymbol{A}^* - 2\boldsymbol{A}^{-1}\right| = \left|4\boldsymbol{A}^{-1} - 2\boldsymbol{A}^{-1}\right| = 8\left|\boldsymbol{A}^{-1}\right|$。
+(7) 由下标，$\boldsymbol{P}$ 到 $\boldsymbol{Q}$ 是列变换 $\boldsymbol{Q} = \boldsymbol{P}\begin{bmatrix} 1 & 2 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}$。
+
+· 64 ·
+
+【第 65 页 / 共 211 页】
+以下是图片中文字的完整转录：
+
+**图上部右侧：**
+第二章 矩阵 —— 基础、防混淆
+学习札记
+
+**图正文：**
+
+(8) $X = \begin{bmatrix} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ x_3 & y_3 & z_3 \end{bmatrix}, AX = B$ 解三个方程组, 系数矩阵都是 $A$, 常数项依次是 $B$ 的 3 列.
+
+2. (1)C. (2)C. (3)B. (4)A. (5)C.
+
+【提示】 (1) 反证. 若 $B = O$, 则 $AB = AO = O$ 与 $AB \neq O$ 相矛盾. 而 $AB = O \neq BA = O$, 于是 $(A + B)^2 = A^2 + BA + B^2$. 故 (A) 不正确.
+若 $A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}, B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$, 可知 (B)(D) 均不正确.
+
+(2) $(A^*)^* = A^* \cdot (A^*)^*$.
+
+(3) $A^2 = (E - 2\alpha\alpha^T)(E - 2\alpha\alpha^T) = E - 4\alpha\alpha^T + 4\alpha\alpha^T\alpha\alpha^T$, 又 $\alpha^T\alpha = 1$, 于是 $A^2 = E$.
+$A\alpha = (E - 2\alpha\alpha^T)\alpha = \alpha - 2\alpha\alpha^T\alpha = \alpha - 2\alpha = -\alpha$,
+即 $-1$ 是 $A$ 的特征值, $\alpha$ 是 $-1$ 的特征向量.
+
+(4) 左乘 $A$, 右乘 $A^{-1}$, 又 $|A| = -2$, 有 $(A + E)B = 4E$.
+
+(5) 由于 $r(A^*) = \begin{cases} n, & \text{若 } r(A) = n, \\ 1, & \text{若 } r(A) = n - 1, \\ 0, & \text{若 } r(A) < n - 1. \end{cases}$
+
+本题 $r(A^*) = 1$ 而 $n = 4$, 说明 $r(A) = 3$, 故 $|A| = 0$.
+
+因为 $|A| = \begin{vmatrix} 3a+1 & 3a+1 & 3a+1 & 3a+1 \\ a & 1 & a & a \\ a & a & 1 & a \\ a & a & a & 1 \end{vmatrix} = (3a+1)(1-a)^3$,
+
+显然 $a = 1$ 时, $r(A) = 1$, 那么只有 $a = -\frac{1}{3}$.
+
+3. (1)(用定义法) 因为 $(A + E)^3 = O$, 即
+$A^3 + 3A^2 + 3A + E = O$,
+那么
+$A(-A^2 - 3A - 3E) = E$.
+
+(2) $B = \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix}, A, A = B \begin{bmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{bmatrix} = BP$,
+$PAP = A$ 亦 $P^{-1}AP = A$,
+$A^* = \begin{bmatrix} 2^n & & \\ & 1 & \\ & & 3^n \end{bmatrix}, BA^* = \begin{bmatrix} 0 & 6 & 0 \\ 6 & 0 & 0 \\ 0 & 0 & 6 \end{bmatrix}$.
+
+(3)(I) $A^T = [E - B^T(BB^T)^{-1}B]^T = E^T - [B^T(BB^T)^{-1}B]^T$
+$= E - B^T[(BB^T)^{-1}]^T(B^T)^T = E - B^T[(BB^T)^T]^{-1}B$
+$= E - B^T(BB^T)^{-1}B = A$.
+
+**图右侧边缘：**
+矩阵
+
+**图底部：**
+· 65 ·
+
+【第 66 页 / 共 211 页】
+以下是图片中文字的完整转录，按原文顺序排列，数学公式使用 LaTeX 格式：
+
+---
+
+**线性代数 辅导讲义**  
+**学习札记**
+
+$$( II ) A^2 = [E - B^T(BB^T)^{-1}B][E - B^T(BB^T)^{-1}B]$$
+$$= E - 2B^T(BB^T)^{-1}B + B^T(BB^T)^{-1}BB^T(BB^T)^{-1}B$$
+$$= E - 2B^T(BB^T)^{-1}B + B^T(BB^T)^{-1}B = A.$$
+
+注意 $B$ 是 $m \times n$ 矩阵，$(BB^T)^{-1} \neq (B^T)^{-1}B^{-1}$。
+
+---
+
+**线性代数 | 做题进阶·三步法**
+
+| 阶段 | 说明 | 内容 |
+| :--- | :--- | :--- |
+| 一阶 | 本卷必做 | 《数学基础过关 660 题》本章对应全部题目 |
+| 二阶 | 同步练习 | 《线性代数辅导讲义·严选题》本章对应全部题目 |
+| 三阶 | 难度挑战 | 《数学强化通关 330 题》本章优选题 |
+| | | 数学一 | 183 186 188 189 |
+| | | 数学二 | 238 241 242 247 248 |
+| | | 数学三 | 183 186 188 189 |
+
+---
+
+· 66 ·
